@@ -1,0 +1,32 @@
+---
+export interface Props {
+	text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<a href="#contacts" class="button-grey">{text}</a>
+
+<style>
+    .button-grey {
+        width: 180px;
+        text-align: center;
+        padding: 12px 0px;
+        border-radius: 4px;
+        border: none;
+        background-color: #8E9AAF;
+        color: #FEEAFA;
+        text-decoration: none;
+        display: inline-block;
+        font-family: 'Philosopher', sans-serif;
+        font-size: 15px;
+    }
+
+    .button-grey:hover {
+        background-color: #DEE2FF;
+        color: #8E9AAF;
+        font-weight: 500;
+    }
+
+</style>

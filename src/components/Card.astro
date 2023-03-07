@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon';
+import Button from '../components/Button.astro';
 export interface Props {
 	title: string;
 	body: string;
@@ -9,6 +11,7 @@ const { href, title, body } = Astro.props;
 ---
 
 <li class="link-card">
+	<Icon name="fa-solid:home" class="icon-house"/>
 	<a href={href}>
 		<h2>
 			{title}
@@ -18,9 +21,12 @@ const { href, title, body } = Astro.props;
 			{body}
 		</p>
 	</a>
+	<Button text="MASSAGE BUCHEN" />
+	<p>---</p>
+	<Button text="PRESE" />
 </li>
 <style>
-	.link-card {
+	/* .link-card {
 		list-style: none;
 		display: flex;
 		padding: 0.25rem;
@@ -59,5 +65,10 @@ const { href, title, body } = Astro.props;
 	}
 	.link-card:is(:hover, :focus-within) h2 {
 		color: rgb(var(--accent));
-	}
+	} */
+
+	.icon-house {
+		color: red;
+		width: 30px;
+	} 
 </style>

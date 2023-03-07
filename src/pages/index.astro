@@ -3,13 +3,76 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="VitaLena">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro!</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
+		<div id="contacts" class="contacts">
+			<h1>Kontakte</h1>
+			<div class="address">
+			  <div class="addr-item1">
+				<div class="icon-text">
+				  <i class="fa fa-home addr-icon home-icon" aria-hidden="true"></i>
+				  <div>
+					<div class="addr-place">
+					  <p>
+						Praxisraum 
+					  </p>
+					  <p>
+						in Weiach 
+					  </p>
+					</div>
+					<p><a href="https://goo.gl/maps/SronJErekN9ETXpL9" target="_blank">
+					  Im See 3
+					</a></p>
+					<p><a href="https://goo.gl/maps/SronJErekN9ETXpL9" target="_blank">
+					  8187 Weiach
+					</a></p>
+				  </div>
+				</div>
+				<div class="icon-text">
+				  <i class="fa fa-phone addr-icon" aria-hidden="true"></i>
+				  <a href="tel:+41795648109" target="_blank">
+					+41 (0)79 564 81 09
+				  </a>
+				</div>
+				<div class="icon-text icon-text-last">
+				  <i class="fa fa-envelope addr-icon" aria-hidden="true"></i>
+				  <a href="mailto:elena_schaller@swissonline.ch" target="_blank">
+					elena_schaller@swissonline.ch
+				  </a>
+				  
+				</div>
+			  </div>
+			  <div class="addr-item2">
+				<div class="icon-text">
+				  <i class="fa fa-home addr-icon home-icon" aria-hidden="true"></i>
+				  <div>
+					<div class="addr-place">
+					  <p>SALZGROTTE</p>
+					  <a href="https://salzgrotte.ch" target="_blank">
+						salzgrotte.ch
+					  </a>
+					</div>
+					<p><a href="https://goo.gl/maps/ZfKhNa9Ryq1TmgHh9" target="_blank">
+					  Lindenstrasse 23
+					</a></p>
+					<p><a href="https://goo.gl/maps/ZfKhNa9Ryq1TmgHh9" target="_blank">
+					  8302 Kloten
+					</a></p>
+				  </div>
+				</div>
+				<div class="icon-text">
+				  <i class="fa fa-phone addr-icon" aria-hidden="true"></i>
+				  <a href="tel:+41445505555" target="_blank">
+					+41 (0)44 550 55 55
+				  </a>
+				</div>
+				<div class="icon-text icon-text-last">
+				  <i class="fa fa-envelope addr-icon" aria-hidden="true"></i>
+				  <a href="mailto:info@salzgrotte.ch" target="_blank">info@salzgrotte.ch</a>
+				</div>
+			  </div>
+			</div>
+		  </div>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
@@ -37,45 +100,73 @@ import Card from '../components/Card.astro';
 
 <style>
 	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+		margin: 0 auto;
+		/* padding: 1.5rem; */
+		max-width: 1100px;
+  		height: 100%;
+		background-color: #EFD3D7;
 	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
+	.contacts {
+		padding: 40px 40px;
+		text-align: center;
+		/* font-size: 20px; */
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+
+	.contacts,
+	.cards h1,
+	h2 {
+		color: #8E9AAF;
 	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
+
+	.address {
+		display: flex;
+		justify-content: center;
+		padding-top: 20px;
+		gap: 8px;
 	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
+
+	.addr-item1 {
+		text-align: left;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
-	.instructions strong {
-		color: rgb(var(--accent));
+
+	.addr-item2 {
+		text-align: left;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+
+	.addr-place {
+		margin-bottom: 8px;
+	}
+
+	.icon-text {
+		display: flex;
+		gap: 10px;
+		margin-bottom: 8px;
+	}
+
+	.icon-text-last {
+		margin-bottom: 0px;
+	}
+
+	.addr-icon {
+		color: #8E9AAF;
+		font-size: 24px;
+		width: 25px;
+		text-align: center;
+	}
+
+	.home-icon {
+		font-size: 29px;
+	}
+
+	.address a {
+		color: #3D3D3D;
+	}
+
+	.address a:hover {
+		color: #84858e;
 	}
 </style>
