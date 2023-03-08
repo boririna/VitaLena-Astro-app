@@ -5,27 +5,59 @@ export interface Props {
 	title: string;
 	body: string;
 	href: string;
+	imgPath: string;
 }
 
-const { href, title, body } = Astro.props;
+const { imgPath, href, title, body } = Astro.props;
 ---
-
-<li class="link-card">
-	<Icon name="fa-solid:home" class="icon-house"/>
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-	<Button text="MASSAGE BUCHEN" />
-	<p>---</p>
-	<Button text="PRESE" />
-</li>
+<div class="card">
+	<img src={imgPath} class="card-img" alt="Klassische Massage">
+	<div class="card-text">
+		<h2>{title}</h2>
+		<p>{body}</p>
+		<p><a href={href} class="card-link">weiterlesen</a></p>
+		<div class="card-button">
+			<Button href="#contacts" text="MASSAGE BUCHEN" />
+		</div>
+	</div>
+</div>
+	
 <style>
+.card {
+  background-color: rgba(255, 255, 255, 0.674);
+  border-radius: 4px;
+  width: 33.33%;
+}
+
+h1, h2 {
+  color: #8E9AAF;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+}
+
+.card-text {
+  padding: 20px;
+}
+
+.card-text h2 {
+  margin-bottom: 20px;
+}
+
+.card-text p {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.card-link {
+  color: #aaaaaa;
+}
+
+.card-button {
+  margin-top: 30px;
+}
 	/* .link-card {
 		list-style: none;
 		display: flex;

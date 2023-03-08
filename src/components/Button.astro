@@ -1,12 +1,13 @@
 ---
 export interface Props {
 	text: string;
+    href: string;
 }
 
-const { text } = Astro.props;
+const { href, text } = Astro.props;
 ---
 
-<a href="#contacts" class="button-grey">{text}</a>
+<a href={href} class="button-grey">{text}</a>
 
 <style>
     .button-grey {
