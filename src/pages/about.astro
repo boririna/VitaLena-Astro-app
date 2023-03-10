@@ -6,7 +6,22 @@ import Footer from "../components/Footer.astro";
 <Layout title="VitaLena">
     <main>
         <Banner />
+        <div class="image-section">
+            <h1>Über mich</h1>
+            <div class="images">
+                <img src="/img/massage1-opt.jpg" alt="" class="personal-photo">
+                <div>
+                    <img src="/img/massage1-opt.jpg" alt="" class="personal-photo">
+                    <div class="studio-photos">
+                        <img src="/img/massage1-opt.jpg" alt="" class="personal-photo">
+                        <img src="/img/massage1-opt.jpg" alt="" class="personal-photo">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-text">
             <p>Hello World</p>
+        </div>
         <Footer />
     </main>
 </Layout>
@@ -14,9 +29,36 @@ import Footer from "../components/Footer.astro";
 <style>
     main {
 		margin: 0 auto;
-		/* padding: 1.5rem; */
 		max-width: 1100px;
   		height: 100%;
 		background-color: #EFD3D7;
 	}
+
+    h1,
+	h2 {
+		color: #8E9AAF;
+	}
+
+    .image-section {
+        padding: 40px 40px;
+        text-align: center;
+    }
+
+    .images {
+        display: flex;
+        gap: 20px;
+    }
+
+    .personal-photo {
+        width: 40%;
+    }
+
+    .studio-photos {
+        display: flex;
+        gap: 20px;
+    }
+
+    .about-text {
+        padding: 40px;
+    }
 </style>
