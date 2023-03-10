@@ -1,40 +1,12 @@
 ---
-import Button from "./Button.astro";
+import ButtonGrey from "./ButtonGrey.astro";
+import ButtonPink from "./ButtonPink.astro";
+import Menu from "./Menu.astro";
 ---
 <div class="banner">
     <div class="main-image">
       <div class="banner-content">
-        <nav>
-          <a href="#">
-            <img src="/img/Logo2.png" alt="VitaLena" class="logo">
-          </a>
-         
-          <ul class="header-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">Über mich</a></li>
-            <li><a href="#massage">Massage</a></li>
-            <li><a href="#contact">Kontakte</a></li>
-          </ul>
-
-          <div class="hamburger-menu">
-
-            <div id="mySidepanel" class="sidepanel">
-
-              <a id="closeBtn" href="#" class="closebtn" >×</a>
-              <a id="homeLink" href="#home">Home</a>
-              <a id="aboutLink" href="#about">Über mich</a>
-              <a id="massageLink" href="#massage">Massage</a>
-              <a id="contactLink" href="#contact">Kontakte</a>
-            </div>
-            
-            <button id="openBtn" class="openbtn">☰</button>
-          </div>
-        </nav>
-
-        <!-- <div class="phone-number">
-          <p>Tel. +41 (0)79 564 81 09</p>
-        </div>  -->
-
+        <Menu />
         <div class="welcome-text">
           <h1>Massage</h1>
           <p class="desktop">Eine halbe Stunde Massage ist absolut notwendig, 
@@ -43,8 +15,8 @@ import Button from "./Button.astro";
           <p class="mobile">in Kloten, Weiach</p>
         </div>
         <div class="header-buttons">
-            <Button href="#contacts" text="MASSAGE BUCHEN"/>
-            <Button href="#contacts" text="PRESE"/>
+            <ButtonGrey href="#contacts" text="MASSAGE BUCHEN"/>
+            <span class="button-pink"><ButtonPink href="#contacts" text="PRESE"/></span>
         </div>          
       </div>
     </div>        
@@ -74,26 +46,6 @@ import Button from "./Button.astro";
   padding: 20px 40px;
 }
 
-nav a {
-  text-decoration: none;
-  color: white;
-  font-size: 30px;
-}
-
-.logo {
-  width: 140px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hamburger-menu {
-  display: none;
-}
-
 .phone-number {
   text-align: right;
   margin-top: 5px;
@@ -107,45 +59,29 @@ nav {
 }
 
 .welcome-text h1 {
-  font-size: 60px;
+  font-size: 64px;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
 .welcome-text p {
-  font-size: 22px;
+  font-size: 23px;
   color: white;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .mobile {
   display: none;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-}
-
-li a {
-  display: block;
-  padding: 20px;
-  font-size: 20px;
-  font-family: 'Mulish', sans-serif;
-  text-decoration: none;
-  color: white;
-}
-
-li :last-child {
-  padding-right: 0;
-}
-
 .header-buttons {
   padding-top: 280px;
   padding-right: 50px;
   text-align: right;
+}
+
+.button-pink {
+    margin-left: 20px;
 }
 
 </style>
