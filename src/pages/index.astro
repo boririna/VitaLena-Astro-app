@@ -7,7 +7,10 @@ import BannerHome from '../components/BannerHome.astro';
 
 <Layout title="VitaLena">
 	<main>
-		<BannerHome />
+		<div class="banner-width">
+			<BannerHome />
+		</div>
+		
 		<!-- contacts -->
 		<div id="contacts" class="contacts">
 			<h1>Kontakte</h1>
@@ -118,6 +121,12 @@ import BannerHome from '../components/BannerHome.astro';
 		background-color: #EFD3D7;
 	}
 
+	/* banner */
+
+	.banner-width {
+		width: 100%;
+	}
+
 	/* contacts */
 	.contacts {
 		padding: 40px 40px;
@@ -203,5 +212,59 @@ import BannerHome from '../components/BannerHome.astro';
 		display: flex;
 		gap: 16px;
 		margin-top: 20px;
+	}
+
+	@media (max-width: 600px) {
+		/* contacts */
+
+		.contacts {
+			font-size: 12px;
+			padding: 20px 10px;
+		}
+
+		.contacts h1 {
+			font-size: 26px;
+		}
+
+		.addr-item1 {
+			padding-left: 0px;
+			padding-right: 3px;
+		}
+
+		.addr-item2 {
+			padding-left: 3px;
+			padding-right: 0px;
+		}
+
+		.icon-text {
+			gap: 6px;
+		}
+
+		.addr-icon {
+			font-size: 13px;
+			width: 14px;
+		}
+
+		.home-icon {
+			font-size: 17px;
+		}
+
+		/* quote */
+
+		.quote {
+			padding: 20px 20px;
+			font-size: 18px;
+		}
+
+		/* Cards */
+
+		.cards {
+			padding: 20px 20px;
+		}
+
+		.card-row {
+			display: block;
+			margin-top: 0;
+		}
 	}
 </style>

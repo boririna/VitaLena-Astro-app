@@ -84,4 +84,75 @@ import Menu from "./Menu.astro";
     margin-left: 20px;
 }
 
+@media (max-width: 1000px) {
+  .banner h1 {
+    font-size: larger;
+  }
+
+  .welcome-text h1 {
+    font-size: 40px;
+  }
+
+  .welcome-text p {
+    font-size: 15px;
+  }
+
+  .header-buttons {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+
+/* banner */
+
+.banner-content {
+  padding: 20px 20px;
+  width: 100%;
+}
+
+.banner-content .header-menu {
+  display: none;
+}
+
+.logo {
+  width: 90px;
+  margin-bottom: 8px;
+}
+
+.phone-number {
+  margin-top: 0px;
+  font-size: 15px;
+}
+
+.welcome-text {
+  width: 75%;
+  margin-top: 0px;
+}
+
+.welcome-text h1 {
+  font-size: 34px;
+  margin-bottom: 0px;
+}
+
+.welcome-text .desktop {
+  display: none;
+}
+
+.mobile {
+  display: block;
+  font-size: 0px;
+}
+
+.welcome-text p {
+  font-size: 20px;
+}
+
+.header-buttons {
+  padding-top: 20px;
+  padding-right: 0;
+  text-align: right;
+}
+}
+
 </style>
