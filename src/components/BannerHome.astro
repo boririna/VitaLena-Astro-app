@@ -6,18 +6,20 @@ import Menu from "./Menu.astro";
 <div class="banner">
     <div class="main-image">
       <div class="banner-content">
-        <Menu />
-        <div class="welcome-text">
-          <h1>Massage</h1>
-          <p class="desktop">Eine halbe Stunde Massage ist absolut notwendig, 
-            außer, wenn man sehr beschäftigt ist, 
-            dann braucht man eine ganze Stunde.</p>
-          <p class="mobile">in Kloten, Weiach</p>
-        </div>
-        <div class="header-buttons">
-            <ButtonGrey href="#contacts" text="MASSAGE BUCHEN"/>
-            <span class="button-pink"><ButtonPink href="#contacts" text="PRESE"/></span>
-        </div>          
+        <div class="banner-padding">
+          <Menu />
+          <div class="welcome-text">
+            <h1>Massage</h1>
+            <p class="desktop">Eine halbe Stunde Massage ist absolut notwendig, 
+              außer, wenn man sehr beschäftigt ist, 
+              dann braucht man eine ganze Stunde.</p>
+            <p class="mobile">in Kloten, Weiach</p>
+          </div>
+          <div class="header-buttons">
+              <ButtonGrey href="#contacts" text="MASSAGE BUCHEN"/>
+              <span class="button-pink"><ButtonPink href="#contacts" text="PRESE"/></span>
+          </div>   
+        </div>    
       </div>
     </div>        
 </div>
@@ -41,8 +43,11 @@ import Menu from "./Menu.astro";
 .banner-content {
   position: absolute;
   top: 0;
-  /* width: 100%; */
+  width: 100%;
   height: 100%;
+}
+
+.banner-padding {
   padding: 20px 40px;
 }
 
@@ -107,17 +112,16 @@ import Menu from "./Menu.astro";
 /* banner */
 
 .banner-content {
-  padding: 20px 20px;
-  width: 100%;
+  /* padding: 20px 20px; */
+  /* width: 100%; */
+}
+
+.banner-padding {
+  padding: 20px;
 }
 
 .banner-content .header-menu {
   display: none;
-}
-
-.logo {
-  width: 90px;
-  margin-bottom: 8px;
 }
 
 .phone-number {
@@ -149,10 +153,15 @@ import Menu from "./Menu.astro";
 }
 
 .header-buttons {
-  padding-top: 20px;
+  padding-top: 5%;
   padding-right: 0;
   text-align: right;
 }
+.button-pink {
+    margin-left: 0px;
+    margin-top: 8px;
+}
+
 }
 
 </style>

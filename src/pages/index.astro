@@ -3,14 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Footer from '../components/Footer.astro';
 import BannerHome from '../components/BannerHome.astro';
+import Menu from '../components/Menu.astro';
 ---
-
 <Layout title="VitaLena">
 	<main>
-		<div class="banner-width">
-			<BannerHome />
-		</div>
-		
+		<BannerHome />	
 		<!-- contacts -->
 		<div id="contacts" class="contacts">
 			<h1>Kontakte</h1>
@@ -120,13 +117,7 @@ import BannerHome from '../components/BannerHome.astro';
   		height: 100%;
 		background-color: #EFD3D7;
 	}
-
-	/* banner */
-
-	.banner-width {
-		width: 100%;
-	}
-
+	
 	/* contacts */
 	.contacts {
 		padding: 40px 40px;
@@ -266,5 +257,9 @@ import BannerHome from '../components/BannerHome.astro';
 			display: block;
 			margin-top: 0;
 		}
+
+	.cards h1 {
+		font-size: 26px;
+	}
 	}
 </style>
