@@ -110,7 +110,7 @@ import Footer from "../components/Footer.astro";
     .process-photo {
         max-width: 100%;
         height: auto;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     .room-photo {
         max-width: 100%;
@@ -131,4 +131,23 @@ import Footer from "../components/Footer.astro";
         text-align: center;
         margin: 20px 0;
     }
+
+    @media (max-width: 600px) {
+    .page-title {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .image-section {
+        padding: 0 20px;
+    }
+    /* .studio-photos {
+        justify-content: center;
+    } */
+   
+    .about-text {
+        padding: 20px;
+    }
+    }
+
 </style>
