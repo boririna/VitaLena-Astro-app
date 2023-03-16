@@ -1,0 +1,87 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Banner from "../components/Banner.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="VitaLena">
+    <main>
+        <Banner />
+        <div class="page-title">
+            <h1>Massage</h1>
+        </div>
+
+        <div class="card-section">
+            <p>Here will be the cards</p>
+        </div>
+        <div class="price-section">
+            <h2>Preise</h2>
+            <div class="prices">
+                <p>Klassische Massage 120 CHF pro 60 Minuten</p>
+                <p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
+                <p>Sportmassage 120 CHF pro 60 Minuten</p>
+            </div>
+            <p>
+                Ein Grossteil der Krankenkassen übernimmt im Rahmen einer
+                Zusatzversicherung die Kosten einer Massage voll oder zum Teil.
+                Bitte erkundigen Sie sich vor der Behandlung bei Ihrer
+                Versicherung.
+            </p>
+        </div>
+        <Footer />
+    </main>
+</Layout>
+
+<style>
+    main {
+        margin: 0 auto;
+        max-width: 1100px;
+        height: 100%;
+        background-color: #efd3d7;
+    }
+
+    h1,
+    h2 {
+        color: #8e9aaf;
+    }
+
+    .page-title {
+        padding: 20px 40px;
+        text-align: center;
+    }
+
+    .card-section {
+        padding: 0 40px;
+    }
+
+    .price-section {
+        padding: 20px 40px;
+        text-align: center;
+    }
+
+    .price-section h2 {
+        margin: 20px 0;
+    }
+
+    .prices {
+        max-width: 360px;
+        margin: 0 auto;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 600px) {
+        .page-title {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-section {
+            padding: 0 20px;
+        }
+
+        .price-section {
+            padding: 20px;
+        }
+    }
+</style>
