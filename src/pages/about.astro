@@ -16,23 +16,27 @@ import Footer from "../components/Footer.astro";
                 <img
                     src="/img/about-person.jpg"
                     alt=""
+                    width="350"
                     class="personal-photo"
                 />
                 <div>
                     <img
                         src="/img/about-process.jpg"
                         alt=""
+                        width="374"
                         class="process-photo"
                     />
                     <div class="studio-photos">
                         <img
                             src="/img/about-room1.jpg"
                             alt=""
+                            width="166"
                             class="room-photo"
                         />
                         <img
                             src="/img/about-room2.jpeg"
                             alt=""
+                            width="250"
                             class="room-photo"
                         />
                     </div>
@@ -99,23 +103,23 @@ import Footer from "../components/Footer.astro";
     }
 
     .personal-photo {
-        max-height: 500px;
-        height: 100%;
-        width: auto;
+        max-width: 100%;
+        height: auto;
+        /* width: auto; */
     }
     .process-photo {
-        max-height: 250px;
-        height: 100%;
-        width: auto;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
     }
     .room-photo {
-        max-height: 250px;
-        height: 100%;
-        width: auto;
+        max-width: 100%;
+        height: auto;
     }
 
     .studio-photos {
         display: flex;
+        flex-flow: wrap;
         gap: 20px;
     }
 
