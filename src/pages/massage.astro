@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Banner from "../components/Banner.astro";
+import CardMassage from "../components/CardMassage.astro";
 import Footer from "../components/Footer.astro";
 ---
 
@@ -10,10 +11,28 @@ import Footer from "../components/Footer.astro";
         <div class="page-title">
             <h1>Massage</h1>
         </div>
-
+        
         <div class="card-section">
-            <p>Here will be the cards</p>
+            <CardMassage
+			  	imgPath1="../../public/img/massage1-opt.jpg"
+				href1="#"
+				title1="Klassische Massage"
+				body1="Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."                />
+            <CardMassage
+			  	imgPath1="../../public/img/massage2-opt.jpg"
+				href1="#"
+				title1="Klassische Massage"
+				body1="Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."
+			/>
+            <CardMassage
+			  	imgPath1="../../public/img/massage3-opt.jpg"
+				href1="#"
+				title1="Klassische Massage"
+				body1="Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."
+			/>
+            
         </div>
+        <!-- TODO get rid of top margin of 20px -->
         <div class="price-section">
             <h2>Preise</h2>
             <div class="prices">

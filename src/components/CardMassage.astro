@@ -1,0 +1,86 @@
+---
+// import { Icon } from 'astro-icon';
+import ButtonGrey from './ButtonGrey.astro';
+export interface Props {
+	title1: string;
+	body1: string;
+	href1: string;
+	imgPath1: string;
+}
+
+const { imgPath1, href1, title1, body1 } = Astro.props;
+---
+<div class="card">
+	<img src={imgPath1} class="card-img" alt="Klassische Massage">
+	<div class="card-text">
+		<h2>{title1}</h2>
+		<p>{body1}</p>
+		<p><a href={href1} class="card-link">weiterlesen</a></p>
+		<div class="card-button">
+			<ButtonGrey href="#contacts" text="MASSAGE BUCHEN" />
+		</div>
+	</div>
+</div>
+	
+<style>
+.card {
+	display: flex;
+  background-color: rgba(255, 255, 255, 0.674);
+  border-radius: 4px;
+ margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+  color: #8E9AAF;
+}
+
+.card-img {
+  width: 50%;
+  border-radius: 4px 4px 0 0;
+}
+
+.card-text {
+  padding: 20px;
+}
+
+.card-text h2 {
+  margin-bottom: 20px;
+}
+
+.card-text p {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.card-link {
+  color: #aaaaaa;
+}
+
+.card-button {
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+
+	.cards h1 {
+		font-size: 26px;
+	}
+
+	.card-text h2 {
+		font-size: 22px;
+	}
+
+	.card-text p{
+		font-size: 18px;
+	}
+
+	.card {
+		margin-top: 20px;
+		width: 100%;
+	}
+
+	.card .button-grey {
+		margin: 0 auto;
+	}
+}
+</style>
