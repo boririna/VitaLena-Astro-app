@@ -3,31 +3,69 @@
 import ButtonGrey from './ButtonGrey.astro';
 export interface Props {
 	title1: string;
-	body1: string;
+	body1: Array<string>;
+	body2: Array<string>;
 	href1: string;
 	imgPath1: string;
 }
 
-const { imgPath1, href1, title1, body1 } = Astro.props;
+const { imgPath1, href1, title1, body1, body2 } = Astro.props;
 ---
 <div class="card">
-	<img src={imgPath1} class="card-img" alt="Klassische Massage">
-	<div class="card-text">
-		<h2>{title1}</h2>
-		<p>{body1}</p>
-		<p><a href={href1} class="card-link">weiterlesen</a></p>
-		<div class="card-button">
+	<div class="card-img-text">
+		<img src={imgPath1} class="card-img" alt="Klassische Massage">
+		<div class="card-text">
+			<h2>{title1}</h2>
+			{body1.map((paragraph) => (
+				<p>{paragraph}</p>
+			))}
+			<!-- <p class="card-link"><a href={href1}>weiterlesen</a></p> -->
+			<div class="card-text-rest">
+				<details>
+					<summary>
+						<p class="card-link">weiterlesen/schlissen</p>
+					  <!-- <span class="icon">👇</span> -->
+					</summary>
+					{body2.map((par) => (
+						<p>{par}</p>
+					))}
+				</details>
+				
+				<!-- <div class="card-button">
+					<ButtonGrey href="#contacts" text="MASSAGE BUCHEN" />
+				</div> -->
+			</div>
+		</div>
+		
+	</div>
+	
+	<!-- <div class="card-text-rest">
+		<details>
+			<summary>
+				<p class="card-link">weiterlesen/schlissen</p>
+			  <!-- <span class="icon">👇</span> -->
+			<!-- </summary>
+			<!-- {body2.map((par) => (
+				<p>{par}</p>
+			))} -->
+		<!-- </details> -->
+		
+		<!-- <div class="card-button">
 			<ButtonGrey href="#contacts" text="MASSAGE BUCHEN" />
 		</div>
-	</div>
+	</div> -->
 </div>
 	
 <style>
 .card {
+	/* flex-flow: wrap; */
+	background-color: rgba(255, 255, 255, 0.674);
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+
+.card-img-text {
 	display: flex;
-  background-color: rgba(255, 255, 255, 0.674);
-  border-radius: 4px;
- margin-bottom: 20px;
 }
 
 h1, h2, h3 {
@@ -36,11 +74,17 @@ h1, h2, h3 {
 
 .card-img {
   width: 50%;
-  border-radius: 4px 4px 0 0;
+  height: 100%;
+  border-radius: 4px 0 0 4px;
 }
 
 .card-text {
-  padding: 20px;
+	max-width: 450px;
+  	padding: 20px;
+}
+
+.card-text-rest {
+	padding-top: 8px;
 }
 
 .card-text h2 {
@@ -49,15 +93,58 @@ h1, h2, h3 {
 
 .card-text p {
   text-align: left;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }
 
 .card-link {
+  /* padding-top: 20px; */
   color: #aaaaaa;
+}
+
+.card-link a {
+	color: #aaaaaa;
 }
 
 .card-button {
   margin-top: 30px;
+}
+
+details {
+  user-select: none;
+}
+
+details>summary span.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s;
+  margin-left: auto;
+}
+
+details[open] summary span.icon {
+  transform: rotate(180deg);
+}
+
+summary {
+  display: flex;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+@media (max-width: 900px) {
+
+
+
+/* .card-img {
+  width: 100%;
+}
+
+.card-text {
+	width: 100%;
+} */
+
 }
 
 @media (max-width: 600px) {
@@ -70,13 +157,25 @@ h1, h2, h3 {
 		font-size: 22px;
 	}
 
+	.card-img {
+		width: 100%;
+	}
+
 	.card-text p{
 		font-size: 18px;
 	}
 
+	.card-text-rest {
+		padding-top: 8px;
+	}
+
 	.card {
-		margin-top: 20px;
+		/* margin-top: 20px; */
 		width: 100%;
+	}
+
+	.card-img-text {
+		flex-flow: wrap;
 	}
 
 	.card .button-grey {

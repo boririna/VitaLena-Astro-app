@@ -19,7 +19,7 @@ import Footer from "../components/Footer.astro";
                     width="350"
                     class="personal-photo"
                 />
-                <div>
+                <div class="proc-photos">
                     <img
                         src="/img/about-process.jpg"
                         alt=""
@@ -28,9 +28,9 @@ import Footer from "../components/Footer.astro";
                     />
                     <div class="studio-photos">
                         <img
-                            src="/img/about-room1.jpg"
+                            src="/img/about-room1.jpeg"
                             alt=""
-                            width="166"
+                            width="250"
                             class="room-photo"
                         />
                         <img
@@ -98,8 +98,10 @@ import Footer from "../components/Footer.astro";
 
     .images {
         display: flex;
+        justify-content: center;
         flex-flow: wrap;
         gap: 20px;
+        
     }
 
     .personal-photo {
@@ -107,6 +109,7 @@ import Footer from "../components/Footer.astro";
         height: auto;
         /* width: auto; */
     }
+
     .process-photo {
         max-width: 100%;
         height: auto;
@@ -124,12 +127,20 @@ import Footer from "../components/Footer.astro";
     }
 
     .about-text {
-        padding: 20px 40px;
+        padding: 0 40px 20px 40px;
+        max-width: 800px;
+        margin: 0 auto;
     }
 
     .about-text h2 {
         text-align: center;
         margin: 20px 0;
+    }
+
+    @media (max-width: 960px) {
+        /* .proc-photos {
+            text-align: center;
+        } */
     }
 
     @media (max-width: 600px) {
@@ -146,7 +157,7 @@ import Footer from "../components/Footer.astro";
     } */
    
     .about-text {
-        padding: 20px;
+        padding: 0 20px 20px 20px;
     }
     }
 

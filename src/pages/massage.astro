@@ -11,30 +11,8 @@ import Footer from "../components/Footer.astro";
         <div class="page-title">
             <h1>Massage</h1>
         </div>
-        
-        <div class="card-section">
-            <CardMassage
-			  	imgPath1="/img/massage1-opt.jpg"
-				href1="#"
-				title1="Klassische Massage"
-				body1="Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."                />
-            <CardMassage
-			  	imgPath1="/img/massage2-opt.jpg"
-				href1="#"
-				title1="Klassische Massage"
-				body1="Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."
-			/>
-            <CardMassage
-			  	imgPath1="/img/massage3-opt.jpg"
-				href1="#"
-				title1="Klassische Massage"
-				body1="Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."
-			/>
-            
-        </div>
-        <!-- TODO get rid of top margin of 20px -->
         <div class="price-section">
-            <h2>Preise</h2>
+            <!-- <h2>Preise</h2> -->
             <div class="prices">
                 <p>Klassische Massage 120 CHF pro 60 Minuten</p>
                 <p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
@@ -47,6 +25,45 @@ import Footer from "../components/Footer.astro";
                 Versicherung.
             </p>
         </div>
+
+        <div class="card-section">
+            <CardMassage
+                imgPath1="/img/massage1-opt.jpg"
+                href1="#"
+                title1="Klassische Massage"
+                body1={["Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt.", " Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."]}
+                body2={["Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt.", "Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."]}
+            />
+            <CardMassage
+                imgPath1="/img/massage2-opt.jpg"
+                href1="#"
+                title1="Entspannungsmassage"
+                body1={["Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."]}
+                body2={["Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."]}
+            />
+            <CardMassage
+                imgPath1="/img/massage3-opt.jpg"
+                href1="#"
+                title1="Klassische Massage"
+                body1={["Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."]}
+                body2={["Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."]}
+            />
+        </div>
+        <!-- TODO get rid of top margin of 20px -->
+        <!-- <div class="price-section">
+            <h2>Preise</h2>
+            <div class="prices">
+                <p>Klassische Massage 120 CHF pro 60 Minuten</p>
+                <p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
+                <p>Sportmassage 120 CHF pro 60 Minuten</p>
+            </div>
+            <p>
+                Ein Grossteil der Krankenkassen übernimmt im Rahmen einer
+                Zusatzversicherung die Kosten einer Massage voll oder zum Teil.
+                Bitte erkundigen Sie sich vor der Behandlung bei Ihrer
+                Versicherung.
+            </p>
+        </div> -->
         <Footer />
     </main>
 </Layout>
@@ -74,8 +91,10 @@ import Footer from "../components/Footer.astro";
     }
 
     .price-section {
-        padding: 20px 40px;
+        padding: 0 40px 20px 40px;
         text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
     }
 
     .price-section h2 {
@@ -83,10 +102,16 @@ import Footer from "../components/Footer.astro";
     }
 
     .prices {
-        max-width: 360px;
+        max-width: 420px;
         margin: 0 auto;
         text-align: left;
         margin-bottom: 20px;
+    }
+
+    .prices p {
+        font-size: 18px;
+        /* font-weight: 600; */
+        margin-bottom: 8px;
     }
 
     @media (max-width: 600px) {
@@ -100,7 +125,18 @@ import Footer from "../components/Footer.astro";
         }
 
         .price-section {
-            padding: 20px;
+            padding: 0 20px 20px 20px;
         }
+        
+        .price-section {
+            text-align: left;
+        }
+
+        .prices p {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
     }
 </style>
