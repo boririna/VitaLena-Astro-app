@@ -58,12 +58,15 @@ import Footer from "../components/Footer.astro";
                     <p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
                     <p>Sportmassage 120 CHF pro 60 Minuten</p>
                 </div>
-                <p>
-                    Ein Grossteil der Krankenkassen übernimmt im Rahmen einer
-                    Zusatzversicherung die Kosten einer Massage voll oder zum Teil.
-                    Bitte erkundigen Sie sich vor der Behandlung bei Ihrer
-                    Versicherung.
-                </p>
+                <div class="price-text">
+                    <p>
+                        Ein Grossteil der Krankenkassen übernimmt im Rahmen einer
+                        Zusatzversicherung die Kosten einer Massage voll oder zum Teil.
+                        Bitte erkundigen Sie sich vor der Behandlung bei Ihrer
+                        Versicherung.
+                    </p>
+                </div>
+               
             </div>
         </div>
         <Footer />
@@ -136,14 +139,18 @@ import Footer from "../components/Footer.astro";
 
         .price-section {
             padding: 0 20px 20px 20px;
+            /* text-align: left; */
+        }
+
+        .price-text {
             text-align: left;
         }
         
         .prices p {
-        font-size: 14px;
-        font-weight: 600;
-        margin-bottom: 8px;
-    }
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
 
     }
 </style>
