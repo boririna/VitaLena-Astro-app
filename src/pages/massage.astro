@@ -8,61 +8,63 @@ import Footer from "../components/Footer.astro";
 <Layout title="VitaLena">
     <main>
         <Banner />
-        <div class="page-title">
-            <h1>Massage</h1>
-        </div>
-        <!-- <div class="price-section">
-            <h2>Preise</h2>
-            <div class="prices">
-                <p>Klassische Massage 120 CHF pro 60 Minuten</p>
-                <p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
-                <p>Sportmassage 120 CHF pro 60 Minuten</p>
+        <div class="massage">
+            <div class="page-title">
+                <h1>Massage</h1>
             </div>
-            <p>
-                Ein Grossteil der Krankenkassen übernimmt im Rahmen einer
-                Zusatzversicherung die Kosten einer Massage voll oder zum Teil.
-                Bitte erkundigen Sie sich vor der Behandlung bei Ihrer
-                Versicherung.
-            </p>
-        </div> -->
+            <!-- <div class="price-section">
+                <h2>Preise</h2>
+                <div class="prices">
+                    <p>Klassische Massage 120 CHF pro 60 Minuten</p>
+                    <p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
+                    <p>Sportmassage 120 CHF pro 60 Minuten</p>
+                </div>
+                <p>
+                    Ein Grossteil der Krankenkassen übernimmt im Rahmen einer
+                    Zusatzversicherung die Kosten einer Massage voll oder zum Teil.
+                    Bitte erkundigen Sie sich vor der Behandlung bei Ihrer
+                    Versicherung.
+                </p>
+            </div> -->
 
-        <div class="card-section">
-            <CardMassage
-                imgPath1="/img/massage1-opt.jpg"
-                href1="#"
-                title1="Klassische Massage"
-                body1={["Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt.", "Die klassische Massage wird als KMT (klassische Massagetherapie) ärztlich verordnet. Mit verschiedenen Grifftechniken wie kneten, streichen, vibrieren etc. werden bei der klassischen Massage die Muskulatur und die oberflächlichen Gewebeschichten behandelt. Eine klassische Massage verleiht Kraft und Vitalität."]}
-                body2={["Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt.", "Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."]}
-            />
-            <CardMassage
-                imgPath1="/img/massage2-opt.jpg"
-                href1="#"
-                title1="Entspannungsmassage"
-                body1={["Bei einer Entspannungsmassage werden durch langsame und rhythmischen Knetungen und Streichungen des Gewebes die Durchblutung der Haut, Muskulatur und der Sehnen angeregt. Verhärtungen der Muskulatur werden weicher, Blockaden und Verspannungen lösen sich auf und Entspannung und Wohlbefinden stellt sich ein."]}
-                body2={["Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."]}
-            />
-            <CardMassage
-                imgPath1="/img/massage3-opt.jpg"
-                href1="#"
-                title1="Sportmassage"
-                body1={["Die Sportmassage ist eine Art der Massage, die im Bereich des Sports einerseits zur Leistungssteigerung durch die verbesserte Regeneration nach Belastungen, andererseits zur Vermeidung von Verletzungen angewendet wird."]}
-                body2={["Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."]}
-            />
-        </div>
-        <!-- TODO get rid of top margin of 20px -->
-        <div class="price-section">
-            <h2>Preise</h2>
-            <div class="prices">
-                <p>Klassische Massage 120 CHF pro 60 Minuten</p>
-                <p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
-                <p>Sportmassage 120 CHF pro 60 Minuten</p>
+            <div class="card-section">
+                <CardMassage
+                    imgPath1="/img/massage1-opt.jpg"
+                    href1="#"
+                    title1="Klassische Massage"
+                    body1={["Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt.", "Die klassische Massage wird als KMT (klassische Massagetherapie) ärztlich verordnet. Mit verschiedenen Grifftechniken wie kneten, streichen, vibrieren etc. werden bei der klassischen Massage die Muskulatur und die oberflächlichen Gewebeschichten behandelt. Eine klassische Massage verleiht Kraft und Vitalität."]}
+                    body2={["Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt.", "Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."]}
+                />
+                <CardMassage
+                    imgPath1="/img/massage2-opt.jpg"
+                    href1="#"
+                    title1="Entspannungsmassage"
+                    body1={["Bei einer Entspannungsmassage werden durch langsame und rhythmischen Knetungen und Streichungen des Gewebes die Durchblutung der Haut, Muskulatur und der Sehnen angeregt. Verhärtungen der Muskulatur werden weicher, Blockaden und Verspannungen lösen sich auf und Entspannung und Wohlbefinden stellt sich ein."]}
+                    body2={["Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."]}
+                />
+                <CardMassage
+                    imgPath1="/img/massage3-opt.jpg"
+                    href1="#"
+                    title1="Sportmassage"
+                    body1={["Die Sportmassage ist eine Art der Massage, die im Bereich des Sports einerseits zur Leistungssteigerung durch die verbesserte Regeneration nach Belastungen, andererseits zur Vermeidung von Verletzungen angewendet wird."]}
+                    body2={["Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."]}
+                />
             </div>
-            <p>
-                Ein Grossteil der Krankenkassen übernimmt im Rahmen einer
-                Zusatzversicherung die Kosten einer Massage voll oder zum Teil.
-                Bitte erkundigen Sie sich vor der Behandlung bei Ihrer
-                Versicherung.
-            </p>
+            <!-- TODO get rid of top margin of 20px -->
+            <div class="price-section">
+                <h2>Preise</h2>
+                <div class="prices">
+                    <p>Klassische Massage 120 CHF pro 60 Minuten</p>
+                    <p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
+                    <p>Sportmassage 120 CHF pro 60 Minuten</p>
+                </div>
+                <p>
+                    Ein Grossteil der Krankenkassen übernimmt im Rahmen einer
+                    Zusatzversicherung die Kosten einer Massage voll oder zum Teil.
+                    Bitte erkundigen Sie sich vor der Behandlung bei Ihrer
+                    Versicherung.
+                </p>
+            </div>
         </div>
         <Footer />
     </main>
@@ -74,6 +76,10 @@ import Footer from "../components/Footer.astro";
         max-width: 1100px;
         height: 100%;
         background-color: #efd3d7;
+    }
+
+    .massage {
+        padding-top: 104px;
     }
 
     h1,
@@ -115,6 +121,10 @@ import Footer from "../components/Footer.astro";
     }
 
     @media (max-width: 600px) {
+        .massage {
+            padding-top: 70px;
+        }
+
         .page-title {
             padding: 20px;
             text-align: center;

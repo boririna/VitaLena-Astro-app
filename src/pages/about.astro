@@ -5,66 +5,69 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="VitaLena">
+    
     <main>
         <Banner />
-        <div class="page-title">
-            <h1>Über mich</h1>
-        </div>
+        <div class="aboutme">
+            <div class="page-title">
+                <h1>Über mich</h1>
+            </div>
 
-        <div class="image-section">
-            <div class="images">
-                <img
-                    src="/img/about-person.jpg"
-                    alt=""
-                    width="350"
-                    class="personal-photo"
-                />
-                <div class="proc-photos">
+            <div class="image-section">
+                <div class="images">
                     <img
-                        src="/img/about-process.jpg"
+                        src="/img/about-person.jpg"
                         alt=""
-                        width="374"
-                        class="process-photo"
+                        width="350"
+                        class="personal-photo"
                     />
-                    <div class="studio-photos">
+                    <div class="proc-photos">
                         <img
-                            src="/img/about-room1.jpeg"
+                            src="/img/about-process.jpg"
                             alt=""
-                            width="250"
-                            class="room-photo"
+                            width="374"
+                            class="process-photo"
                         />
-                        <img
-                            src="/img/about-room2.jpeg"
-                            alt=""
-                            width="250"
-                            class="room-photo"
-                        />
+                        <div class="studio-photos">
+                            <img
+                                src="/img/about-room1.jpeg"
+                                alt=""
+                                width="250"
+                                class="room-photo"
+                            />
+                            <img
+                                src="/img/about-room2.jpeg"
+                                alt=""
+                                width="250"
+                                class="room-photo"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="about-text">
-            <h2>Steckbrief</h2>
-            <p>
-                <!-- TODO -->
-                Nach meiner technischen Lehre und anschliessendem Studium,
-                arbeitete ich unter anderem in der Medizinaltechnik, wo ich mich
-                erstmals mit den Funktionen des menschlichen Körpers auseinander
-                setzte. Während dieser Zeit hatte ich selber starke
-                Rückenprobleme, welche auch nach ärztlicher und chiropraktischer
-                Behandlung immer wieder auftauchten. Durch eine Massagetherapie
-                wurde ich bis heute von meinen Beschwerden befreit. Fasziniert
-                vom Erfolg dieser Massagetherapie und angetrieben vom Wunsch
-                Menschen zu helfen und mehr über die Funktionsweise des
-                menschlichen Körpers zu erfahren, absolvierte ich die Ausbildung
-                zum Masseur.
-            </p>
-            <h2>Ausbildungen</h2>
-            <p>- Diplomierter Berufsmasseur bei der Fachschule Bodyfeet</p>
-            <p>- Diplomierter Dorn-Therapeut bei der Fachschule Bodyfeet</p>
-            <p>- Diplomierter Gesundheitsmasseur bei der Fachschule Bodyfeet</p>
-            <p>- Kopfschmerz- und Migränetherapie bei der Fachschule Bodyfeet</p>    
-            <p>- Professionelle Sportmassage bei der Fachschule Bodyfeeteschwerden befreit</p>
+            <div class="about-text">
+                <h2>Steckbrief</h2>
+                <p>
+                    <!-- TODO -->
+                    Nach meiner technischen Lehre und anschliessendem Studium,
+                    arbeitete ich unter anderem in der Medizinaltechnik, wo ich mich
+                    erstmals mit den Funktionen des menschlichen Körpers auseinander
+                    setzte. Während dieser Zeit hatte ich selber starke
+                    Rückenprobleme, welche auch nach ärztlicher und chiropraktischer
+                    Behandlung immer wieder auftauchten. Durch eine Massagetherapie
+                    wurde ich bis heute von meinen Beschwerden befreit. Fasziniert
+                    vom Erfolg dieser Massagetherapie und angetrieben vom Wunsch
+                    Menschen zu helfen und mehr über die Funktionsweise des
+                    menschlichen Körpers zu erfahren, absolvierte ich die Ausbildung
+                    zum Masseur.
+                </p>
+                <h2>Ausbildungen</h2>
+                <p>- Diplomierter Berufsmasseur bei der Fachschule Bodyfeet</p>
+                <p>- Diplomierter Dorn-Therapeut bei der Fachschule Bodyfeet</p>
+                <p>- Diplomierter Gesundheitsmasseur bei der Fachschule Bodyfeet</p>
+                <p>- Kopfschmerz- und Migränetherapie bei der Fachschule Bodyfeet</p>    
+                <p>- Professionelle Sportmassage bei der Fachschule Bodyfeeteschwerden befreit</p>
+            </div>
         </div>
         <Footer />
     </main>
@@ -72,10 +75,15 @@ import Footer from "../components/Footer.astro";
 
 <style>
     main {
+        position: relative;
         margin: 0 auto;
         max-width: 1100px;
         height: 100%;
         background-color: #efd3d7;
+    }
+
+    .aboutme {
+        padding-top: 104px;
     }
 
     h1,
@@ -144,6 +152,11 @@ import Footer from "../components/Footer.astro";
     }
 
     @media (max-width: 600px) {
+
+    .aboutme {
+        padding-top: 70px;
+    }
+    
     .page-title {
         padding: 20px;
         text-align: center;

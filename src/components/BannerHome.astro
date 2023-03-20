@@ -3,11 +3,13 @@ import ButtonGrey from "./ButtonGrey.astro";
 import ButtonPink from "./ButtonPink.astro";
 import Menu from "./Menu.astro";
 ---
-<div class="banner">
+<div class="banner-home">
     <div class="main-image">
       <div class="banner-content">
-        <div class="banner-padding">
+        <div id="navbar" class="header-home">
           <Menu />
+        </div>
+        <div class="banner-padding">       
           <div class="welcome-text">
             <h1>Massage</h1>
             <p class="desktop">Eine halbe Stunde Massage ist absolut notwendig, 
@@ -24,15 +26,29 @@ import Menu from "./Menu.astro";
     </div>        
 </div>
 
+<script>
+  window.onscroll = function(ev) {
+    if (window.scrollY > 1) {
+         document.getElementById("navbar").style.backgroundColor = "#CBC0D3"; 
+         
+    } else {
+    document.getElementById("navbar").style.backgroundColor = "unset";
+  }
+};
+</script>
+
 <style>
-.banner {
+.banner-home {
   background-color: #EFD3D7;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .main-image {
   width: 100%;
   height: 0;
   padding-top: 66%;
+  background-color: #EFD3D7;
   background-image: url(/img/main_small_dark.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -48,7 +64,18 @@ import Menu from "./Menu.astro";
 }
 
 .banner-padding {
+  padding: 124px 40px 20px 40px;
+}
+
+.header-home {
+  position: fixed;
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
   padding: 20px 40px;
+  /* background-image: url(/img/main_small_dark.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover; */
 }
 
 .phone-number {
@@ -115,8 +142,19 @@ import Menu from "./Menu.astro";
   /* width: 100%; */
 }
 
-.banner-padding {
+.header-home {
+  position: fixed;
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
   padding: 8px 20px;
+  /* background-image: url(/img/main_small_dark.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover; */
+}
+
+.banner-padding {
+  padding: 70px 20px 8px 20px;
 }
 
 .banner-content .header-menu {
