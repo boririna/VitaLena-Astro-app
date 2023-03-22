@@ -1,86 +1,116 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Footer from '../components/Footer.astro';
-import BannerHome from '../components/BannerHome.astro';
-import { Icon } from 'astro-icon';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
+import BannerHome from "../components/BannerHome.astro";
+import { Icon } from "astro-icon";
 ---
+
 <Layout title="VitaLena">
 	<main>
-		<BannerHome />	
+		<BannerHome />
 		<!-- contacts -->
 		<div id="contacts" class="contacts">
 			<h1>Kontakte</h1>
 			<div class="address">
-			  <div class="addr-item1">
-				<div class="icon-text">
-				  <Icon name="fa-solid:home" class="addr-icon home-icon" />
-				  <div>
-					<div class="addr-place">
-					  <p>
-						Praxisraum 
-					  </p>
-					  <p>
-						in Weiach 
-					  </p>
+				<div class="addr-item1">
+					<div class="icon-text">
+						<Icon
+							name="fa-solid:home"
+							class="addr-icon home-icon"
+						/>
+						<div>
+							<div class="addr-place">
+								<p>Praxisraum</p>
+								<p>in Weiach</p>
+							</div>
+							<p>
+								<a
+									href="https://goo.gl/maps/SronJErekN9ETXpL9"
+									target="_blank"
+								>
+									Im See 3
+								</a>
+							</p>
+							<p>
+								<a
+									href="https://goo.gl/maps/SronJErekN9ETXpL9"
+									target="_blank"
+								>
+									8187 Weiach
+								</a>
+							</p>
+						</div>
 					</div>
-					<p><a href="https://goo.gl/maps/SronJErekN9ETXpL9" target="_blank">
-					  Im See 3
-					</a></p>
-					<p><a href="https://goo.gl/maps/SronJErekN9ETXpL9" target="_blank">
-					  8187 Weiach
-					</a></p>
-				  </div>
-				</div>
-				<div class="icon-text">
-				  <Icon name="fa-solid:phone-alt" class="addr-icon" />
-				  <a href="tel:+41795648109" target="_blank">
-					+41 (0)79 564 81 09
-				  </a>
-				</div>
-				<div class="icon-text icon-text-last">
-				  <Icon name="fa-solid:envelope" class="addr-icon" />
-				  <a href="mailto:elena_schaller@swissonline.ch" target="_blank">
-					elena_schaller@swissonline.ch
-				  </a>
-				  
-				</div>
-			  </div>
-			  <div class="addr-item2">
-				<div class="icon-text">
-				  <Icon name="fa-solid:home" class="addr-icon home-icon" />
-				  <div>
-					<div class="addr-place">
-					  <p>SALZGROTTE</p>
-					  <a href="https://salzgrotte.ch" target="_blank">
-						salzgrotte.ch
-					  </a>
+					<div class="icon-text">
+						<Icon name="fa-solid:phone-alt" class="addr-icon" />
+						<a href="tel:+41795648109" target="_blank">
+							+41 (0)79 564 81 09
+						</a>
 					</div>
-					<p><a href="https://goo.gl/maps/ZfKhNa9Ryq1TmgHh9" target="_blank">
-					  Lindenstrasse 23
-					</a></p>
-					<p><a href="https://goo.gl/maps/ZfKhNa9Ryq1TmgHh9" target="_blank">
-					  8302 Kloten
-					</a></p>
-				  </div>
+					<div class="icon-text icon-text-last">
+						<Icon name="fa-solid:envelope" class="addr-icon" />
+						<a
+							href="mailto:elena_schaller@swissonline.ch"
+							target="_blank"
+						>
+							elena_schaller@swissonline.ch
+						</a>
+					</div>
 				</div>
-				<div class="icon-text">
-				  <Icon name="fa-solid:phone-alt" class="addr-icon" />
-				  <a href="tel:+41445505555" target="_blank">
-					+41 (0)44 550 55 55
-				  </a>
+				<div class="addr-item2">
+					<div class="icon-text">
+						<Icon
+							name="fa-solid:home"
+							class="addr-icon home-icon"
+						/>
+						<div>
+							<div class="addr-place">
+								<p>SALZGROTTE</p>
+								<a href="https://salzgrotte.ch" target="_blank">
+									salzgrotte.ch
+								</a>
+							</div>
+							<p>
+								<a
+									href="https://goo.gl/maps/ZfKhNa9Ryq1TmgHh9"
+									target="_blank"
+								>
+									Lindenstrasse 23
+								</a>
+							</p>
+							<p>
+								<a
+									href="https://goo.gl/maps/ZfKhNa9Ryq1TmgHh9"
+									target="_blank"
+								>
+									8302 Kloten
+								</a>
+							</p>
+						</div>
+					</div>
+					<div class="icon-text">
+						<Icon name="fa-solid:phone-alt" class="addr-icon" />
+						<a href="tel:+41445505555" target="_blank">
+							+41 (0)44 550 55 55
+						</a>
+					</div>
+					<div class="icon-text icon-text-last">
+						<Icon name="fa-solid:envelope" class="addr-icon" />
+						<a href="mailto:info@salzgrotte.ch" target="_blank"
+							>info@salzgrotte.ch</a
+						>
+					</div>
 				</div>
-				<div class="icon-text icon-text-last">
-				  <Icon name="fa-solid:envelope" class="addr-icon" />
-				  <a href="mailto:info@salzgrotte.ch" target="_blank">info@salzgrotte.ch</a>
-				</div>
-			  </div>
 			</div>
 		</div>
 
 		<!-- quote -->
 		<div class="quote">
-			<p>„Die Gesundheit überwiegt alle äußeren Güter so sehr, dass ein gesunder Bettler glücklicher als ein kranker König ist.“</p>
+			<p>
+				„Die Gesundheit überwiegt alle äußeren Güter so sehr, dass ein
+				gesunder Bettler glücklicher als ein kranker König ist.“
+			</p>
 			<p>Arthur Schopenhauer</p>
 		</div>
 
@@ -88,51 +118,51 @@ import { Icon } from 'astro-icon';
 		<div class="cards">
 			<h1>Behandlungen</h1>
 			<div class="card-row">
-			<Card
-			  	imgPath="img/massage1-opt.jpg"
-				href="/massage/"
-				title="Klassische Massage"
-				body="Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."
-			/>
-			<Card
-				imgPath="img/massage2-opt.jpg"
-				href="/massage/"
-				title="Entspannungsmassage"
-				body="Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."
-			/>
-			<Card
-				imgPath="img/massage3-opt.jpg"
-				href="/massage/"
-				title="Sportmassage"
-				body="Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."
-			/>
+				<Card
+					imgPath="img/massage1-opt.jpg"
+					href="/massage/"
+					title="Klassische Massage"
+					body="Die klassische Massage ist die am häufigsten angewendete Form der Massage und wird überwiegend zur Vorbeugung und Behandlung von Erkrankungen des Bewegungsapparats eingesetzt."
+				/>
+				<Card
+					imgPath="img/massage2-opt.jpg"
+					href="/massage/"
+					title="Entspannungsmassage"
+					body="Bei einer Entspannungsmassage werden durch langsame und rhythmischen Knetungen und Streichungen des Gewebes die Durchblutung der Haut, Muskulatur und der Sehnen angeregt."
+				/>
+				<Card
+					imgPath="img/massage3-opt.jpg"
+					href="/massage/"
+					title="Sportmassage"
+					body="Die Sportmassage ist eine Art der Massage, die im Bereich des Sports einerseits zur Leistungssteigerung durch die verbesserte Regeneration nach Belastungen, andererseits zur Vermeidung von Verletzungen angewendet wird."
+				/>
 			</div>
 		</div>
 		<!-- Prices -->
 		<div id="massage-price" class="price-section">
-            <h1>Preise</h1>
-            <div class="prices">
-                <p>Klassische Massage 120 CHF pro 60 Minuten</p>
-                <p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
-                <p>Sportmassage 120 CHF pro 60 Minuten</p>
-            </div>
-            <p>
-                Ein Grossteil der Krankenkassen übernimmt im Rahmen einer
-                Zusatzversicherung die Kosten einer Massage voll oder zum Teil.
-                Bitte erkundigen Sie sich vor der Behandlung bei Ihrer
-                Versicherung.
-            </p>
-        </div>
+			<h1>Preise</h1>
+			<div class="prices">
+				<p>Klassische Massage 120 CHF pro 60 Minuten</p>
+				<p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
+				<p>Sportmassage 120 CHF pro 60 Minuten</p>
+			</div>
+			<p>
+				Ein Grossteil der Krankenkassen übernimmt im Rahmen einer
+				Zusatzversicherung die Kosten einer Massage voll oder zum Teil.
+				Bitte erkundigen Sie sich vor der Behandlung bei Ihrer
+				Versicherung.
+			</p>
+		</div>
 		<Footer />
 	</main>
 </Layout>
 
 <style>
 	main {
-  		height: 100%;
-		background-color: #EFD3D7;
+		height: 100%;
+		background-color: #efd3d7;
 	}
-	
+
 	/* contacts */
 	.contacts {
 		padding: 40px 40px;
@@ -140,10 +170,11 @@ import { Icon } from 'astro-icon';
 	}
 
 	.contacts,
-	.cards, 
+	.cards,
 	.price-section h1,
-	h2, h3 {
-		color: #8E9AAF;
+	h2,
+	h3 {
+		color: #8e9aaf;
 	}
 
 	.address {
@@ -180,7 +211,7 @@ import { Icon } from 'astro-icon';
 	}
 
 	.addr-icon {
-		color: #8E9AAF;
+		color: #8e9aaf;
 		font-size: 24px;
 		width: 20px;
 		height: 20px;
@@ -193,7 +224,7 @@ import { Icon } from 'astro-icon';
 	}
 
 	.address a {
-		color: #3D3D3D;
+		color: #3d3d3d;
 	}
 
 	.address a:hover {
@@ -206,7 +237,7 @@ import { Icon } from 'astro-icon';
 		padding: 80px 150px;
 		background-color: rgba(255, 255, 255, 0.674);
 		text-align: center;
-		font-family: 'Philosopher', sans-serif;
+		font-family: "Philosopher", sans-serif;
 		font-size: 22px;
 		font-weight: 500;
 	}
@@ -225,28 +256,28 @@ import { Icon } from 'astro-icon';
 
 	/* prices */
 	.price-section {
-        padding: 0 40px 20px 40px;
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto;
-    }
+		padding: 0 40px 20px 40px;
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto;
+	}
 
-    .price-section h1 {
-        margin-bottom: 20px;
-    }
+	.price-section h1 {
+		margin-bottom: 20px;
+	}
 
-    .prices {
-        max-width: 420px;
-        margin: 0 auto;
-        text-align: left;
-        margin-bottom: 20px;
-    }
+	.prices {
+		max-width: 420px;
+		margin: 0 auto;
+		text-align: left;
+		margin-bottom: 20px;
+	}
 
-    .prices p {
-        font-size: 18px;
-        /* font-weight: 600; */
-        margin-bottom: 8px;
-    }
+	.prices p {
+		font-size: 18px;
+		/* font-weight: 600; */
+		margin-bottom: 8px;
+	}
 
 	@media (max-width: 600px) {
 		/* contacts */
@@ -308,11 +339,11 @@ import { Icon } from 'astro-icon';
 
 		/* prices */
 		.price-section {
-            padding: 0 20px 20px 20px;
+			padding: 0 20px 20px 20px;
 			text-align: center;
-        }
+		}
 
-        .prices p {
+		.prices p {
 			font-size: 14px;
 			font-weight: 600;
 			margin-bottom: 8px;

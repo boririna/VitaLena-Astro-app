@@ -44,11 +44,18 @@ h1, h2, h3 {
 
 .card-text h2 {
   margin-bottom: 20px;
+  word-wrap: break-word;
 }
 
 .card-text p {
-  text-align: left;
-  margin-bottom: 16px;
+	text-align: left;
+	margin-bottom: 16px;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 6; /* number of lines to show */
+			line-clamp: 6; 
+	-webkit-box-orient: vertical;
+
 }
 
 .card-link {
