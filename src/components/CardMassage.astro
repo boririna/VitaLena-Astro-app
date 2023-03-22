@@ -21,40 +21,67 @@ const { imgPath1, href1, title1, body1, body2 } = Astro.props;
 			))}
 			<!-- <p class="card-link"><a href={href1}>weiterlesen</a></p> -->
 			<div class="card-text-rest">
-				<details>
+
+				<p id="collapsible" class="card-link">weiterlesen/schlissen</p>
+				<!-- <div class="content">
+					{body2.map((par) => (
+						<p>{par}</p>
+					))}
+				</div> -->
+				
+				<!-- <details>
 					<summary>
 						<p class="card-link">weiterlesen/schlissen</p>
-					  <!-- <span class="icon">👇</span> -->
+					  <span class="icon">👇</span>
 					</summary>
 					{body2.map((par) => (
 						<p>{par}</p>
 					))}
-				</details>
+				</details> -->
 				
 				<div class="card-button">
 					<ButtonGrey href="#contacts" text="MASSAGE BUCHEN" />
 				</div>
 			</div>
 		</div>
-		
 	</div>
-	
-	<!-- <div class="card-text-rest">
-		<details>
-			<summary>
-				<p class="card-link">weiterlesen/schlissen</p>
-			  <!-- <span class="icon">👇</span> -->
-			<!-- </summary>
-			<!-- {body2.map((par) => (
-				<p>{par}</p>
-			))} -->
-		<!-- </details> -->
-		
-		<!-- <div class="card-button">
-			<ButtonGrey href="#contacts" text="MASSAGE BUCHEN" />
-		</div>
-	</div> -->
+	<div id="collapsText" class="content">
+		{body2.map((par) => (
+			<p>{par}</p>
+		))}
+	</div>
 </div>
+
+<script is:inline>
+	
+	const extendCollapse = function () {
+		let elem = document.getElementById("collapsText");
+		// elem.style.display = "block"
+		if (elem.style.display === "block") {
+			elem.style.display = "none";
+		} else {
+			elem.style.display = "block";
+		}
+	}
+	document.getElementById("collapsible").addEventListener("click", extendCollapse);
+
+	// let coll = document.getElementsByClassName("card-link");
+	// let i;
+	
+	
+	// for (i = 0; i < coll.length; i++) {
+	//   coll[i].addEventListener("click", function() {
+	// 	this.classList.toggle("active");
+	// 	// let content = this.nextElementSibling;
+	// 	let cont = document.getElementsByClassName("content");
+	// 	if (cont[0].style.display === "block") {
+	// 	  cont.style.display = "none";
+	// 	} else {
+	// 	  cont.style.display = "block";
+	// 	}
+	//   });
+	// }
+</script>
 	
 <style>
 .card {
@@ -99,10 +126,15 @@ h1, h2, h3 {
 .card-link {
   /* padding-top: 20px; */
   color: #aaaaaa;
+  cursor: pointer;
 }
 
 .card-link a {
 	color: #aaaaaa;
+}
+
+.content {
+	display: none;
 }
 
 .card-button {
