@@ -1,217 +1,230 @@
 ---
 // import { Icon } from 'astro-icon';
-import ButtonGrey from './ButtonGrey.astro';
+import ButtonGrey from "./ButtonGrey.astro";
 export interface Props {
 	title1: string;
 	body1: Array<string>;
-	body2: Array<string>;
+	body2: string;
 	href1: string;
 	imgPath1: string;
 }
 
-const { imgPath1, href1, title1, body1, body2 } = Astro.props;
+const { imgPath1, href1, title1, body1, body2} = Astro.props;
 ---
+
 <div class="card">
 	<div class="card-img-text">
-		<img src={imgPath1} class="card-img" alt="Klassische Massage">
+		<img src={imgPath1} class="card-img" alt="Klassische Massage" />
 		<div class="card-text">
-			<h2>{title1}</h2>
-			{body1.map((paragraph) => (
-				<p>{paragraph}</p>
-			))}
-			<!-- <p class="card-link"><a href={href1}>weiterlesen</a></p> -->
-			<div class="card-text-rest">
-
-				<p id="collapsible" class="card-link">weiterlesen/schlissen</p>
-				<!-- <div class="content">
-					{body2.map((par) => (
-						<p>{par}</p>
-					))}
-				</div> -->
-				
-				<!-- <details>
-					<summary>
-						<p class="card-link">weiterlesen/schlissen</p>
-					  <span class="icon">👇</span>
-					</summary>
-					{body2.map((par) => (
-						<p>{par}</p>
-					))}
-				</details> -->
-				
+			<div class="card-title-button">
+				<h2>{title1}</h2>
 				<div class="card-button">
 					<ButtonGrey href="#contacts" text="MASSAGE BUCHEN" />
 				</div>
 			</div>
+			<div>
+				{body1.map((paragraph) => <p>{paragraph}</p>)}
+			</div>	
 		</div>
 	</div>
-	<div id="collapsText" class="content">
-		{body2.map((par) => (
-			<p>{par}</p>
-		))}
-	</div>
+	<div class="collapsed-text">
+			<p id="collapsible" class="card-link">weiterlesen</p> 
+		<div id="collapsText" class="card-text-rest">
+			<div set:html={body2}></div>
+			<!-- {body2.map((par) => <p>{par}</p>)} -->
+		</div>
+	</div>	
 </div>
 
-<script is:inline>
-	
-	const extendCollapse = function () {
-		let elem = document.getElementById("collapsText");
-		// elem.style.display = "block"
-		if (elem.style.display === "block") {
-			elem.style.display = "none";
+<script>	
+	let collapsible = document.getElementsByClassName("card-link");
+	let i;
+	for (i = 0; i < collapsible.length; i++) {
+		collapsible[i].addEventListener("click", function() {
+		// this.classList.toggle("active");
+		let content = this.nextElementSibling;
+		if (this.innerHTML === "weiterlesen") {
+			this.innerHTML = "schlissen";
+			this.style.paddingBottom = "20px";
 		} else {
-			elem.style.display = "block";
+			this.innerHTML = "weiterlesen";
+			this.style.paddingBottom = "0";
 		}
+		if (content.style.display === "block") {
+			content.style.display = "none";
+		} else {
+			content.style.display = "block";
+		}
+	  });
 	}
-	document.getElementById("collapsible").addEventListener("click", extendCollapse);
-
-	// let coll = document.getElementsByClassName("card-link");
-	// let i;
-	
-	
-	// for (i = 0; i < coll.length; i++) {
-	//   coll[i].addEventListener("click", function() {
-	// 	this.classList.toggle("active");
-	// 	// let content = this.nextElementSibling;
-	// 	let cont = document.getElementsByClassName("content");
-	// 	if (cont[0].style.display === "block") {
-	// 	  cont.style.display = "none";
-	// 	} else {
-	// 	  cont.style.display = "block";
-	// 	}
-	//   });
-	// }
 </script>
-	
+
 <style>
-.card {
-	/* flex-flow: wrap; */
-	background-color: rgba(255, 255, 255, 0.674);
-	border-radius: 4px;
-	margin-bottom: 20px;
-}
-
-.card-img-text {
-	display: flex;
-}
-
-h1, h2, h3 {
-  color: #8E9AAF;
-}
-
-.card-img {
-  width: 50%;
-  height: 100%;
-  border-radius: 4px 0 0 4px;
-}
-
-.card-text {
-	max-width: 450px;
-  	padding: 20px;
-}
-
-.card-text-rest {
-	padding-top: 8px;
-}
-
-.card-text h2 {
-  margin-bottom: 20px;
-}
-
-.card-text p {
-  text-align: left;
-  /* margin-bottom: 16px; */
-}
-
-.card-link {
-  /* padding-top: 20px; */
-  color: #aaaaaa;
-  cursor: pointer;
-}
-
-.card-link a {
-	color: #aaaaaa;
-}
-
-.content {
-	display: none;
-}
-
-.card-button {
-  margin-top: 30px;
-}
-
-details {
-  user-select: none;
-}
-
-details>summary span.icon {
-  width: 24px;
-  height: 24px;
-  transition: all 0.3s;
-  margin-left: auto;
-}
-
-details[open] summary span.icon {
-  transform: rotate(180deg);
-}
-
-summary {
-  display: flex;
-  cursor: pointer;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-@media (max-width: 900px) {
-
-
-
-/* .card-img {
-  width: 100%;
-}
-
-.card-text {
-	width: 100%;
-} */
-
-}
-
-@media (max-width: 600px) {
-
-	.cards h1 {
-		font-size: 26px;
-	}
-
-	.card-text h2 {
-		font-size: 22px;
-	}
-
-	.card-img {
-		width: 100%;
-	}
-
-	.card-text p{
-		font-size: 18px;
-	}
-
-	.card-text-rest {
-		padding-top: 8px;
-	}
-
 	.card {
-		/* margin-top: 20px; */
-		width: 100%;
+		background-color: rgba(255, 255, 255, 0.674);
+		border-radius: 4px;
+		margin-bottom: 20px;
 	}
 
 	.card-img-text {
+		display: flex;
+	}
+
+	h1,
+	h2,
+	h3 {
+		color: #8e9aaf;
+	}
+
+	.card-img {
+		width: 50%;
+		height: 100%;
+		border-radius: 4px 0 0 4px;
+		float: left;
+	}
+
+	.card-title-button {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
 		flex-flow: wrap;
 	}
 
-	.card .button-grey {
-		margin: 0 auto;
+	.card-text {
+		max-width: 450px;
+		padding: 20px;
 	}
-}
+
+	.card-text h2 {
+		/* margin-bottom: 20px; */
+	}
+
+	.card-text p {
+		text-align: left;
+		/* margin-bottom: 16px; */
+	}
+
+	.card-link {
+		color: #aaaaaa;
+		cursor: pointer;
+		padding-bottom: 0;
+	}
+
+	.card-link a {
+		color: #aaaaaa;
+	}
+
+	.card-text-rest {
+		display: none;
+	}
+
+	.collapsed-text {
+		padding: 20px;
+	}
+
+	.card-button {
+		/* margin-top: 10px; */
+	}
+
+	details {
+		user-select: none;
+	}
+
+	details > summary span.icon {
+		width: 24px;
+		height: 24px;
+		transition: all 0.3s;
+		margin-left: auto;
+	}
+
+	details[open] summary span.icon {
+		transform: rotate(180deg);
+	}
+
+	summary {
+		display: flex;
+		cursor: pointer;
+	}
+
+	summary::-webkit-details-marker {
+		display: none;
+	}
+
+	@media (max-width: 900px) {
+
+		.card-text {
+			max-width: 100%;
+		}
+
+		.card {
+			/* margin-top: 20px; */
+			width: 100%;
+		}
+
+		.card-img-text {
+			flex-flow: wrap;
+		}
+
+		.card-img {
+			width: 100%;
+		}
+
+		.card-button {
+			margin-top: 10px;
+		}
+
+		.collapsed-text {
+			padding: 0 20px 20px 20px;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.cards h1 {
+			font-size: 26px;
+		}
+
+		.card-text h2 {
+			font-size: 22px;
+		}
+
+		.card-img {
+			width: 100%;
+		}
+
+		.card-title-button {
+			flex-wrap: wrap;
+			/* justify-content: center; */
+			/* margin-bottom: 0; */
+		}
+
+		.card-button {
+			margin-top: 10px;
+		}
+
+		.card-text p {
+			font-size: 18px;
+		}
+
+		.card-text-rest {
+			font-size: 18px;
+		}
+
+		.collapsed-text {
+			padding: 0 20px 20px 20px;
+		}
+
+		.card {
+			/* margin-top: 20px; */
+			width: 100%;
+		}
+
+		.card-img-text {
+			flex-flow: wrap;
+		}
+
+		.card .button-grey {
+			margin: 0 auto;
+		}
+	}
 </style>
