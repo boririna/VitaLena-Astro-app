@@ -1,177 +1,192 @@
 <nav>
-    <a href="/">
-      <img src="/img/Logo2.png" alt="VitaLena" class="logo">
-    </a>
-   
-    <ul class="header-menu">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about/">Über mich</a></li>
-      <li><a href="/massage/">Massage</a></li>
-      <li><a href="/contacts/">Kontakte</a></li>
-    </ul>
+  <a href="/">
+    <img src="/img/Logo2.png" alt="VitaLena" class="logo" />
+  </a>
 
-    <div class="hamburger-menu">
+  <ul id="menu" class="header-menu">
+    <li><a class="menuLink active" href="/">Home</a></li>
+    <li><a class="menuLink" href="/about/">Über mich</a></li>
+    <li><a class="menuLink" href="/massage/">Massage</a></li>
+    <li><a class="menuLink" href="/contacts/">Kontakte</a></li>
+  </ul>
 
-      <div id="mySidepanel" class="sidepanel">
-
-        <a id="closeBtn" href="#" class="closebtn" >×</a>
-        <a id="homeLink" href="/">Home</a>
-        <a id="aboutLink" href="/about/">Über mich</a>
-        <a id="massageLink" href="/massage/">Massage</a>
-        <a id="contactLink" href="/contacts/">Kontakte</a>
-      </div>
-      
-      <button id="openBtn" class="openbtn">☰</button>
+  <div class="hamburger-menu">
+    <div id="mySidepanel" class="sidepanel">
+      <a id="closeBtn" href="#" class="closebtn">×</a>
+      <a id="homeLink" href="/">Home</a>
+      <a id="aboutLink" href="/about/">Über mich</a>
+      <a id="massageLink" href="/massage/">Massage</a>
+      <a id="contactLink" href="/contacts/">Kontakte</a>
     </div>
-  </nav>
 
-  <script>
-    const openNav = function () {
-      document.getElementById("mySidepanel").style.width = "50%";
-    }
+    <button id="openBtn" class="openbtn">☰</button>
+  </div>
+</nav>
 
-    const closeNav = function () {
-      document.getElementById("mySidepanel").style.width = "0";
-    }
+<script>
+  const openNav = function () {
+    document.getElementById("mySidepanel").style.width = "50%";
+  };
 
-    document
-      .getElementById("openBtn")
-      .addEventListener("click", function (event) {
-        openNav();
-      });
-  
-    document
-      .getElementById("closeBtn")
-      .addEventListener("click", function (event) {
-        closeNav();
-      });
+  const closeNav = function () {
+    document.getElementById("mySidepanel").style.width = "0";
+  };
 
-    document
-      .getElementById("homeLink")
-      .addEventListener("click", function (event) {
-        closeNav();
-      });
+  document
+    .getElementById("openBtn")
+    .addEventListener("click", function (event) {
+      openNav();
+    });
 
-      document
-      .getElementById("aboutLink")
-      .addEventListener("click", function (event) {
-        closeNav();
-      });
-  </script>
+  document
+    .getElementById("closeBtn")
+    .addEventListener("click", function (event) {
+      closeNav();
+    });
+
+  document
+    .getElementById("homeLink")
+    .addEventListener("click", function (event) {
+      closeNav();
+    });
+
+  document
+    .getElementById("aboutLink")
+    .addEventListener("click", function (event) {
+      closeNav();
+    });
+
+  // Get the container element
+  let btnContainer = document.getElementById("menu");
+
+  // Get all buttons with class="menuLink" inside the container
+  let btns = btnContainer.getElementsByClassName("menuLink");
+
+  // Loop through the buttons and add the active class to the current/clicked button
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function () {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+</script>
 
 <style>
-nav a {
-  text-decoration: none;
-  color: white;
-  font-size: 30px;
-}
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+  }
 
-.logo {
-  width: 140px;
-}
+  .logo {
+    width: 140px;
+  }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.hamburger-menu {
-  display: none;
-}
+  .active, .menuLink:hover {
+    text-decoration: underline;
+  }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-}
+  .hamburger-menu {
+    display: none;
+  }
 
-li a {
-  display: block;
-  padding: 20px;
-  font-size: 20px;
-  font-family: 'Mulish', sans-serif;
-  text-decoration: none;
-  color: white;
-}
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+  }
 
-li :last-child {
-  padding-right: 0;
-}
+  li a {
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+    font-family: "Mulish", sans-serif;
+    text-decoration: none;
+    color: white;
+  }
 
+  li :last-child {
+    padding-right: 0;
+  }
 
-@media (max-width: 600px) {
+  @media (max-width: 600px) {
+    .header-menu {
+      display: none;
+    }
 
-.header-menu {
-  display: none;
-}
+    .logo {
+      width: 90px;
+      /* margin-bottom: 8px; */
+    }
 
-.logo {
-  width: 90px;
-  /* margin-bottom: 8px; */
-}
+    /* humburger menu */
 
-/* humburger menu */
+    .hamburger-menu {
+      display: block;
+    }
 
-.hamburger-menu {
-  display: block;
-}
+    .hamburger {
+      font-size: 30px;
+      font-weight: 100;
+    }
 
-.hamburger {
-  font-size: 30px;
-  font-weight: 100;
-}
+    .sidepanel {
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-color: #cbc0d3;
+      overflow-x: hidden;
+      transition: 0.8s;
+      padding-top: 60px;
+      box-sizing: border-box;
+      /* border-left: 0.1mm solid #f1f1f1 ; */
+    }
 
-.sidepanel  {
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  height: 100%;
-  top: 0;
-  right: 0;
-  background-color: #CBC0D3;
-  overflow-x: hidden;
-  transition: 0.8s;
-  padding-top: 60px;
-  box-sizing: border-box;
-  /* border-left: 0.1mm solid #f1f1f1 ; */
-}
+    .sidepanel a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      white-space: nowrap;
+      font-size: 20px;
+      color: #ffffff;
+      display: block;
+      transition: 0.3s;
+    }
 
-.sidepanel a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  white-space: nowrap;
-  font-size: 20px;
-  color: #ffffff;
-  display: block;
-  transition: 0.3s;
-}
+    .sidepanel a:hover {
+      color: #f1f1f1;
+    }
 
-.sidepanel a:hover {
-  color: #f1f1f1;
-}
+    .sidepanel .closebtn {
+      position: absolute;
+      top: 5px;
+      right: 20px;
+      font-size: 36px;
+      padding: 8px 16px;
+    }
 
-.sidepanel .closebtn {
-  position: absolute;
-  top: 5px;
-  right: 20px;
-  font-size: 36px;
-  padding: 8px 16px;
-}
+    .openbtn {
+      font-size: 25px;
+      cursor: pointer;
+      background-color: transparent;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+    }
 
-.openbtn {
-  font-size: 25px;
-  cursor: pointer;
-  background-color: transparent;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
-
-.openbtn:hover {
-  background-color: transparent;
-}
-}
+    .openbtn:hover {
+      background-color: transparent;
+    }
+  }
 </style>

@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Banner from "../components/Banner.astro";
 import Footer from "../components/Footer.astro";
+import SlideshowEventList from "../components/SlideshowEventList.astro";
 ---
 
 <Layout title="VitaLena">
@@ -14,12 +15,15 @@ import Footer from "../components/Footer.astro";
 
             <div class="image-section">
                 <div class="images">
-                    <img
+                    <div class="pers-photos">
+                        <img
                         src="/img/about-person-opt.jpg"
                         alt=""
                         width="400"
                         class="personal-photo"
                     />
+                    </div>
+                    
                     <div class="proc-photos">
                         <img
                             src="/img/about-process.jpg"
@@ -31,19 +35,24 @@ import Footer from "../components/Footer.astro";
                             <img
                                 src="/img/about-room2-opt.jpeg"
                                 alt=""
-                                width="250"
+                                width="350"
                                 class="room-photo"
                             />
                             <img
                                 src="/img/about-room3-opt.jpg"
                                 alt=""
-                                width="250"
+                                width="350"
                                 class="room-photo"
                             />
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- <div class="slide-show">
+                <SlideshowEventList/>
+            </div> -->
+
             <div class="about-text">
                 <h2>Steckbrief</h2>
                 <p>
@@ -183,6 +192,10 @@ import Footer from "../components/Footer.astro";
         gap: 20px;
     }
 
+    .studio-photos img {
+        width: 250px;
+    }
+
     .about-text {
         padding: 0 40px 20px 40px;
         max-width: 800px;
@@ -198,9 +211,12 @@ import Footer from "../components/Footer.astro";
     }
 
     @media (max-width: 960px) {
-        /* .proc-photos {
-            text-align: center;
+        /* .pers-photos img {
+            width: 100%;
         } */
+        .proc-photos {
+            text-align: center;
+        }
     }
 
     @media (max-width: 600px) {
@@ -216,9 +232,9 @@ import Footer from "../components/Footer.astro";
         .image-section {
             padding: 0 20px;
         }
-        /* .studio-photos {
-        justify-content: center;
-    } */
+        .studio-photos img {
+           width: 100%;
+        }
 
         .about-text {
             padding: 0 20px 20px 20px;
