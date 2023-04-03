@@ -2,7 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import Banner from "../components/Banner.astro";
 import Footer from "../components/Footer.astro";
+import ButtonGrey from '../components/ButtonGreySubmit.astro';
 import { Icon } from "astro-icon";
+import ButtonGreySubmit from "../components/ButtonGreySubmit.astro";
 ---
 
 <Layout title="VitaLena">
@@ -121,6 +123,25 @@ import { Icon } from "astro-icon";
                 </iframe>
             </div>
             <div class="contact-form">
+                <form name="contact" method="POST" data-netlify="true">
+                    <p>
+                      <label>Your Name: </label>
+                      <input type="text" name="name" />
+                    </p>
+                    <p>
+                      <label>Your Email: </label>
+                      <input type="email" name="email" />
+                    </p>
+                    <p>
+                      <label>Message: </label>
+                      <textarea name="message"></textarea>
+                    </p>
+                    <p>
+                        <ButtonGreySubmit text="SUBMIT" />
+                      <!-- <button type="submit">Send</button> -->
+                    </p>
+                  </form>
+                  
             </div>
         </div>
         <Footer />
@@ -206,8 +227,31 @@ import { Icon } from "astro-icon";
         color: #84858e;
     }
 
+    /* Contact form */
+
     .contact-form {
-        text-align: center;
+        padding: 20px 40px;
+        /* text-align: center; */
+    }
+
+    .contact-form input, textarea {
+        width: 50%;
+        margin-bottom: 20px;
+        border: none;
+    }
+    
+    .contact-form input {
+        height: 30px;
+    }
+
+    .contact-form textarea {
+        height: 100px;
+    }
+
+    .contact-form p {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
     }
 
     @media (max-width: 960px) {
