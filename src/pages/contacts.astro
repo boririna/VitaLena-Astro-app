@@ -62,7 +62,7 @@ import ButtonGreySubmit from "../components/ButtonGreySubmit.astro";
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2692.222292543229!2d8.4247139!3d47.5634632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479071c89afe7add%3A0x2d543a607ce5109b!2sIm%20See%203%2C%208187%20Weiach!5e0!3m2!1sen!2sch!4v1679263269765!5m2!1sen!2sch"
                     width="500"
                     height="300"
-                    style="border:0;"
+                    style="border:0;border-radius: 4px;"
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
@@ -116,30 +116,36 @@ import ButtonGreySubmit from "../components/ButtonGreySubmit.astro";
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2698.0629521094816!2d8.585375799999998!3d47.449712299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a9ff24aa526c7%3A0xcf18b03a3a02f0fc!2sLindenstrasse%2023%2C%208302%20Kloten!5e0!3m2!1sen!2sch!4v1679263639898!5m2!1sen!2sch"
                     width="500"
                     height="300"
-                    style="border:0;"
+                    style="border:0;border-radius: 4px;"
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
             <div class="contact-form">
+                <h2>Kontaktieren Sie mich</h2>
                 <form name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="subject" value="Massage details inquiry" />
                     <p>
-                      <label>Your Name: </label>
+                      <p><label>Vorname: </label></p>
                       <input type="text" name="name" />
                     </p>
                     <p>
-                      <label>Your Email: </label>
+                        <label>Nachname: </label>
+                        <input type="text" name="name" />
+                      </p>
+                    <p>
+                      <label>Email: </label>
                       <input type="email" name="email" />
                     </p>
                     <p>
-                      <label>Message: </label>
+                      <label>Nachricht: </label>
                       <textarea name="message"></textarea>
                     </p>
-                    <p>
-                        <ButtonGreySubmit text="SUBMIT" />
-                      <!-- <button type="submit">Send</button> -->
-                    </p>
+                    <div class="contact-button">
+                        <ButtonGreySubmit text="SENDEN" />
+                        <!-- <button type="submit">Send</button> -->
+                    </div>
                   </form>
                   
             </div>
@@ -231,13 +237,23 @@ import ButtonGreySubmit from "../components/ButtonGreySubmit.astro";
 
     .contact-form {
         padding: 20px 40px;
-        /* text-align: center; */
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contact-form h2 {
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     .contact-form input, textarea {
-        width: 50%;
+        width: 100%;
         margin-bottom: 20px;
         border: none;
+        border-radius: 4px;
+    }
+    .contact-form label {
+        width: 100px;
     }
     
     .contact-form input {
@@ -249,9 +265,13 @@ import ButtonGreySubmit from "../components/ButtonGreySubmit.astro";
     }
 
     .contact-form p {
-        display: flex;
+        
         justify-content: center;
         gap: 5px;
+    }
+
+    .contact-button {
+        text-align: right;
     }
 
     @media (max-width: 960px) {
