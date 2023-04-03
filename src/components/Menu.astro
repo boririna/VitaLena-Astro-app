@@ -1,13 +1,17 @@
+---
+const pathName = new URL(Astro.request.url).pathname;
+const currentPath = pathName.slice(1); // remove the first "/"
+---
 <nav>
   <a href="/">
     <img src="/img/Logo2.png" alt="VitaLena" class="logo" />
   </a>
 
   <ul id="menu" class="header-menu">
-    <li><a class="menuLink active" href="/">Home</a></li>
-    <li><a class="menuLink" href="/about/">Über mich</a></li>
-    <li><a class="menuLink" href="/massage/">Massage</a></li>
-    <li><a class="menuLink" href="/contacts/">Kontakte</a></li>
+    <li><a class={currentPath === "" ? "active" : ""} href="/">Home</a></li>
+    <li><a class={currentPath === "about" ? "active" : ""} href="/about">Über mich</a></li>
+    <li><a class={currentPath === "massage" ? "active" : ""} href="/massage">Massage</a></li>
+    <li><a class={currentPath === "contacts" ? "active" : ""} href="/contacts">Kontakte</a></li>
   </ul>
 
   <div class="hamburger-menu">
@@ -55,21 +59,6 @@
     .addEventListener("click", function (event) {
       closeNav();
     });
-
-  // Get the container element
-  let btnContainer = document.getElementById("menu");
-
-  // Get all buttons with class="menuLink" inside the container
-  let btns = btnContainer.getElementsByClassName("menuLink");
-
-  // Loop through the buttons and add the active class to the current/clicked button
-  for (let i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function () {
-      var current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
-    });
-  }
 </script>
 
 <style>
@@ -87,6 +76,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .header-menu a:hover {
+    text-decoration: underline;
   }
 
   .active, .menuLink:hover {
