@@ -128,15 +128,19 @@ import ButtonGreySubmit from "../components/ButtonGreySubmit.astro";
                     <input type="hidden" name="subject" value="Massage details inquiry" />
                     <p>
                       <p><label>Vorname: </label></p>
-                      <input type="text" name="name" />
+                      <input type="text" name="name" required/>
                     </p>
                     <p>
                         <label>Nachname: </label>
                         <input type="text" name="name" />
-                      </p>
+                    </p>
+                    <p>
+                        <label>Telefonnummer: </label>
+                        <input type="tel" name="name" required/>
+                    </p>
                     <p>
                       <label>Email: </label>
-                      <input type="email" name="email" />
+                      <input type="email" name="email" required/>
                     </p>
                     <p>
                       <label>Nachricht: </label>
@@ -251,6 +255,8 @@ import ButtonGreySubmit from "../components/ButtonGreySubmit.astro";
         margin-bottom: 20px;
         border: none;
         border-radius: 4px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
     .contact-form label {
         width: 100px;
@@ -265,7 +271,6 @@ import ButtonGreySubmit from "../components/ButtonGreySubmit.astro";
     }
 
     .contact-form p {
-        
         justify-content: center;
         gap: 5px;
     }

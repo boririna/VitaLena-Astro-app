@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Banner from "../components/Banner.astro";
 import CardMassage from "../components/CardMassage.astro";
+import CardMassageReverse from "../components/CardMassageReverse.astro";
 import Footer from "../components/Footer.astro";
 ---
 
@@ -21,13 +22,13 @@ import Footer from "../components/Footer.astro";
                     body1={["Die Klassische Massage ist eine äusserliche, manuelle Behandlung zur Verbesserung/Beseitigung und Prävention von Beschwerden im Bereich des Bewegungsapparates (Muskeln, Sehnen, Bänder, Gelenke, und Nerven) und zur psychischen Entspannung. Bei der Klassischen Massage werden fünf verschiedene Handgriffe angewandt: Effleurage/Streichung, Petrissage/Knetung, Friktion/Reibung, Tapotement/Klopfung und Vibration. Durch die unterschiedlichen Massagegriffe ist es je nach Indikation möglich, den Muskeltonus zu korrigieren."]}
                     body2="<p>Die klassische Massage:</p><ul><li>stärkt das Immunsystem</li><li>lindert Schmerzen</li><li>reduziert Stress und dessen Auswirkungen wie: Kopfschmerzen, Migräne-Attacken, Schlafprobleme & Muskelverspannungen</li><li>entspannt/aktiviert die Muskulatur</li><li>verbessert den Zellstoffwechsel im Gewebe</li><li>löst Verklebungen und Narben</li><li>beeinflusst das vegetative Nervensystem indem es den Sympathikus hemmt und den Parasympathikus aktiviert.</li><li>senkt Blutdruck, Puls und Atemfrequenz</li><li>wirkt über Reflexbögen auf innere Organe</li><li>bringt psychische Entspannung</li></ul>"
                 />
-                <CardMassage
-                    collapseLinkId="collapse2"
-                    imgPath1="/img/massage2-opt.jpg"
-                    href1="#"
-                    title1="Entspannungsmassage"
-                    body1={["Bei einer Entspannungsmassage werden durch langsame und rhythmischen Knetungen und Streichungen des Gewebes die Durchblutung der Haut, Muskulatur und der Sehnen angeregt. Verhärtungen der Muskulatur werden weicher, Blockaden und Verspannungen lösen sich auf und Entspannung und Wohlbefinden stellt sich ein."]}
-                    body2="<p>Bei einer Entspannungsmassage werden durch langsame und rhythmischen Knetungen und Streichungen des Gewebes die Durchblutung der Haut, Muskulatur und der Sehnen angeregt. Verhärtungen der Muskulatur werden weicher, Blockaden und Verspannungen lösen sich auf und Entspannung und Wohlbefinden stellt sich ein.</p>"
+                <CardMassageReverse
+                    collapseLinkIdRev="collapse2"
+                    imgPathRev="/img/massage2-opt.jpg"
+                    hrefRev="#"
+                    titleRev="Entspannungsmassage"
+                    bodyRev1={["Bei einer Entspannungsmassage werden durch langsame und rhythmischen Knetungen und Streichungen des Gewebes die Durchblutung der Haut, Muskulatur und der Sehnen angeregt. Verhärtungen der Muskulatur werden weicher, Blockaden und Verspannungen lösen sich auf und Entspannung und Wohlbefinden stellt sich ein."]}
+                    bodyRev2="<p>Bei einer Entspannungsmassage werden durch langsame und rhythmischen Knetungen und Streichungen des Gewebes die Durchblutung der Haut, Muskulatur und der Sehnen angeregt. Verhärtungen der Muskulatur werden weicher, Blockaden und Verspannungen lösen sich auf und Entspannung und Wohlbefinden stellt sich ein.</p>"
                 />
                 <CardMassage
                     collapseLinkId="collapse3"

@@ -2,58 +2,57 @@
 // import { Icon } from 'astro-icon';
 import ButtonGrey from "./ButtonGrey.astro";
 export interface Props {
-	title1: string;
-	body1: Array<string>;
-	body2: string;
-	href1: string;
-	imgPath1: string;
-	collapseLinkId: string;
+	titleRev: string;
+	bodyRev1: Array<string>;
+	bodyRev2: string;
+	hrefRev: string;
+	imgPathRev: string;
+	collapseLinkIdRev: string;
 }
 
-const { imgPath1, href1, title1, body1, body2, collapseLinkId} = Astro.props;
+const { imgPathRev, hrefRev, titleRev, bodyRev1, bodyRev2, collapseLinkIdRev} = Astro.props;
 ---
 
 <div class="card">
 	<div class="card-img-text">
-		<img src={imgPath1} class="card-img" alt="Klassische Massage" />
 		<div class="card-text">
 			<div class="card-title-button">
-				<h2>{title1}</h2>
+				<h2>{titleRev}</h2>
 				<div class="card-button">
 					<ButtonGrey href="/contacts/" text="MASSAGE BUCHEN" />
 				</div>
 			</div>
 			<div>
-				{body1.map((paragraph) => <p>{paragraph}</p>)}
-				<p id={collapseLinkId} class="card-link">weiterlesen</p> 
+				{bodyRev1.map((parag) => <p>{parag}</p>)}
+				<p id={collapseLinkIdRev} class="card-link-rev">weiterlesen</p> 
 			</div>	
 		</div>
+		<img src={imgPathRev} class="card-img" alt="Klassische Massage" />
 	</div>
 	<div class="collapsed-text">
-		<div id={collapseLinkId + "text"} class="card-text-rest">
-			<div set:html={body2}></div>
-			<!-- {body2.map((par) => <p>{par}</p>)} -->
+		<div id={collapseLinkIdRev + "text"} class="card-text-rest">
+			<div set:html={bodyRev2}></div>
 		</div>
 	</div>	
 </div>
 
 <script>	
-	let collapsible = document.getElementsByClassName("card-link");
+	let collapsRev = document.getElementsByClassName("card-link-rev");
 	let i = 0;
 
-	for (i = 0; i < collapsible.length; i++) {
-		collapsible[i].addEventListener("click", function() {		
-		let textId = this.id + "text"
-		let textElement = document.getElementById(textId)
+	for (i = 0; i < collapsRev.length; i++) {
+		collapsRev[i].addEventListener("click", function() {		
+		let textIdRev = this.id + "text"
+		let textElementRev = document.getElementById(textIdRev)
 		if (this.innerHTML === "weiterlesen") {
 			this.innerHTML = "schlissen";
 		} else {
 			this.innerHTML = "weiterlesen";
 		}
-		if (textElement.style.display === "block") {
-			textElement.style.display = "none";
+		if (textElementRev.style.display === "block") {
+			textElementRev.style.display = "none";
 		} else {
-			textElement.style.display = "block";
+			textElementRev.style.display = "block";
 		}
 	  }
 	  );
@@ -68,7 +67,7 @@ const { imgPath1, href1, title1, body1, body2, collapseLinkId} = Astro.props;
 	}
 
 	.card-img-text {
-		display: flex;
+		display: flex;		
 	}
 
 	h1,
@@ -80,7 +79,7 @@ const { imgPath1, href1, title1, body1, body2, collapseLinkId} = Astro.props;
 	.card-img {
 		width: 50%;
 		height: 100%;
-		border-radius: 4px 0 0 4px;
+		border-radius: 0 4px 4px 0;
 		float: left;
 	}
 
@@ -101,7 +100,7 @@ const { imgPath1, href1, title1, body1, body2, collapseLinkId} = Astro.props;
 		text-align: left;
 	}
 
-	.card-link {
+	.card-link-rev {
 		color: #aaaaaa;
 		cursor: pointer;
 		padding-top: 20px;
@@ -110,14 +109,6 @@ const { imgPath1, href1, title1, body1, body2, collapseLinkId} = Astro.props;
 	.card-text-rest {
 		display: none;
 		padding: 20px 20px 20px 20px; 
-	}
-
-	.collapsed-text {
-		/* padding: 20px; */
-	}
-
-	.card-button {
-		/* margin-top: 10px; */
 	}
 
 	details {
@@ -151,12 +142,12 @@ const { imgPath1, href1, title1, body1, body2, collapseLinkId} = Astro.props;
 		}
 
 		.card {
-			/* margin-top: 20px; */
 			width: 100%;
 		}
 
 		.card-img-text {
 			flex-flow: wrap;
+			flex-wrap: wrap-reverse;
 		}
 
 		.card-img {
@@ -177,6 +168,11 @@ const { imgPath1, href1, title1, body1, body2, collapseLinkId} = Astro.props;
 	}
 
 	@media (max-width: 600px) {
+		.card-img-text {
+			flex-flow: wrap;
+			flex-wrap: wrap-reverse;
+		}
+
 		.cards h1 {
 			font-size: 26px;
 		}
@@ -191,8 +187,6 @@ const { imgPath1, href1, title1, body1, body2, collapseLinkId} = Astro.props;
 
 		.card-title-button {
 			flex-wrap: wrap;
-			/* justify-content: center; */
-			/* margin-bottom: 0; */
 		}
 
 		.card-button {
@@ -207,17 +201,9 @@ const { imgPath1, href1, title1, body1, body2, collapseLinkId} = Astro.props;
 			font-size: 18px;
 		}
 
-		/* .collapsed-text {
-			padding: 0 20px 20px 20px;
-		} */
 
 		.card {
-			/* margin-top: 20px; */
 			width: 100%;
-		}
-
-		.card-img-text {
-			flex-flow: wrap;
 		}
 
 		.card .button-grey {
