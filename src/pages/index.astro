@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Footer from "../components/Footer.astro";
 import BannerHome from "../components/BannerHome.astro";
+import SlideshowEventList3Img from "../components/SlideshowEventList3Img.astro";
+import SlideshowEventList1Img from "../components/SlideshowEventList1Img.astro";
 import { Icon } from "astro-icon";
 ---
 
@@ -141,7 +143,6 @@ import { Icon } from "astro-icon";
 		<!-- Prices -->
 		<div id="massage-price" class="price-section">
 			<h1>Preise</h1>
-			
 			<div class="prices">
 				<p>Klassische Massage 120 CHF pro 60 Minuten</p>
 				<p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
@@ -156,6 +157,15 @@ import { Icon } from "astro-icon";
 				Versicherung.
 			</p>
 		</div>
+		<div class="reviews">
+			<h1>Bewertungen</h1>
+			<div class="reviews-desktop">
+				<SlideshowEventList3Img />
+			</div>
+			<div class="reviews-mobile">
+				<SlideshowEventList1Img />
+			</div>			
+		</div>
 		<Footer />
 	</main>
 </Layout>
@@ -167,6 +177,7 @@ import { Icon } from "astro-icon";
 	}
 
 	/* contacts */
+
 	.contacts {
 		padding: 40px 40px;
 		text-align: center;
@@ -174,7 +185,9 @@ import { Icon } from "astro-icon";
 
 	.contacts,
 	.cards,
-	.price-section h1,
+	.price-section,
+	.reviews
+	h1,
 	h2,
 	h3 {
 		color: #8e9aaf;
@@ -246,6 +259,7 @@ import { Icon } from "astro-icon";
 	}
 
 	/* cards */
+
 	.cards {
 		padding: 40px 40px;
 		text-align: center;
@@ -258,6 +272,7 @@ import { Icon } from "astro-icon";
 	}
 
 	/* prices */
+
 	.price-section {
 		padding: 0 40px 20px 40px;
 		text-align: center;
@@ -278,11 +293,28 @@ import { Icon } from "astro-icon";
 
 	.prices p {
 		font-size: 18px;
-		/* font-weight: 600; */
 		margin-bottom: 8px;
 	}
 
+	/* reviews */
+
+	.reviews-mobile {
+		display: none;
+	}
+
+	.reviews {
+		/* max-width: 800px; */
+		padding: 20px 40px 40px 40px;
+        margin: 0 auto;
+	}
+
+	.reviews h1 {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
 	@media (max-width: 600px) {
+
 		/* contacts */
 
 		.contacts {
@@ -325,7 +357,7 @@ import { Icon } from "astro-icon";
 			font-size: 18px;
 		}
 
-		/* Cards */
+		/* cards */
 
 		.cards {
 			padding: 20px 20px;
@@ -341,6 +373,7 @@ import { Icon } from "astro-icon";
 		}
 
 		/* prices */
+
 		.price-section {
 			padding: 0 20px 20px 20px;
 			text-align: center;
@@ -354,6 +387,24 @@ import { Icon } from "astro-icon";
 		}
 
 		.price-section h1 {
+			font-size: 26px;
+		}
+
+		/* reviews */
+		.reviews-desktop {
+			display: none;
+		}
+
+		.reviews-mobile {
+			display: block;
+		}
+
+		.reviews {
+			/* max-width: 800px; */
+			padding: 0 20px 20px 20px;
+		}
+
+		.reviews h1 {
 			font-size: 26px;
 		}
 	}

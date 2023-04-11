@@ -1,0 +1,210 @@
+---
+import { Icon } from "astro-icon";
+export interface Props {
+    slideImg1: string;
+    slideImg2: string;
+    slideImg3: string;
+    slideImg4: string;
+}
+
+const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
+---
+
+<!-- Slider container -->
+
+<div class="slider-mobile">
+    <!-- slide 1 -->
+    <div class="slide-mobile">
+        <div class="slide-text">
+            <p>
+                I very much enjoyed the attention to detail when adjusting
+                various parts of the body and stretching or massaging based on
+                what's needed, and in a way that can actually help your pain
+                points feel better. In comparison to a massage from a place like
+                massage envy, my experience here felt way more therapeutic and
+                would provide lasting results for the next few days. I highly
+                recommend and will definitely be returning!
+            </p>
+            <p>- Katerina</p>
+        </div>
+        <!-- <img src={slideImg1} alt="" /> -->
+    </div>
+
+    <!-- slide 2 -->
+    <div class="slide-mobile">
+        <div class="slide-text">
+            <p>
+                She was amazing! Attentive, a great listener and communicator,
+                working out tough tension spots in a way I didn’t even, know was
+                possible! I wish I could afford to see her every week!
+            </p>
+            <p>- Maria</p>
+        </div>
+    </div>
+
+    <!-- slide 3 -->
+    <div class="slide-mobile">
+        <div class="slide-text">
+            <p>
+                I prefer heavy pressure for my massages, I usually get deep
+                tissue or pressure point massages, and my masseuse did not
+                disappoint! She did some traditional massage techniques along
+                with stretching and back walking, all was fantastic. Writing
+                this review makes me want to call and book another! Great
+                service and they were able to get me an appointment on the same
+                day I called.
+            </p>
+            <p>- Peter</p>
+        </div>
+    </div>
+
+    <!-- Control buttons -->
+    <button class="btn-m btn-next-m">
+        <Icon name="fa-solid:chevron-right" class="btn-icon" />
+    </button>
+    <button class="btn-m btn-prev-m">
+        <Icon name="fa-solid:chevron-left" class="btn-icon" />
+    </button>
+</div>
+
+<script>
+    // Select all slides
+    const slides = document.querySelectorAll(".slide-mobile");
+
+    // loop through slides and set each slides translateX
+    slides.forEach((slide, indx) => {
+        slide.style.transform = `translateX(${indx * 100}%)`;
+    });
+
+    // select next slide button
+    const nextSlide = document.querySelector(".btn-next-m");
+
+    // current slide counter
+    let curSlide = 0;
+    // maximum number of slides
+    let maxSlide = slides.length - 1;
+
+    // add event listener and navigation functionality
+    nextSlide.addEventListener("click", function () {
+        // check if current slide is the last and reset current slide
+        if (curSlide === maxSlide) {
+            curSlide = 0;
+        } else {
+            curSlide++;
+        }
+
+        //   move slide by -100%
+        slides.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+        });
+    });
+
+    // select prev slide button
+    const prevSlide = document.querySelector(".btn-prev-m");
+
+    // add event listener and navigation functionality
+    prevSlide.addEventListener("click", function () {
+        // check if current slide is the first and reset current slide to last
+        if (curSlide === 0) {
+            curSlide = maxSlide;
+        } else {
+            curSlide--;
+        }
+
+        //   move slide by 100%
+        slides.forEach((slide, indx) => {
+            slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
+        });
+    });
+</script>
+
+<style>
+    .slider-mobile {
+        width: 100%;
+        /* max-width: 800px; */
+        min-height: 300px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slide-mobile {
+        width: 100%;
+        height: 100%;
+        max-width: 1020px;
+        position: absolute;
+        transition: all 0.5s;
+        display: flex;
+        gap: 16px;
+        padding-right: 1px;
+    }
+
+    .slide-text {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.674);
+        padding: 20px;
+        border-radius: 4px;
+    }
+
+    .slide-text :first-child {
+        padding-bottom: 10px;
+    }
+
+    .slider-mobile img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .btn-m {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        border: none;
+        border-radius: 50%;
+        z-index: 10px;
+        cursor: pointer;
+        background-color: #feeafa;
+        opacity: 0.8;
+        font-size: 18px;
+    }
+
+    .btn-m:active {
+        transform: scale(1.1);
+    }
+
+    .btn-icon {
+        height: 20px;
+        color: #8e9aaf;
+    }
+
+    .btn-prev-m {
+        top: 45%;
+        left: 2%;
+    }
+
+    .btn-next-m {
+        top: 45%;
+        right: 2%;
+    }
+
+    @media (max-width: 960px) {
+
+    }
+
+    @media (max-width: 600px) {
+        /* .slider-desktop {
+            display: none;
+        }
+
+        .slider-mobile {
+            display: block;
+            width: 100%;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        } */
+
+    }
+
+</style>
