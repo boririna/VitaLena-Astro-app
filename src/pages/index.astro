@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import BannerHome from "../components/BannerHome.astro";
 import SlideshowEventList3Img from "../components/SlideshowEventList3Img.astro";
 import SlideshowEventList1Img from "../components/SlideshowEventList1Img.astro";
+import SlideshowEventList2Img from "../components/SlideshowEventList2Img.astro";
 import { Icon } from "astro-icon";
 ---
 
@@ -164,6 +165,9 @@ import { Icon } from "astro-icon";
 			</div>
 			<div class="reviews-mobile">
 				<SlideshowEventList1Img />
+			</div>
+			<div class="reviews-tablet">
+				<SlideshowEventList2Img />
 			</div>			
 		</div>
 		<Footer />
@@ -302,6 +306,10 @@ import { Icon } from "astro-icon";
 		display: none;
 	}
 
+	.reviews-tablet {
+		display: none;
+	}
+
 	.reviews {
 		/* max-width: 800px; */
 		padding: 20px 40px 40px 40px;
@@ -311,6 +319,17 @@ import { Icon } from "astro-icon";
 	.reviews h1 {
 		margin-bottom: 20px;
 		text-align: center;
+	}
+
+	@media (max-width: 900px) {
+
+		.reviews-desktop {
+			display: none;
+		}
+		
+		.reviews-tablet {
+			display: block;
+		}
 	}
 
 	@media (max-width: 600px) {
@@ -392,6 +411,10 @@ import { Icon } from "astro-icon";
 
 		/* reviews */
 		.reviews-desktop {
+			display: none;
+		}
+
+		.reviews-tablet {
 			display: none;
 		}
 
