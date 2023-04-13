@@ -161,7 +161,8 @@ import { Icon } from "astro-icon";
 		<!-- Reviews -->
 		<div class="reviews">
 			<h1>Bewertungen</h1>
-			<div class="reviews-desktop">
+			<p>Hier könnten Ihre Bewertungen sein</p>
+			<!-- <div class="reviews-desktop">
 				<SlideshowEventList3Img />
 			</div>
 			<div class="reviews-mobile">
@@ -169,7 +170,7 @@ import { Icon } from "astro-icon";
 			</div>
 			<div class="reviews-tablet">
 				<SlideshowEventList2Img />
-			</div>			
+			</div>			 -->
 		</div>
 		<Footer />
 	</main>
@@ -320,6 +321,11 @@ import { Icon } from "astro-icon";
 	.reviews h1 {
 		margin-bottom: 20px;
 		text-align: center;
+	}
+
+	.reviews p {
+		text-align: center;
+		padding-top: 20px;
 	}
 
 	@media (max-width: 900px) {
