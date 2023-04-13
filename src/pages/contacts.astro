@@ -76,7 +76,7 @@ import ButtonGreySubmit from "../components/ButtonGreySubmit.astro";
                         <div>
                             <div class="addr-place">
                                 <p>SALZGROTTE</p>
-                                <a href="https://salzgrotte.ch" target="_blank">
+                                <a href="https://salzgrotte.ch/offer-prices/" target="_blank">
                                     salzgrotte.ch
                                 </a>
                             </div>
@@ -123,8 +123,39 @@ import ButtonGreySubmit from "../components/ButtonGreySubmit.astro";
                 </iframe>
             </div>
             <div class="contact-form">
-                <h2>Kontaktieren Sie mich</h2>
-                <form name="contact" method="POST" data-netlify="true">
+                <h2>Für Buchung in der Salzgrotte</h2>
+                <form name="contact-salzgrotte" method="POST" data-netlify="true">
+                    <input type="hidden" name="subject" value="Massage details inquiry" />
+                    <p>
+                      <p><label>Vorname: </label></p>
+                      <input type="text" name="name" required/>
+                    </p>
+                    <p>
+                        <label>Nachname: </label>
+                        <input type="text" name="name" />
+                    </p>
+                    <p>
+                        <label>Telefonnummer: </label>
+                        <input type="tel" name="name" required/>
+                    </p>
+                    <p>
+                      <label>Email: </label>
+                      <input type="email" name="email" required/>
+                    </p>
+                    <p>
+                      <label>Nachricht: </label>
+                      <textarea name="message"></textarea>
+                    </p>
+                    <div class="contact-button">
+                        <ButtonGreySubmit text="SENDEN" />
+                        <!-- <button type="submit">Send</button> -->
+                    </div>
+                  </form>
+                  
+            </div>
+            <div class="contact-form">
+                <h2>Für alles andere</h2>
+                <form name="contact-general" method="POST" data-netlify="true">
                     <input type="hidden" name="subject" value="Massage details inquiry" />
                     <p>
                       <p><label>Vorname: </label></p>
