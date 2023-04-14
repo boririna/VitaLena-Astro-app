@@ -15,6 +15,59 @@ import ButtonGreySubmit from "../components/ButtonGreySubmit.astro";
                 <h1>Kontakte</h1>
             </div>
             <div class="address-map">
+                <div class="addr-item2">
+                    <div class="icon-text">
+                        <Icon name="fa-solid:home" class="addr-icon home-icon" />
+                        <div>
+                            <div class="addr-place">
+                                <p>SALZGROTTE</p>
+                                <a href="https://salzgrotte.ch/offer-prices/" target="_blank">
+                                    salzgrotte.ch
+                                </a>
+                            </div>
+                            <p>
+                                <a
+                                    href="https://goo.gl/maps/ZfKhNa9Ryq1TmgHh9"
+                                    target="_blank"
+                                >
+                                    Lindenstrasse 23
+                                </a>
+                            </p>
+                            <p>
+                                <a
+                                    href="https://goo.gl/maps/ZfKhNa9Ryq1TmgHh9"
+                                    target="_blank"
+                                >
+                                    8302 Kloten
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="icon-text">
+                        <Icon name="fa-solid:phone-alt" class="addr-icon" />
+                        <a href="tel:+41445505555" target="_blank">
+                            +41 (0)44 550 55 55
+                        </a>
+                    </div>
+                    <div class="icon-text icon-text-last">
+                        <Icon name="fa-solid:envelope" class="addr-icon" />
+                        <a href="mailto:info@salzgrotte.ch" target="_blank"
+                            >info@salzgrotte.ch</a
+                        >
+                    </div>
+                </div>
+                <iframe 
+                    loading="lazy"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2698.0629521094816!2d8.585375799999998!3d47.449712299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a9ff24aa526c7%3A0xcf18b03a3a02f0fc!2sLindenstrasse%2023%2C%208302%20Kloten!5e0!3m2!1sen!2sch!4v1679263639898!5m2!1sen!2sch"
+                    width="500"
+                    height="300"
+                    style="border:0;border-radius: 4px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="address-map">
                 <div class="addr-item1">
                     <div class="icon-text">
                         <Icon name="fa-solid:home" class="addr-icon home-icon" />
@@ -69,59 +122,7 @@ import ButtonGreySubmit from "../components/ButtonGreySubmit.astro";
                 >
                 </iframe>
             </div>
-            <div class="address-map">
-                <div class="addr-item2">
-                    <div class="icon-text">
-                        <Icon name="fa-solid:home" class="addr-icon home-icon" />
-                        <div>
-                            <div class="addr-place">
-                                <p>SALZGROTTE</p>
-                                <a href="https://salzgrotte.ch/offer-prices/" target="_blank">
-                                    salzgrotte.ch
-                                </a>
-                            </div>
-                            <p>
-                                <a
-                                    href="https://goo.gl/maps/ZfKhNa9Ryq1TmgHh9"
-                                    target="_blank"
-                                >
-                                    Lindenstrasse 23
-                                </a>
-                            </p>
-                            <p>
-                                <a
-                                    href="https://goo.gl/maps/ZfKhNa9Ryq1TmgHh9"
-                                    target="_blank"
-                                >
-                                    8302 Kloten
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="icon-text">
-                        <Icon name="fa-solid:phone-alt" class="addr-icon" />
-                        <a href="tel:+41445505555" target="_blank">
-                            +41 (0)44 550 55 55
-                        </a>
-                    </div>
-                    <div class="icon-text icon-text-last">
-                        <Icon name="fa-solid:envelope" class="addr-icon" />
-                        <a href="mailto:info@salzgrotte.ch" target="_blank"
-                            >info@salzgrotte.ch</a
-                        >
-                    </div>
-                </div>
-                <iframe 
-                    loading="lazy"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2698.0629521094816!2d8.585375799999998!3d47.449712299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a9ff24aa526c7%3A0xcf18b03a3a02f0fc!2sLindenstrasse%2023%2C%208302%20Kloten!5e0!3m2!1sen!2sch!4v1679263639898!5m2!1sen!2sch"
-                    width="500"
-                    height="300"
-                    style="border:0;border-radius: 4px;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+            
             <div class="contact-form">
                 <h2>Für Buchung in der Salzgrotte</h2>
                 <form name="contact-salzgrotte" method="POST" data-netlify="true">
@@ -148,10 +149,8 @@ import ButtonGreySubmit from "../components/ButtonGreySubmit.astro";
                     </p>
                     <div class="contact-button">
                         <ButtonGreySubmit text="SENDEN" />
-                        <!-- <button type="submit">Send</button> -->
                     </div>
-                  </form>
-                  
+                </form> 
             </div>
             <div class="contact-form">
                 <h2>Für alles andere</h2>
@@ -179,10 +178,8 @@ import ButtonGreySubmit from "../components/ButtonGreySubmit.astro";
                     </p>
                     <div class="contact-button">
                         <ButtonGreySubmit text="SENDEN" />
-                        <!-- <button type="submit">Send</button> -->
                     </div>
-                  </form>
-                  
+                </form>  
             </div>
         </div>
         <Footer />
