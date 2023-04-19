@@ -24,7 +24,7 @@ const { imgPathRev, hrefRev, titleRev, bodyRev1, bodyRev2, collapseLinkIdRev} = 
 			</div>
 			<div>
 				{bodyRev1.map((parag) => <p>{parag}</p>)}
-				<p id={collapseLinkIdRev} class="card-link-rev">weiterlesen ⯆</p> 
+				<p id={collapseLinkIdRev} class="card-link-rev">weiterlesen</p> 
 			</div>	
 		</div>
 		<img src={imgPathRev} class="card-img" alt="Klassische Massage" />
@@ -44,10 +44,10 @@ const { imgPathRev, hrefRev, titleRev, bodyRev1, bodyRev2, collapseLinkIdRev} = 
 		collapsRev[i].addEventListener("click", function() {		
 		let textIdRev = this.id + "text"
 		let textElementRev = document.getElementById(textIdRev)
-		if (this.innerHTML === "weiterlesen ⯆") {
-			this.innerHTML = "schliessen &nbsp;&nbsp;⯅";
+		if (this.innerHTML === "weiterlesen") {
+			this.innerHTML = "schliessen";
 		} else {
-			this.innerHTML = "weiterlesen ⯆";
+			this.innerHTML = "weiterlesen";
 		}
 		if (textElementRev.style.display === "block") {
 			textElementRev.style.display = "none";
@@ -104,6 +104,7 @@ const { imgPathRev, hrefRev, titleRev, bodyRev1, bodyRev2, collapseLinkIdRev} = 
 		color: #aaaaaa;
 		cursor: pointer;
 		padding-top: 20px;
+		text-decoration: underline;
 	}
 
 	.card-text-rest {
