@@ -7,226 +7,251 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="VitaLena">
-    <main>
-        <Banner />
-        <div class="massage">
-            <div class="page-title">
-                <h1>Massage</h1>
-            </div>
-            <!-- massage cards -->
-            <div class="card-section">
-                <CardMassage
-                    collapseLinkId="collapse1"
-                    imgPath1="/img/massage1-opt.jpg"
-                    href1="#"
-                    title1="Klassische Massage"
-                    body1={["Die Klassische Massage ist eine äusserliche, manuelle Behandlung zur Verbesserung/Beseitigung und Prävention von Beschwerden im Bereich des Bewegungsapparates (Muskeln, Sehnen, Bänder, Gelenke, und Nerven) und zur psychischen Entspannung. Bei der Klassischen Massage werden fünf verschiedene Handgriffe angewandt: Effleurage/Streichung, Petrissage/Knetung, Friktion/Reibung, Tapotement/Klopfung und Vibration. Durch die unterschiedlichen Massagegriffe ist es je nach Indikation möglich, den Muskeltonus zu korrigieren."]}
-                    body2="<p>Die klassische Massage:</p><ul><li>stärkt das Immunsystem</li><li>lindert Schmerzen</li><li>reduziert Stress und dessen Auswirkungen wie: Kopfschmerzen, Migräne-Attacken, Schlafprobleme & Muskelverspannungen</li><li>entspannt/aktiviert die Muskulatur</li><li>verbessert den Zellstoffwechsel im Gewebe</li><li>löst Verklebungen und Narben</li><li>beeinflusst das vegetative Nervensystem indem es den Sympathikus hemmt und den Parasympathikus aktiviert.</li><li>senkt Blutdruck, Puls und Atemfrequenz</li><li>wirkt über Reflexbögen auf innere Organe</li><li>bringt psychische Entspannung</li></ul>"
-                />
-                <CardMassageReverse
-                    collapseLinkIdRev="collapse2"
-                    imgPathRev="/img/massage2-opt.jpg"
-                    hrefRev="#"
-                    titleRev="Entspannungsmassage"
-                    bodyRev1={["Bei einer Entspannungsmassage werden durch langsame und rhythmischen Knetungen und Streichungen des Gewebes die Durchblutung der Haut, Muskulatur und der Sehnen angeregt. Verhärtungen der Muskulatur werden weicher, Blockaden und Verspannungen lösen sich auf und Entspannung und Wohlbefinden stellt sich ein."]}
-                    bodyRev2="<p>Bei einer Entspannungsmassage werden durch langsame und rhythmischen Knetungen und Streichungen des Gewebes die Durchblutung der Haut, Muskulatur und der Sehnen angeregt. Verhärtungen der Muskulatur werden weicher, Blockaden und Verspannungen lösen sich auf und Entspannung und Wohlbefinden stellt sich ein.</p>"
-                />
-                <CardMassage
-                    collapseLinkId="collapse3"
-                    imgPath1="/img/massage3-opt.jpg"
-                    href1="#"
-                    title1="Sportmassage"
-                    body1={["Ziel und Zweck einer Sportmassage ist die spezifische Behandlung von Sportlern vor oder nach sportlichen Aktivitäten. Dabei werden Handgriffe der klassischen Massage verwendet, die durch verschiedene andere Grifftechniken erweitert werden. Auf diese Weise wird den speziellen Bedürfnissen von Sportlern Rechnung getragen."]}
-                    body2="<p>Die Sportmassage sorgt für:</p><ul><li>die Aktivierung des Kreislaufsystems</li><li>die Erhöhung der Sauerstoffzufuhr</li><li>die verbesserte Ableitung von Schlacken</li><li>die Vermeidung einer zu schnellen Ermüdung</li><li>die Beseitigung von Schmerzen durch überbeanspruchte Muskeln</li><li>die Beschleunigung den Heilungsprozess bei Verletzungen</li><li>die Steigerung des Wohlbefindens</li><li>die Aktivierung des zentralen Nervensystems</li></ul><p>Bei einer Sportmassage unterscheidet man zwischen der Vorbereitungsmassage, der Trainingsmassage, der Zwischenmassage sowie der Regenerationsmassage.</p></br><p>Da die Sportmassage auch den Effekt eines Aufwärmens hat, wird auf diese Weise auch möglichen Verletzungen beim Sport vorgebeugt. Im Anschluss an die sportliche Aktivität soll die Sportmassage dazu beitragen, einen schmerzhaften Muskelkater zu unterbinden. Nach den sportlichen Belastungen wird der Körper durch die Anwendung von bestimmten Griffen behandelt, umso besser regenerieren zu können. Sie dient zum raschen Abbau von Stoffwechselschlacken, damit diese sich nicht im Muskelgewebe festsetzen. Zudem soll die Leistungsfähigkeit des Sportlers erhöht werden.</p></br><p>Doch nicht nur für Leistungssportler ist eine Sportmassage geeignet. Auch für Freizeitsportler oder für Alltag und Berufsleben kann eine solche Massage von Vorteil sein, da sie eine positive Wirkung auf die Muskulatur hat und verkrampfte und überdehnte Muskeln entspannt. Zudem werden unterforderte Muskeln und Gewebe angeregt sowie die Sauerstoffversorgung verbessert.</p></br><p>Neben Sportlern können auch Menschen, die aufgrund von falscher Sitzhaltung, langem Autofahren, langer Arbeit am Schreibtisch bzw. Computer unter</p><ul><li>Rückenschmerzen</li><li>Nackenschmerzen</li><li>Stress</li></ul><p>leiden, von einer Sportmassage profitieren, da die Massage gezielt die dadurch entstehenden Verklebungen und Verspannungen behandelt.</p>"
-                />
-            </div>
-            <!-- contraindications -->
-            <div class="contradict-section">
+  <main>
+    <Banner />
+    <div class="massage">
+      <div class="page-title">
+        <h1>Massage</h1>
+      </div>
+      <!-- massage cards -->
+      <div class="card-section">
+        <CardMassage
+          collapseLinkId="collapse1"
+          imgPath1="/img/massage1-opt.jpg"
+          href1="#"
+          title1="Klassische Massage"
+          body1={[
+            "Die Klassische Massage ist eine äusserliche, manuelle Behandlung zur Verbesserung/Beseitigung und Prävention von Beschwerden im Bereich des Bewegungsapparates (Muskeln, Sehnen, Bänder, Gelenke, und Nerven) und zur psychischen Entspannung. Bei der Klassischen Massage werden fünf verschiedene Handgriffe angewandt: Effleurage/Streichung, Petrissage/Knetung, Friktion/Reibung, Tapotement/Klopfung und Vibration. Durch die unterschiedlichen Massagegriffe ist es je nach Indikation möglich, den Muskeltonus zu korrigieren.",
+          ]}
+          body2="<p>Die klassische Massage:</p><ul><li>stärkt das Immunsystem</li><li>lindert Schmerzen</li><li>reduziert Stress und dessen Auswirkungen wie: Kopfschmerzen, Migräne-Attacken, Schlafprobleme & Muskelverspannungen</li><li>entspannt/aktiviert die Muskulatur</li><li>verbessert den Zellstoffwechsel im Gewebe</li><li>löst Verklebungen und Narben</li><li>beeinflusst das vegetative Nervensystem indem es den Sympathikus hemmt und den Parasympathikus aktiviert.</li><li>senkt Blutdruck, Puls und Atemfrequenz</li><li>wirkt über Reflexbögen auf innere Organe</li><li>bringt psychische Entspannung</li></ul>"
+        />
+        <CardMassageReverse
+          collapseLinkIdRev="collapse2"
+          imgPathRev="/img/massage2-opt.jpg"
+          hrefRev="#"
+          titleRev="Entspannungsmassage"
+          bodyRev1={[
+            "Als Entspannungsmassage wird eine Massage bezeichnet, die nicht aus medizinischen Gründen durchgeführt wird, sondern ausschließlich der Entspannung dient. Sie dient vor allem zum Abbau von Stress auf geistiger und körperlicher Ebene und zur Steigerung des Wohlbefindens.",
+            "Dabei können unterschiedliche Massagetechniken zum Einsatz kommen. Teilweise besteht bei einer Entspannungsmassage das Ziel, bestimmte Muskeln oder Muskelgruppen zu lockern, um Verspannungen zu lösen.",
+          ]}
+          bodyRev2="<p>Bei einer Entspannungsmassage, die man auch Anti-Stress oder Relax Massage nennt, werden gleichmäßig langsame und rhythmische Bewegungen vorgenommen, mit dessen Hilfe sich Geist, Körper und Seele wieder erholen können.</p><br/><p>Die Basis der Massage die ich verwende ist die Hiromassage (oder Chiromassage) nach der Methode von Enrique Garcia. Das Wort <q>hiro</q>im Lateinischen wird als <q>Hand</q> übersetzt. Hiromassage entstand als Ergebnis der Vermischung von verschiedenen Techniken klassischer und orientalischer Massagesysteme sowie Elemente der Chiropraktik und Kinesiologie. Sie erhöht den Muskeltonus und lindert Muskelermüdung. Es hilft bei der Bewältigung der Muskelatonie, bei der Behandlung von Fibrose, Kontrakturen, Osteochondrose, Arthritis und Arthrose sowie bei Schwellungen.</p><br/><p>Die myo-intensive Massagetechnik der Hiromassage beeinflusst die Gelenke. Sie entfernt Blockaden, die durch Verletzungen, unangenehme statische Spannungen und Stress entstehen. Aus diesem Grund gibt es einen Muskelkrampf um das Gelenk und dann seine Blockade. Der Masseur entspannt zunächst die Muskeln des Patienten und wirkt dann schmerzfrei auf das Gelenk.</p<br/><p>Die neurosedative Methode der Hiromassage wird zur Bekämpfung von emotionalem und mentalem Stress eingesetzt. Es hilft, die Symptome von chronischer Müdigkeit, Schlafstörungen, Reizbarkeit loszuwerden. Es betrifft das Zentralnervensystem einer Person. Hiromassage kann die Widerstandskraft des Körpers gegen Stress erhöhen. Darüber hinaus stimuliert es auch die Lustzentren des Gehirns und setzt Endorphine frei. Diese Technik beinhaltet eine homogene, kontinuierliche und rhythmische Bewegung des Masseurs.</p><br/><p>Die Hiromassage wird auch zur hämolymphatischen Drainage eingesetzt. Es beeinflusst das menschliche Lymph- und Venensystem. Der Einsatzort ist in diesem Fall das periphere Kapillarnetz. Der Masseur führt in langsamem Tempo pulsierende, wellige Bewegungen aus. Es ist zu beachten, dass die Hiromassage nicht nur einen mechanischen, sondern auch einen starken Energieeffekt hat.</p><br/><p>Die Indikationen umfassen Gelenkerkrankungen (Arthrose, Osteochondrose und andere), Muskelatonie, chronische Müdigkeit, Schmerzen, erhöhte Nervenreizbarkeit, Schlafstörungen, Neurosen, Stress, Depressionen, Übergewicht, Cellulite, Fibrose, Ödeme, Falten, einige Gefäßerkrankungen, Hypertonizität der Muskeln, Funktionsstörungen der Talg- oder Schweißdrüsen, Erkrankungen des Lymphsystems, Verschlechterung des Hautzustands.</p><br/><p>Eine professionelle Hiromassage hilft, Verspannungen und Müdigkeit abzubauen, sich zu entspannen, den Muskeltonus zu erhöhen oder umgekehrt zu verringern, Schmerzen zu lindern, Verletzungen zu beseitigen, die Durchblutung und den Lymphfluss zu verbessern,Stoffwechselprozesse zu beschleunigen, den Hautzustand zu verbessern und den Körper zu verjüngen und sogar zusätzliche Pfunde loszuwerden.</p>"
+        />
+        <CardMassage
+          collapseLinkId="collapse3"
+          imgPath1="/img/massage3-opt.jpg"
+          href1="#"
+          title1="Sportmassage"
+          body1={[
+            "Ziel und Zweck einer Sportmassage ist die spezifische Behandlung von Sportlern vor oder nach sportlichen Aktivitäten. Dabei werden Handgriffe der klassischen Massage verwendet, die durch verschiedene andere Grifftechniken erweitert werden. Auf diese Weise wird den speziellen Bedürfnissen von Sportlern Rechnung getragen.",
+          ]}
+          body2="<p>Die Sportmassage sorgt für:</p><ul><li>die Aktivierung des Kreislaufsystems</li><li>die Erhöhung der Sauerstoffzufuhr</li><li>die verbesserte Ableitung von Schlacken</li><li>die Vermeidung einer zu schnellen Ermüdung</li><li>die Beseitigung von Schmerzen durch überbeanspruchte Muskeln</li><li>die Beschleunigung den Heilungsprozess bei Verletzungen</li><li>die Steigerung des Wohlbefindens</li><li>die Aktivierung des zentralen Nervensystems</li></ul><p>Bei einer Sportmassage unterscheidet man zwischen der Vorbereitungsmassage, der Trainingsmassage, der Zwischenmassage sowie der Regenerationsmassage.</p></br><p>Da die Sportmassage auch den Effekt eines Aufwärmens hat, wird auf diese Weise auch möglichen Verletzungen beim Sport vorgebeugt. Im Anschluss an die sportliche Aktivität soll die Sportmassage dazu beitragen, einen schmerzhaften Muskelkater zu unterbinden. Nach den sportlichen Belastungen wird der Körper durch die Anwendung von bestimmten Griffen behandelt, umso besser regenerieren zu können. Sie dient zum raschen Abbau von Stoffwechselschlacken, damit diese sich nicht im Muskelgewebe festsetzen. Zudem soll die Leistungsfähigkeit des Sportlers erhöht werden.</p></br><p>Doch nicht nur für Leistungssportler ist eine Sportmassage geeignet. Auch für Freizeitsportler oder für Alltag und Berufsleben kann eine solche Massage von Vorteil sein, da sie eine positive Wirkung auf die Muskulatur hat und verkrampfte und überdehnte Muskeln entspannt. Zudem werden unterforderte Muskeln und Gewebe angeregt sowie die Sauerstoffversorgung verbessert.</p></br><p>Neben Sportlern können auch Menschen, die aufgrund von falscher Sitzhaltung, langem Autofahren, langer Arbeit am Schreibtisch bzw. Computer unter</p><ul><li>Rückenschmerzen</li><li>Nackenschmerzen</li><li>Stress</li></ul><p>leiden, von einer Sportmassage profitieren, da die Massage gezielt die dadurch entstehenden Verklebungen und Verspannungen behandelt.</p>"
+        />
+      </div>
+      <!-- contraindications -->
+      <div class="contradict-section">
+        <h2>Kontraindikationen</h2>
 
-                <h2>Kontraindikationen</h2>
+        <h3>Absolute Kontraindikationen</h3>
 
-                <h3>Absolute Kontraindikationen</h3>
+        <p>Bei folgenden Fällen darf generell nicht massiert werden:</p>
+        <ul>
+          <li>fieberhafte Erkrankungen</li>
+          <li>Entzündungen jeglicher Art</li>
+          <li>
+            akute Thrombose, Thrombophlebitis, arterielle Durchblutungsstörungen
+          </li>
+          <li>
+            frischer Herzinfarkt, Herzmuskelschwäche und andere schwere
+            Herzerkrankungen
+          </li>
+          <li>Krebserkrankungen, Tumore</li>
+          <li>
+            frische Verletzungen des Bewegungsapparates (Knochenbrüche,
+            Verstauchungen, Muskelzerrungen, Muskelrisse);
+          </li>
+          <li>Hauterkrankungen im akuten Stadium,</li>
+          <li>
+            Verletzungen der Integrität der Haut (Geschwüre, Verbrennungen,
+            Wunden),
+          </li>
+          <li>Infektionensktankheiten</li>
+          <li>gewisse neurologische Erkrankungen</li>
+          <li>
+            während der ersten drei Schwangerschaftsmonaten sowie bei
+            Abortgefahr (Fehlgeburt)
+          </li>
+        </ul>
 
-                <p>Bei folgenden Fällen darf generell nicht massiert werden:</p>
-                <ul>
-                    <li>fieberhafte Erkrankungen</li>
-                    <li>Entzündungen jeglicher Art</li>
-                    <li>akute Thrombose, Thrombophlebitis, arterielle Durchblutungsstörungen</li>
-                    <li>frischer Herzinfarkt, Herzmuskelschwäche und andere schwere
-                        Herzerkrankungen</li>
-                    <li>Krebserkrankungen, Tumore</li>
-                    <li>frische Verletzungen des Bewegungsapparates (Knochenbrüche,
-                        Verstauchungen, Muskelzerrungen, Muskelrisse);</li>
-                    <li>Hauterkrankungen im akuten Stadium,</li>
-                    <li>Verletzungen der Integrität der Haut (Geschwüre, Verbrennungen,
-                        Wunden),</li>
-                    <li>Infektionensktankheiten</li>
-                    <li>gewisse neurologische Erkrankungen</li>
-                    <li>während der ersten drei Schwangerschaftsmonaten sowie bei
-                        Abortgefahr (Fehlgeburt)</li>
-                </ul>
+        <h3>Relative Kontraindikationen</h3>
+        <p>
+          Mit diesem Begriff definiert man Situationen, in denen die Massage nur
+          eingeschränkt möglich ist, z.B. Beinvenenthrombose, bei der eine
+          Schulter-Arm Massage durchgeführt werden kann.
+        </p>
 
-                <h3>Relative Kontraindikationen</h3>
-                <p>Mit diesem Begriff definiert man Situationen, in denen die Massage nur
-                    eingeschränkt möglich ist, z.B. Beinvenenthrombose, bei der eine Schulter-Arm
-                    Massage durchgeführt werden kann.</p>
-
-                <div class="contradict-bold">
-                    <p><b>Diese Liste ist nicht abschliessend. Bei Unklarheiten ist eine Rücksprache mit
-                        dem Arzt angezeigt.</b></p>
-                </div>
-                
-                <p>Sollten Sie in der Vergangenheit an einer der oben aufgelisteten Krankheiten /
-                    Beschwerden gelitten haben oder leiden Sie momentan darunter, möchte ich
-                    Sie bitten, mich zum Zeitpunkt der Terminvereinbarung darüber zu
-                    informieren. Bitte setzen Sie mich spätestens während der Anamnese in
-                    Kenntnis über allfällige Krankheiten/Beschwerden und über vergangene und
-                    operative Eingriffe und Unfälle.</p>
-            </div>
-
-            <!-- prices -->
-            <div class="price-section">
-                <h2>Preise</h2>
-                <div class="prices">
-                    <p>Klassische Massage 120 CHF pro 60 Minuten</p>
-                    <p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
-                    <p>Sportmassage 120 CHF pro 60 Minuten</p>
-                </div>
-                <div class="price-text">
-                    <p>Die Behandlungsdauer versteht sich inklusive Vor- und Nachgespräch.</p>
-			        <br>
-                    <p>
-                        Ein Grossteil der Krankenkassen übernimmt im Rahmen einer
-                        Zusatzversicherung die Kosten einer Massage voll oder zum Teil.
-                        Bitte erkundigen Sie sich vor der Behandlung bei Ihrer
-                        Versicherung.
-                    </p>
-                </div>
-               
-            </div>
+        <div class="contradict-bold">
+          <p>
+            <b
+              >Diese Liste ist nicht abschliessend. Bei Unklarheiten ist eine
+              Rücksprache mit dem Arzt angezeigt.</b
+            >
+          </p>
         </div>
-        <Footer />
-    </main>
+
+        <p>
+          Sollten Sie in der Vergangenheit an einer der oben aufgelisteten
+          Krankheiten / Beschwerden gelitten haben oder leiden Sie momentan
+          darunter, möchte ich Sie bitten, mich zum Zeitpunkt der
+          Terminvereinbarung darüber zu informieren. Bitte setzen Sie mich
+          spätestens während der Anamnese in Kenntnis über allfällige
+          Krankheiten/Beschwerden und über vergangene und operative Eingriffe
+          und Unfälle.
+        </p>
+      </div>
+
+      <!-- prices -->
+      <div class="price-section">
+        <h2>Preise</h2>
+        <div class="prices">
+          <p>Klassische Massage 120 CHF pro 60 Minuten</p>
+          <p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
+          <p>Sportmassage 120 CHF pro 60 Minuten</p>
+        </div>
+        <div class="price-text">
+          <p>
+            Die Behandlungsdauer versteht sich inklusive Vor- und Nachgespräch.
+          </p>
+          <br />
+          <p>
+            Ein Grossteil der Krankenkassen übernimmt im Rahmen einer
+            Zusatzversicherung die Kosten einer Massage voll oder zum Teil.
+            Bitte erkundigen Sie sich vor der Behandlung bei Ihrer Versicherung.
+          </p>
+        </div>
+      </div>
+    </div>
+    <Footer />
+  </main>
 </Layout>
 
 <style>
-    main {
-        margin: 0 auto;
-        max-width: 1100px;
-        height: 100%;
-        background-color: #efd3d7;
-    }
+  main {
+    margin: 0 auto;
+    max-width: 1100px;
+    height: 100%;
+    background-color: #efd3d7;
+  }
 
+  .massage {
+    padding-top: 104px;
+  }
+
+  h1,
+  h2 {
+    color: #8e9aaf;
+  }
+
+  .page-title {
+    padding: 40px 40px;
+    text-align: center;
+  }
+
+  /* massage cards */
+
+  .card-section {
+    padding: 0 40px;
+  }
+
+  /* prices */
+
+  .price-section {
+    padding: 0 40px 40px 40px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .price-section h2 {
+    margin: 20px 0;
+  }
+
+  .prices {
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .prices p {
+    font-size: 18px;
+    /* font-weight: 600; */
+    margin-bottom: 8px;
+  }
+
+  /* contradictions */
+
+  .contradict-section {
+    padding: 20px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .contradict-section h2 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .contradict-section h3 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .contradict-bold {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @media (max-width: 600px) {
     .massage {
-        padding-top: 104px;
-    }
-
-    h1,
-    h2 {
-        color: #8e9aaf;
+      padding-top: 70px;
     }
 
     .page-title {
-        padding: 40px 40px;
-        text-align: center;
+      padding: 20px;
+      text-align: center;
     }
 
-    /* massage cards */
-
     .card-section {
-        padding: 0 40px;
+      padding: 0 20px;
     }
 
     /* prices */
 
     .price-section {
-        padding: 0 40px 40px 40px;
-        text-align: center;
-        max-width: 800px;
-        margin: 0 auto;
+      padding: 0 20px 20px 20px;
+      /* text-align: left; */
     }
 
     .price-section h2 {
-        margin: 20px 0;
+      margin: 0 20px 20px 20px;
     }
 
-    .prices {
-        max-width: 420px;
-        margin: 0 auto;
-        text-align: left;
-        margin-bottom: 20px;
+    .price-text {
+      text-align: left;
     }
 
     .prices p {
-        font-size: 18px;
-        /* font-weight: 600; */
-        margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
     }
 
     /* contradictions */
 
     .contradict-section {
-        padding: 20px 40px;
-        max-width: 800px;
-        margin: 0 auto;
+      padding: 0 20px 20px 20px;
+      max-width: 800px;
+      margin: 0 auto;
     }
-
-    .contradict-section h2 {
-        text-align: center;
-        padding-bottom: 20px;
-    }
-
-    .contradict-section h3 {
-        text-align: center;
-        padding-bottom: 20px;
-    }
-
-    .contradict-bold {
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    @media (max-width: 600px) {
-        .massage {
-            padding-top: 70px;
-        }
-
-        .page-title {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .card-section {
-            padding: 0 20px;
-        }
-
-        /* prices */
-
-        .price-section {
-            padding: 0 20px 20px 20px;
-            /* text-align: left; */
-        }
-
-        .price-section h2 {
-            margin: 0 20px 20px 20px;
-        }
-
-        .price-text {
-            text-align: left;
-        }
-        
-        .prices p {
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        /* contradictions */
-
-        .contradict-section {
-            padding: 0 20px 20px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-    }
+  }
 </style>
