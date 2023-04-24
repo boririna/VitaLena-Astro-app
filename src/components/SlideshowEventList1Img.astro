@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon";
+import ButtonGrey from "./ButtonGrey.astro";
 export interface Props {
     slideImg1: string;
     slideImg2: string;
@@ -16,22 +17,16 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
     <!-- slide 1 -->
     <div class="slide-mobile">
         <div class="slide-text">
-            <p>
-                I very much enjoyed the attention to detail when adjusting
-                various parts of the body and stretching or massaging based on
-                what's needed, and in a way that can actually help your pain
-                points feel better. In comparison to a massage from a place like
-                massage envy, my experience here felt way more therapeutic and
-                would provide lasting results for the next few days. I highly
-                recommend and will definitely be returning!
-            </p>
-            <p>- Katerina</p>
+            <div>
+                <p>Hier könnten Ihre Bewertungen sein</p>
+                <ButtonGrey href="/contacts/#personal-contact" text="BEWERTUNG SCHREIBEN" />
+            </div>
         </div>
         <!-- <img src={slideImg1} alt="" /> -->
     </div>
 
     <!-- slide 2 -->
-    <div class="slide-mobile">
+    <!-- <div class="slide-mobile">
         <div class="slide-text">
             <p>
                 She was amazing! Attentive, a great listener and communicator,
@@ -40,10 +35,10 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
             </p>
             <p>- Maria</p>
         </div>
-    </div>
+    </div> -->
 
     <!-- slide 3 -->
-    <div class="slide-mobile">
+    <!-- <div class="slide-mobile">
         <div class="slide-text">
             <p>
                 I prefer heavy pressure for my massages, I usually get deep
@@ -56,15 +51,15 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
             </p>
             <p>- Peter</p>
         </div>
-    </div>
+    </div> -->
 
     <!-- Control buttons -->
-    <button class="btn-m btn-next-m">
+    <!-- <button class="btn-m btn-next-m">
         <Icon name="fa-solid:chevron-right" class="btn-icon" />
     </button>
     <button class="btn-m btn-prev-m">
         <Icon name="fa-solid:chevron-left" class="btn-icon" />
-    </button>
+    </button> -->
 </div>
 
 <script>
@@ -125,10 +120,13 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
         min-height: 300px;
         position: relative;
         overflow: hidden;
+        margin: 0 auto;
+        display: flex;  /* ampty review */ 
+        justify-content: center;  /* ampty review */ 
     }
 
     .slide-mobile {
-        width: 100%;
+        width: 40%; /* ampty review */ 
         height: 100%;
         max-width: 1020px;
         position: absolute;
@@ -143,6 +141,10 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
         background-color: rgba(255, 255, 255, 0.674);
         padding: 20px;
         border-radius: 4px;
+        text-align: center;
+        display: flex;  /* ampty review */ 
+        align-items: center;  /* ampty review */ 
+        justify-content: center;  /* ampty review */ 
     }
 
     .slide-text :first-child {
@@ -204,6 +206,9 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
             position: relative;
             overflow: hidden;
         } */
+        .slide-mobile {
+        width: 100%; /* ampty review */ 
+    }
 
     }
 

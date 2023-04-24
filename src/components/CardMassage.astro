@@ -8,12 +8,13 @@ export interface Props {
 	href1: string;
 	imgPath1: string;
 	collapseLinkId: string;
+	massageCardId: string;
 }
 
-const { imgPath1, href1, title1, body1, body2, collapseLinkId} = Astro.props;
+const { imgPath1, href1, title1, body1, body2, collapseLinkId, massageCardId} = Astro.props;
 ---
 
-<div class="card">
+<div id={massageCardId} class="card">
 	<div class="card-img-text">
 		<img src={imgPath1} class="card-img" alt="Klassische Massage" />
 		<div class="card-text">
