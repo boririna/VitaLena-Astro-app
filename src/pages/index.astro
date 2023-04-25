@@ -109,12 +109,20 @@ import { Icon } from "astro-icon";
 		</div>
 
 		<!-- quote -->
-		<div class="quote">
+		<div class="quote-desktop">
 			<p>
 				„Die Gesundheit überwiegt alle äusseren Güter so sehr, dass ein
 				gesunder Bettler glücklicher als ein kranker König ist.“
 			</p>
 			<p>Arthur Schopenhauer</p>
+		</div>
+
+		<div class="quote-mobile">
+			<p>
+				„Eine halbe Stunde Massage ist absolut notwendig, 
+				ausser, wenn man sehr beschäftigt ist, 
+				dann braucht man eine ganze Stunde.“
+			</p>
 		</div>
 
 		<!-- cards -->
@@ -256,13 +264,17 @@ import { Icon } from "astro-icon";
 
 	/* quote */
 
-	.quote {
+	.quote-desktop {
 		padding: 80px 150px;
 		background-color: rgba(255, 255, 255, 0.674);
 		text-align: center;
 		font-family: "Philosopher", sans-serif;
 		font-size: 22px;
 		font-weight: 500;
+	}
+
+	.quote-mobile {
+		display: none;
 	}
 
 	/* cards */
@@ -378,10 +390,17 @@ import { Icon } from "astro-icon";
 		}
 
 		/* quote */
-
-		.quote {
+		.quote-desktop {
+			display: none;
+		}
+		.quote-mobile {
+			display: block;
 			padding: 20px 20px;
 			font-size: 18px;
+			background-color: rgba(255, 255, 255, 0.674);
+			text-align: center;
+			font-family: "Philosopher", sans-serif;
+			font-weight: 500;
 		}
 
 		/* cards */
