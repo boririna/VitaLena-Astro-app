@@ -152,11 +152,26 @@ import { Icon } from "astro-icon";
 		<!-- Prices -->
 		<div id="massage-price" class="price-section">
 			<h1>Preise</h1>
-			<div class="prices">
-				<p>Klassische Massage 120 CHF pro 60 Minuten</p>
-				<p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
-				<p>Sportmassage 120 CHF pro 60 Minuten</p>
+			<div class="price-columns">
+				<div>
+					<h2>In der Salzgrotte</h2>
+					<div class="prices">
+						<p>Klassische Massage 120 CHF pro 60 Minuten</p>
+						<p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
+						<p>Sportmassage 120 CHF pro 60 Minuten</p>
+					</div>
+				</div>
+				<div>
+					<h2>Im Praxisraum</h2>
+					<div class="prices">
+						<p>Klassische Massage ab 80 CHF pro 60 Minuten</p>
+						<p>Entspannungsmassage ab 80 CHF pro 60 Minuten</p>
+						<p>Sportmassage ab 80 CHF pro 60 Minuten</p>
+					</div>
+				</div>
+				
 			</div>
+			
 			<p>Die Behandlungsdauer versteht sich inklusive Vor- und Nachgespräch.</p>
 			<br>
 			<p>
@@ -295,12 +310,19 @@ import { Icon } from "astro-icon";
 	.price-section {
 		padding: 0 40px 20px 40px;
 		text-align: center;
-		max-width: 800px;
+		max-width: 1000px;
 		margin: 0 auto;
 	}
 
-	.price-section h1 {
+	.price-section h1, h2 {
 		margin-bottom: 20px;
+	}
+
+	.price-columns {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+		flex-wrap: wrap;
 	}
 
 	.prices {
@@ -425,6 +447,10 @@ import { Icon } from "astro-icon";
 			text-align: center;
 		}
 
+		.price-columns {
+			gap: 0;
+		}
+
 		.prices p {
 			font-size: 14px;
 			font-weight: 600;
@@ -434,6 +460,10 @@ import { Icon } from "astro-icon";
 
 		.price-section h1 {
 			font-size: 26px;
+		}
+
+		.price-section h2 {
+			font-size: 22px;
 		}
 
 		/* reviews */
