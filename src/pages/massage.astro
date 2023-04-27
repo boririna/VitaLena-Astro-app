@@ -115,10 +115,23 @@ import Footer from "../components/Footer.astro";
       <!-- prices -->
       <div class="price-section">
         <h2>Preise</h2>
-        <div class="prices">
-          <p>Klassische Massage 120 CHF pro 60 Minuten</p>
-          <p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
-          <p>Sportmassage 120 CHF pro 60 Minuten</p>
+        <div class="price-columns">
+          <div>
+            <h3>In der Salzgrotte</h3>
+            <div class="prices">
+              <p>Klassische Massage 120 CHF pro 60 Minuten</p>
+              <p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
+              <p>Sportmassage 120 CHF pro 60 Minuten</p>
+            </div>
+          </div>
+          <div>
+            <h3>Im Praxisraum</h3>
+            <div class="prices">
+              <p>Klassische Massage ab 80 CHF pro 60 Minuten</p>
+              <p>Entspannungsmassage ab 80 CHF pro 60 Minuten</p>
+              <p>Sportmassage ab 80 CHF pro 60 Minuten</p>
+            </div>
+          </div>
         </div>
         <div class="price-text">
           <p>
@@ -170,13 +183,20 @@ import Footer from "../components/Footer.astro";
   .price-section {
     padding: 0 40px 40px 40px;
     text-align: center;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
   }
 
-  .price-section h2 {
-    margin: 20px 0;
+  .price-section h2, h3 {
+    margin-bottom: 20px;
   }
+
+  .price-columns {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
 
   .prices {
     max-width: 420px;
@@ -238,6 +258,10 @@ import Footer from "../components/Footer.astro";
     .price-section h2 {
       margin: 0 20px 20px 20px;
     }
+
+    .price-columns {
+			gap: 0;
+		}
 
     .price-text {
       text-align: left;
