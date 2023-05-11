@@ -6,6 +6,7 @@ import BannerHome from "../components/BannerHome.astro";
 import SlideshowEventList3Img from "../components/SlideshowEventList3Img.astro";
 import SlideshowEventList1Img from "../components/SlideshowEventList1Img.astro";
 import SlideshowEventList2Img from "../components/SlideshowEventList2Img.astro";
+import ButtonGrey from "../components/ButtonGrey.astro"
 import { Icon } from "astro-icon";
 ---
 
@@ -184,8 +185,8 @@ import { Icon } from "astro-icon";
 		<div class="reviews">
 			<h1>Bewertungen</h1>
 			<!-- <p>Hier könnten Ihre Bewertungen sein</p> -->
-			<SlideshowEventList1Img />
-			<!-- <div class="reviews-desktop">
+			<!-- <SlideshowEventList2Img /> -->
+			<div class="reviews-desktop">
 				<SlideshowEventList3Img />
 			</div>
 			<div class="reviews-mobile">
@@ -193,7 +194,10 @@ import { Icon } from "astro-icon";
 			</div>
 			<div class="reviews-tablet">
 				<SlideshowEventList2Img />
-			</div>			 -->
+			</div>
+			<div class="reviews-button">
+				<ButtonGrey href="/contacts/#personal-contact" text="BEWERTUNG SCHREIBEN" />
+			</div>
 		</div>
 		<Footer />
 	</main>
@@ -360,6 +364,11 @@ import { Icon } from "astro-icon";
 	.reviews p {
 		text-align: center;
 		padding-top: 20px;
+	}
+
+	.reviews-button {
+		text-align: center;
+    	padding-top: 20px;
 	}
 
 	@media (max-width: 900px) {

@@ -1,190 +1,187 @@
 ---
 import { Icon } from "astro-icon";
 export interface Props {
-    slideImg1: string;
-    slideImg2: string;
-    slideImg3: string;
-    slideImg4: string;
+  slideImg1: string;
+  slideImg2: string;
+  slideImg3: string;
+  slideImg4: string;
 }
 
 const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
 ---
 
 <!-- Slider container -->
-
 <div class="slider-tablet">
-    <!-- slide 1 -->
-    <div class="slide-tablet">
-        <div class="slide-text">
-            <p>
-                I very much enjoyed the attention to detail when adjusting
-                various parts of the body and stretching or massaging based on
-                what's needed, and in a way that can actually help your pain
-                points feel better. In comparison to a massage from a place like
-                massage envy, my experience here felt way more therapeutic and
-                would provide lasting results for the next few days. I highly
-                recommend and will definitely be returning!
-            </p>
-            <p>- Katerina</p>
-        </div>
-        <div class="slide-text">
-            <p>
-                This place is amazing. The combination massage was very much
-                needed. I didn't realize how tight my body was until the session
-                was over. Oh boy was it tense but afterwards I felt so much
-                relief. I would recommend anyone to give it a try.
-            </p>
-            <p>- Kate</p>
-        </div>
-        <!-- <img src={slideImg1} alt="" /> -->
+  <!-- slide 1 -->
+  <div class="slide-tablet">
+    <div class="slide-text">
+      <p>
+        Zu Elena gehe ich immer sehr gerne in die Massage. Die Session ist
+        professionell, einfühlsam und Elena ist auch immer für einen Quatsch zu
+        haben, und findet immer die richtige Mischung von Stille, Massage und
+        Gespräch. Ich schätze Elena sehr und freue mich jeweils auf die Massage.
+      </p>
+      <p>- Flavio, 10.05.2023</p>
     </div>
-
-    <!-- slide 2 -->
-    <div class="slide-tablet">
-        <div class="slide-text">
-            <p>
-                She was amazing! Attentive, a great listener and communicator,
-                working out tough tension spots in a way I didn’t even, know was
-                possible! I wish I could afford to see her every week!
-            </p>
-            <p>- Maria</p>
-        </div>
-        <div class="slide-text">
-            <p>
-                She knows her stuff! Walked out feeling brand spankin' new. I'll
-                definitely be back.
-            </p>
-            <p>- Peter</p>
-        </div>
+    <div class="slide-text">
+      <p>
+        Hallo liebe Elena. Ich gehe jedesmal völlig entspannt bei dir aus der
+        Massage. Sobald ich eine Verspannung oder ähnliche Probleme habe gehst
+        du darauf ein und versuchst es zu lösen. Der Wohlfühlfaktor ist bei dir
+        einfach gegeben und du weisst was du tust. 👌🏻 Ich komme immer wieder
+        gern zu dir mach weiter so. Liebe Grüsse Claudia
+      </p>
+      <p>- Claudia, 11.05.2023</p>
     </div>
+    <!-- <img src={slideImg1} alt="" /> -->
+  </div>
 
-    <!-- Control buttons -->
-    <button class="btn-p btn-next-p">
-        <Icon name="fa-solid:chevron-right" class="btn-icon" />
-    </button>
-    <button class="btn-p btn-prev-p">
-        <Icon name="fa-solid:chevron-left" class="btn-icon" />
-    </button>
+  <!-- slide 2 -->
+  <!-- <div class="slide-tablet">
+    <div class="slide-text">
+      <p>
+        She was amazing! Attentive, a great listener and communicator, working
+        out tough tension spots in a way I didn’t even, know was possible! I
+        wish I could afford to see her every week!
+      </p>
+      <p>- Maria</p>
+    </div>
+    <div class="slide-text">
+      <p>
+        She knows her stuff! Walked out feeling brand spankin' new. I'll
+        definitely be back.
+      </p>
+      <p>- Peter</p>
+    </div>
+  </div> -->
+
+  <!-- Control buttons -->
+  <!-- <button class="btn-p btn-next-p">
+    <Icon name="fa-solid:chevron-right" class="btn-icon" />
+  </button>
+  <button class="btn-p btn-prev-p">
+    <Icon name="fa-solid:chevron-left" class="btn-icon" />
+  </button> -->
 </div>
 
 <script>
-    // Select all slides
-    const slides = document.querySelectorAll(".slide-tablet");
+  // Select all slides
+  const slides = document.querySelectorAll(".slide-tablet");
 
-    // loop through slides and set each slides translateX
+  // loop through slides and set each slides translateX
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${indx * 100}%)`;
+  });
+
+  // select next slide button
+  const nextSlide = document.querySelector(".btn-next-p");
+
+  // current slide counter
+  let curSlide = 0;
+  // maximum number of slides
+  let maxSlide = slides.length - 1;
+
+  // add event listener and navigation functionality
+  nextSlide.addEventListener("click", function () {
+    // check if current slide is the last and reset current slide
+    if (curSlide === maxSlide) {
+      curSlide = 0;
+    } else {
+      curSlide++;
+    }
+
+    //   move slide by -100%
     slides.forEach((slide, indx) => {
-        slide.style.transform = `translateX(${indx * 100}%)`;
+      slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
     });
+  });
 
-    // select next slide button
-    const nextSlide = document.querySelector(".btn-next-p");
+  // select prev slide button
+  const prevSlide = document.querySelector(".btn-prev-p");
 
-    // current slide counter
-    let curSlide = 0;
-    // maximum number of slides
-    let maxSlide = slides.length - 1;
+  // add event listener and navigation functionality
+  prevSlide.addEventListener("click", function () {
+    // check if current slide is the first and reset current slide to last
+    if (curSlide === 0) {
+      curSlide = maxSlide;
+    } else {
+      curSlide--;
+    }
 
-    // add event listener and navigation functionality
-    nextSlide.addEventListener("click", function () {
-        // check if current slide is the last and reset current slide
-        if (curSlide === maxSlide) {
-            curSlide = 0;
-        } else {
-            curSlide++;
-        }
-
-        //   move slide by -100%
-        slides.forEach((slide, indx) => {
-            slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-        });
+    //   move slide by 100%
+    slides.forEach((slide, indx) => {
+      slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
     });
-
-    // select prev slide button
-    const prevSlide = document.querySelector(".btn-prev-p");
-
-    // add event listener and navigation functionality
-    prevSlide.addEventListener("click", function () {
-        // check if current slide is the first and reset current slide to last
-        if (curSlide === 0) {
-            curSlide = maxSlide;
-        } else {
-            curSlide--;
-        }
-
-        //   move slide by 100%
-        slides.forEach((slide, indx) => {
-            slide.style.transform = `translateX(${100 * (indx - curSlide)}%)`;
-        });
-    });
+  });
 </script>
 
 <style>
-    .slider-tablet {
-        width: 100%;
-        /* max-width: 800px; */
-        min-height: 300px;
-        position: relative;
-        overflow: hidden;
-    }
+  .slider-tablet {
+    width: 100%;
+    /* max-width: 800px; */
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
+  }
 
-    .slide-tablet {
-        width: 100%;
-        height: 100%;
-        max-width: 1020px;
-        position: absolute;
-        transition: all 0.5s;
-        display: flex;
-        gap: 16px;
-        padding-right: 1px;
-    }
+  .slide-tablet {
+    width: 100%;
+    height: 100%;
+    max-width: 1020px;
+    position: absolute;
+    transition: all 0.5s;
+    display: flex;
+    gap: 16px;
+    padding-right: 1px;
+  }
 
-    .slide-text {
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.674);
-        padding: 20px;
-        border-radius: 4px;
-    }
+  .slide-text {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.674);
+    padding: 20px;
+    border-radius: 4px;
+  }
 
-    .slide-text :first-child {
-        padding-bottom: 10px;
-    }
+  .slide-text :first-child {
+    padding-bottom: 10px;
+  }
 
-    .slider-tablet img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
+  .slider-tablet img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
-    .btn-p {
-        position: absolute;
-        width: 40px;
-        height: 40px;
-        padding: 10px;
-        border: none;
-        border-radius: 50%;
-        z-index: 10px;
-        cursor: pointer;
-        background-color: #feeafa;
-        opacity: 0.8;
-        font-size: 18px;
-    }
+  .btn-p {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: #feeafa;
+    opacity: 0.8;
+    font-size: 18px;
+  }
 
-    .btn-p:active {
-        transform: scale(1.1);
-    }
+  .btn-p:active {
+    transform: scale(1.1);
+  }
 
-    .btn-icon {
-        height: 20px;
-        color: #8e9aaf;
-    }
+  .btn-icon {
+    height: 20px;
+    color: #8e9aaf;
+  }
 
-    .btn-prev-p {
-        top: 45%;
-        left: 2%;
-    }
+  .btn-prev-p {
+    top: 45%;
+    left: 2%;
+  }
 
-    .btn-next-p {
-        top: 45%;
-        right: 2%;
-    }
+  .btn-next-p {
+    top: 45%;
+    right: 2%;
+  }
 </style>
