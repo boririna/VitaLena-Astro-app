@@ -14,7 +14,7 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
 <!-- Slider container -->
 <div class="slider-mobile">
   <!-- slide 1 -->
-  <div class="slide-mobile">
+  <div class="slide-mobile" id="slide1">
     <div class="slide-text">
       <div>
         <p>
@@ -30,7 +30,7 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
   </div>
 
   <!-- slide 2 -->
-  <div class="slide-mobile">
+  <div class="slide-mobile" id="slide2">
     <div class="slide-text">
       <p>
         Hallo liebe Elena. Ich gehe jedesmal völlig entspannt bei dir aus der
@@ -63,7 +63,7 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
   </button>
 </div>
 
-<script>
+<script defer>
   // Select all slides
   const slides = document.querySelectorAll(".slide-mobile");
 
