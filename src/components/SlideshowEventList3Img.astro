@@ -44,43 +44,40 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
   </div>
 
   <!-- slide 2 -->
-  <!-- <div class="slide">
+  <div class="slide">
         <div class="slide-text">
             <p>
-                Today I am a very happy and relaxing and friendly atmosphere.
-                Really enjoyable experience, Cannot recommend enough. Thanks to
-                the therapist.
+              Jedes Mal eine tolle, entspannende und einfühlsame Massage.
+              Verspannungen werden gelöst und ich gehe mit einem gutem Gefühl.
+              Nebenbei findet man auch immer Themen zum quatschen. Sehr zu empfehlen,
+              Elena weiss was sie tut. Danke.
             </p>
-            <p>- Marry</p>
+            <p>- Marco, 12. Mai 2023</p>
         </div>
         <div class="slide-text">
             <p>
-                This place is amazing. The combination massage was very much
-                needed. I didn't realize how tight my body was until the session
-                was over. Oh boy was it tense but afterwards I felt so much
-                relief. I would recommend anyone to give it a try.
-            </p>
-            <p>- Mark</p>
+              Meine kleine Auszeit bei Elena geniesse ich immer sehr! Sie hat mir
+              durch ihre zielgerichtete Massage schon oft den Gang zum Chiropraktiker
+              erspart, dafür bin ich sehr dankbar.
+            <p>- Imke, 25. Mai 2023</p>
         </div>
-        <div class="slide-text">
+        <div class="slide-text-empty">
             <p>
-                She knows her stuff! Walked out feeling brand spankin' new. I'll
-                definitely be back.
+              Hier könnte Ihre Bewertung sein.
             </p>
-            <p>- Gordon</p>
         </div>
-    </div> -->
+    </div>
 
   <!-- Control buttons -->
-  <!-- <button class="btn btn-next">
+  <button class="btn btn-next">
         <Icon name="fa-solid:chevron-right" class="btn-icon" />
     </button>
     <button class="btn btn-prev">
         <Icon name="fa-solid:chevron-left" class="btn-icon" />
-    </button> -->
+    </button>
 </div>
 
-<script>
+<script defer>
   // Select all slides
   const slides = document.querySelectorAll(".slide");
 
@@ -160,6 +157,16 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
 
   .slide-text :first-child {
     padding-bottom: 10px;
+  }
+
+  .slide-text-empty {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.674);
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .slide img {
