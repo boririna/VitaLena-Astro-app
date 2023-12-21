@@ -45,36 +45,68 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
 
   <!-- slide 2 -->
   <div class="slide">
-        <div class="slide-text">
-            <p>
-              Jedes Mal eine tolle, entspannende und einfühlsame Massage.
-              Verspannungen werden gelöst und ich gehe mit einem gutem Gefühl.
-              Nebenbei findet man auch immer Themen zum quatschen. Sehr zu empfehlen,
-              Elena weiss was sie tut. Danke.
-            </p>
-            <p>- Marco, 12. Mai 2023</p>
-        </div>
-        <div class="slide-text">
-            <p>
-              Meine kleine Auszeit bei Elena geniesse ich immer sehr! Sie hat mir
-              durch ihre zielgerichtete Massage schon oft den Gang zum Chiropraktiker
-              erspart, dafür bin ich sehr dankbar.
-            <p>- Imke, 25. Mai 2023</p>
-        </div>
-        <div class="slide-text">
-            <p>
-              Liebe Elena. Deine (fast) wöchentliche Massagen sind meine Rettung für meinen verspannten Oberkörper. Vorallem meine Schultern sind vom Sport so verkrampft. Nach deiner Massage fühle ich mich tausend mal entspannter und seitdem ich mich bei dir massieren lasse, habe ich weniger Schmerzen und kann so noch mehr Sport machen :D Letztens hast du eine Verklemmung im Nacken-Schulterbereich weggezaubert! Vielen Vielen Dank für deine magischen Hände und dass du immer auf meine Wehwehchen schaust :)</p>
-            <p>- Nguyen, 1. Septmber 2023</p>
-        </div>
+    <div class="slide-text">
+      <p>
+        Jedes Mal eine tolle, entspannende und einfühlsame Massage.
+        Verspannungen werden gelöst und ich gehe mit einem gutem Gefühl.
+        Nebenbei findet man auch immer Themen zum quatschen. Sehr zu empfehlen,
+        Elena weiss was sie tut. Danke.
+      </p>
+      <p>- Marco, 12. Mai 2023</p>
     </div>
+    <div class="slide-text">
+      <p>
+        Meine kleine Auszeit bei Elena geniesse ich immer sehr! Sie hat mir
+        durch ihre zielgerichtete Massage schon oft den Gang zum Chiropraktiker
+        erspart, dafür bin ich sehr dankbar.
+        <p>- Imke, 25. Mai 2023</p>
+      </p>
+    </div>
+    <div class="slide-text">
+      <p>
+        Liebe Elena. Deine (fast) wöchentliche Massagen sind meine Rettung für
+        meinen verspannten Oberkörper. Vorallem meine Schultern sind vom Sport
+        so verkrampft. Nach deiner Massage fühle ich mich tausend mal
+        entspannter und seitdem ich mich bei dir massieren lasse, habe ich
+        weniger Schmerzen und kann so noch mehr Sport machen :D Letztens hast du
+        eine Verklemmung im Nacken-Schulterbereich weggezaubert! Vielen Vielen
+        Dank für deine magischen Hände und dass du immer auf meine Wehwehchen
+        schaust :)
+      </p>
+      <p>- Nguyen, 1. Septmber 2023</p>
+    </div>
+  </div>
+
+  <!-- slide 3 -->
+  <div class="slide">
+    <div class="slide-text">
+      <p>
+        Ohne die Massagen bei Elena kann ich es mir nicht mehr vorstellen: mit
+        ihrer grosser Erfahrung löst sie immer meine Verspannungen und trägt
+        dank einer angenehmen Atmosphäre sehr zu meiner Entspannung bei.
+      </p>
+      <p>- Sara, 24. Oktober 2023</p>
+    </div>
+    <div class="slide-text">
+      <p>
+        Meine kleine Auszeit bei Elena geniesse ich immer sehr! Sie hat mir
+        durch ihre zielgerichtete Massage schon oft den Gang zum Chiropraktiker
+        erspart, dafür bin ich sehr dankbar.
+        <p>- Daniela, 21. December 2023</p>
+      </p>
+    </div>
+    <div class="slide-text no-review">
+      <p>Hier könnte Ihre Bewertung sein.</p>
+    </div>
+  </div>
 
   <!-- Control buttons -->
   <button class="btn btn-next">
-        <Icon name="fa-solid:chevron-right" class="btn-icon" />
-    </button>
-    <button class="btn btn-prev">
-        <Icon name="fa-solid:chevron-left" class="btn-icon" />
-    </button>
+    <Icon name="fa-solid:chevron-right" class="btn-icon" />
+  </button>
+  <button class="btn btn-prev">
+    <Icon name="fa-solid:chevron-left" class="btn-icon" />
+  </button>
 </div>
 
 <script defer>
@@ -206,6 +238,12 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
   .btn-next {
     top: 45%;
     right: 2%;
+  }
+
+  .no-review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   @media (max-width: 960px) {
