@@ -105,6 +105,21 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
     </div>
   </div>
 
+  <!-- slide 5 -->
+  <div class="slide-tablet">
+    <div class="slide-text">
+      <p>
+        Ich bin dankbar für Elenas Hände, ihren Spirit und Können 🌺 man/frau
+        kriecht rein und fliegt neu geboren raus 🌺 Danke Elena, wunderbar kann
+        ich mich so nah unter deine Hände geben 🏆
+      </p>
+      <p>- Nicole, 24. Januar 2024</p>
+    </div>
+    <div class="slide-text no-review">
+      <p>Hier könnte Ihre Bewertung sein</p>
+    </div>
+  </div>
+
   <!-- Control buttons -->
   <button class="btn-p btn-next-p">
     <Icon name="fa-solid:chevron-right" class="btn-icon" />
@@ -233,5 +248,11 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
   .btn-next-p {
     top: 45%;
     right: 2%;
+  }
+
+  .no-review {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
