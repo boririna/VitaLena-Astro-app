@@ -1,97 +1,134 @@
 <div class="footer">
-    <a href="#">
-      <img src="/img/Logo2.png" alt="VitaLena" class="footer-logo">
-    </a>
-    <ul class="header-menu">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about/">Über mich</a></li>
-      <li><a href="/massage/">Massage</a></li>
-      <li><a href="/contacts/">Kontakte</a></li>
-    </ul>
-    <a href="https://emr.ch/therapeut/elena.schaller" target="_blank">
-      <img src="/img/emr-rme-grey.jpg" alt="EMR/AMR zertifiziert" class="emr">
-    </a>
-    <a href="https://emr.ch/therapeut/elena.schaller" target="_blank">
-      <p>Krankenkassen anerkannt (Zusatzversicherung)</p>
-    </a>
-    <p class="copyright">
-      <a href="https://troopl.com/iaborisova" target="_blank">
-        Copyright ©2023 All rights reserved | This website is made by Irina Borisova
+  <a href="#">
+    <img src="/img/Logo2.png" alt="VitaLena" class="footer-logo" />
+  </a>
+  <ul class="header-menu">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about/">Über mich</a></li>
+    <li><a href="/massage/">Massage</a></li>
+    <li><a href="/contacts/">Kontakte</a></li>
+  </ul>
+  <div>
+    <div class="certificates">
+      <a href="https://emr.ch/therapeut/elena.schaller" target="_blank">
+        <img
+          src="/img/emr-rme-transparent.png"
+          alt="EMR/AMR zertifiziert"
+          class="emr"
+        />
       </a>
-    </p>
+      <a
+        href="https://asca.ch/de/asca-therapeuten/angaben-des-therapeuten/Elena-Schaller_626257/"
+        target="_blank"
+      >
+        <img
+          src="/img/asca-transparent.png"
+          alt="EMR/AMR zertifiziert"
+          class="asca"
+        />
+      </a>
+    </div>
+
+    <p>Krankenkassen anerkannt (Zusatzversicherung)</p>
   </div>
 
-  <style>
-    .footer-logo {
-        width: 140px;
-    }
+  <p class="copyright">
+    <span>Copyright ©2023 All rights reserved |</span>
+    <a href="https://troopl.com/iaborisova" target="_blank">
+      This website is made by Irina Borisova
+    </a>
+  </p>
+</div>
 
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        display: flex;
-    }
+<style>
+  .footer-logo {
+    width: 140px;
+  }
 
-    li a {
-        display: block;
-        padding: 20px;
-        font-size: 20px;
-        font-family: 'Mulish', sans-serif;
-        text-decoration: none;
-        color: white;
-    }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+  }
 
-    li :last-child {
-        padding-right: 0;
-    }
+  li a {
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+    font-family: "Mulish", sans-serif;
+    text-decoration: none;
+    color: white;
+  }
 
+  li :last-child {
+    padding-right: 0;
+  }
+
+  .footer {
+    padding: 40px 40px;
+    background-color: #cbc0d3;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .footer ul {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .certificates {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .certificates img {
+    height: 80px;
+    width: auto;
+  }
+
+  /* .emr {
+    margin-top: 20px;
+    width: 180px;
+  } */
+
+  .copyright {
+    margin-top: 80px;
+    font-size: 13px;
+  }
+
+  @media (max-width: 600px) {
     .footer {
-        padding: 40px 40px;
-        background-color: #CBC0D3;
-        text-align: center;
-        max-width: 1100px;
-        margin: 0 auto;
+      padding: 20px;
     }
 
-    .footer ul {
-        justify-content: center;
-        margin-top: 20px;
+    .footer-logo {
+      width: 90px;
     }
 
-    .emr {
-        margin-top: 20px;
-        width: 180px;
+    /* .emr {
+      margin-top: 20px;
+      width: 150px;
+    } */
+
+    .footer li a {
+      font-size: 16px;
+      padding: 6px;
     }
 
     .copyright {
-        margin-top: 120px;
-        font-size: 13px;
+      margin-top: 50px;
+      font-size: 11px;
     }
 
-    @media (max-width: 600px) {
-      .footer {
-        padding: 20px;
-      }
-
-      .footer-logo {
-        width: 90px;
-      }
-
-      .emr {
-        margin-top: 20px;
-        width: 150px;
-      }
-
-      .footer li a {
-        font-size: 16px;
-        padding: 6px;
-      }
-
-      .copyright {
-        margin-top: 50px;
-        font-size: 11px;
-      }
+    .certificates {
+      margin-top: 40px;
+      gap: 0;
     }
-  </style>
+  }
+</style>
