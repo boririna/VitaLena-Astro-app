@@ -1,5 +1,7 @@
 ---
 import { Icon } from "astro-icon";
+import Review from "./Review.astro";
+import json from "../data/reviews.json";
 
 export interface Props {
   slideImg1: string;
@@ -9,12 +11,22 @@ export interface Props {
 }
 
 const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
+// const response = await fetch("http://localhost:3000//reviews.json");
+const data = json;
+console.log(data);
 ---
 
 <!-- Slider container -->
 <div class="slider-mobile">
   <!-- slide 1 -->
-  <div class="slide-mobile" id="slide1">
+  {
+    data.map((review) => (
+      <Review name={review.name} date={review.date} text={review.text} />
+    ))
+  }
+
+  <!-- <div class="slide-mobile" id="slide1">
+    
     <div class="slide-text">
       <div>
         <p>
@@ -24,13 +36,13 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
           und Gespräch. Ich schätze Elena sehr und freue mich jeweils auf die
           Massage.
         </p>
-        <p>- Flavio, 10. Mai 2023</p>
+        <p>- {data[1].name}, 10. Mai 2023</p>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- slide 2 -->
-  <div class="slide-mobile" id="slide2">
+  <!-- <div class="slide-mobile" id="slide2">
     <div class="slide-text">
       <div>
         <p>
@@ -43,10 +55,10 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
         <p>- Claudia, 11. Mai 2023</p>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- slide 3 -->
-  <div class="slide-mobile">
+  <!-- <div class="slide-mobile">
     <div class="slide-text">
       <div>
         <p>
@@ -57,7 +69,7 @@ const { slideImg1, slideImg2, slideImg3, slideImg4 } = Astro.props;
         <p>- Sylvie, 11. Mai 2023</p>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- slide 4 -->
   <div class="slide-mobile">
