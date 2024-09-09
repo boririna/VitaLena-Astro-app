@@ -127,9 +127,9 @@ import Footer from "../components/Footer.astro";
           <div>
             <h3>Im Praxisraum</h3>
             <div class="prices">
-              <p>Klassische Massage ab 80 CHF pro 60 Minuten</p>
-              <p>Entspannungsmassage ab 80 CHF pro 60 Minuten</p>
-              <p>Sportmassage ab 80 CHF pro 60 Minuten</p>
+              <p>Klassische Massage 100 CHF pro 60 Minuten</p>
+              <p>Entspannungsmassage 100 CHF pro 60 Minuten</p>
+              <p>Sportmassage 100 CHF pro 60 Minuten</p>
             </div>
           </div>
         </div>
@@ -187,16 +187,17 @@ import Footer from "../components/Footer.astro";
     margin: 0 auto;
   }
 
-  .price-section h2, h3 {
+  .price-section h2,
+  h3 {
     margin-bottom: 20px;
   }
 
   .price-columns {
-		display: flex;
-		justify-content: center;
-		gap: 20px;
-		flex-wrap: wrap;
-	}
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
 
   .prices {
     max-width: 420px;
@@ -260,8 +261,8 @@ import Footer from "../components/Footer.astro";
     }
 
     .price-columns {
-			gap: 0;
-		}
+      gap: 0;
+    }
 
     .price-text {
       text-align: left;

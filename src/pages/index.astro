@@ -6,498 +6,472 @@ import BannerHome from "../components/BannerHome.astro";
 import SlideshowEventList3Img from "../components/SlideshowEventList3Img.astro";
 import SlideshowEventList1Img from "../components/SlideshowEventList1Img.astro";
 import SlideshowEventList2Img from "../components/SlideshowEventList2Img.astro";
-import ButtonGrey from "../components/ButtonGrey.astro"
+import ButtonGrey from "../components/ButtonGrey.astro";
 import { Icon } from "astro-icon";
 ---
 
 <Layout title="VitaLena Massage">
-	<main>
-		<BannerHome />
-		<!-- contacts -->
-		<div id="contacts" class="contacts">
-			<h1>Kontakte</h1>
-			<div class="address">
-				<div class="addr-item1">
-					<div class="icon-text">
-						<Icon
-							name="fa-solid:home"
-							class="addr-icon home-icon"
-						/>
-						<div>
-							<div class="addr-place">
-								<p>Praxisraum</p>
-								<p>in Weiach</p>
-							</div>
-							<p>
-								<a
-									href="https://goo.gl/maps/SronJErekN9ETXpL9"
-									target="_blank"
-								>
-									Im See 3
-								</a>
-							</p>
-							<p>
-								<a
-									href="https://goo.gl/maps/SronJErekN9ETXpL9"
-									target="_blank"
-								>
-									8187 Weiach
-								</a>
-							</p>
-						</div>
-					</div>
-					<div class="icon-text">
-						<Icon name="fa-solid:phone-alt" class="addr-icon" />
-						<a href="tel:+41795648109" target="_blank">
-							+41 (0)79 564 81 09
-						</a>
-					</div>
-					<div class="icon-text icon-text-last">
-						<Icon name="fa-solid:envelope" class="addr-icon" />
-						<a
-							href="mailto:elena_schaller@swissonline.ch"
-							target="_blank"
-						>
-							elena_schaller@swissonline.ch
-						</a>
-					</div>
-				</div>
-				<div class="addr-item2">
-					<div class="icon-text">
-						<Icon
-							name="fa-solid:home"
-							class="addr-icon home-icon"
-						/>
-						<div>
-							<div class="addr-place">
-								<p>SALZGROTTE</p>
-								<a href="https://salzgrotte.ch/offer-prices/" target="_blank">
-									salzgrotte.ch
-								</a>
-							</div>
-							<p>
-								<a
-									href="https://goo.gl/maps/ZfKhNa9Ryq1TmgHh9"
-									target="_blank"
-								>
-									Lindenstrasse 23
-								</a>
-							</p>
-							<p>
-								<a
-									href="https://goo.gl/maps/ZfKhNa9Ryq1TmgHh9"
-									target="_blank"
-								>
-									8302 Kloten
-								</a>
-							</p>
-						</div>
-					</div>
-					<div class="icon-text">
-						<Icon name="fa-solid:phone-alt" class="addr-icon" />
-						<a href="tel:+41445505555" target="_blank">
-							+41 (0)44 550 55 55
-						</a>
-					</div>
-					<div class="icon-text icon-text-last">
-						<Icon name="fa-solid:envelope" class="addr-icon" />
-						<a href="mailto:info@salzgrotte.ch" target="_blank"
-							>info@salzgrotte.ch</a
-						>
-					</div>
-				</div>
-			</div>
-		</div>
+  <main>
+    <BannerHome />
+    <!-- contacts -->
+    <div id="contacts" class="contacts">
+      <h1>Kontakte</h1>
+      <div class="address">
+        <div class="addr-item1">
+          <div class="icon-text">
+            <Icon name="fa-solid:home" class="addr-icon home-icon" />
+            <div>
+              <div class="addr-place">
+                <p>Praxisraum</p>
+                <p>in Weiach</p>
+              </div>
+              <p>
+                <a href="https://goo.gl/maps/SronJErekN9ETXpL9" target="_blank">
+                  Im See 3
+                </a>
+              </p>
+              <p>
+                <a href="https://goo.gl/maps/SronJErekN9ETXpL9" target="_blank">
+                  8187 Weiach
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="icon-text">
+            <Icon name="fa-solid:phone-alt" class="addr-icon" />
+            <a href="tel:+41795648109" target="_blank"> +41 (0)79 564 81 09</a>
+          </div>
+          <div class="icon-text icon-text-last">
+            <Icon name="fa-solid:envelope" class="addr-icon" />
+            <a href="mailto:elena_schaller@swissonline.ch" target="_blank">
+              elena_schaller@swissonline.ch
+            </a>
+          </div>
+        </div>
+        <div class="addr-item2">
+          <div class="icon-text">
+            <Icon name="fa-solid:home" class="addr-icon home-icon" />
+            <div>
+              <div class="addr-place">
+                <p>SALZGROTTE</p>
+                <a href="https://salzgrotte.ch/offer-prices/" target="_blank">
+                  salzgrotte.ch
+                </a>
+              </div>
+              <p>
+                <a href="https://goo.gl/maps/ZfKhNa9Ryq1TmgHh9" target="_blank">
+                  Lindenstrasse 23
+                </a>
+              </p>
+              <p>
+                <a href="https://goo.gl/maps/ZfKhNa9Ryq1TmgHh9" target="_blank">
+                  8302 Kloten
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="icon-text">
+            <Icon name="fa-solid:phone-alt" class="addr-icon" />
+            <a href="tel:+41445505555" target="_blank"> +41 (0)44 550 55 55</a>
+          </div>
+          <div class="icon-text icon-text-last">
+            <Icon name="fa-solid:envelope" class="addr-icon" />
+            <a href="mailto:info@salzgrotte.ch" target="_blank"
+              >info@salzgrotte.ch</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<!-- quote -->
-		<div class="quote-desktop">
-			<p>
-				„Die Gesundheit überwiegt alle äusseren Güter so sehr, dass ein
-				gesunder Bettler glücklicher als ein kranker König ist.“
-			</p>
-			<p>Arthur Schopenhauer</p>
-		</div>
+    <!-- quote -->
+    <div class="quote-desktop">
+      <p>
+        „Die Gesundheit überwiegt alle äusseren Güter so sehr, dass ein gesunder
+        Bettler glücklicher als ein kranker König ist.“
+      </p>
+      <p>Arthur Schopenhauer</p>
+    </div>
 
-		<div class="quote-mobile">
-			<p>
-				„Eine halbe Stunde Massage ist absolut notwendig, 
-				ausser, wenn man sehr beschäftigt ist, 
-				dann braucht man eine ganze Stunde.“
-			</p>
-		</div>
+    <div class="quote-mobile">
+      <p>
+        „Eine halbe Stunde Massage ist absolut notwendig, ausser, wenn man sehr
+        beschäftigt ist, dann braucht man eine ganze Stunde.“
+      </p>
+    </div>
 
-		<!-- cards -->
-		<div class="cards">
-			<h1>Behandlungen</h1>
-			<div class="card-row">
-				<Card
-					imgPath="img/massage1-opt.jpg"
-					href="/massage/#classic"
-					title="Klassische Massage"
-					body="Die Klassische Massage ist eine äusserliche, manuelle Behandlung zur Verbesserung/Beseitigung und Prävention von Beschwerden im Bereich des Bewegungsapparates (Muskeln, Sehnen, Bänder, Gelenke, und Nerven) und zur psychischen Entspannung."
-				/>
-				<Card
-					imgPath="img/massage2-opt.jpg"
-					href="/massage/#relaxing"
-					title="Entspannungsmassage"
-					body="Als Entspannungsmassage wird eine Massage bezeichnet, die nicht aus medizinischen Gründen durchgeführt wird, sondern ausschließlich der Entspannung dient. Sie dient vor allem zum Abbau von Stress auf geistiger und körperlicher Ebene und zur Steigerung des Wohlbefindens."
-				/>
-				<Card
-					imgPath="img/massage3-opt.jpg"
-					href="/massage/#sport"
-					title="Sportmassage"
-					body="Ziel und Zweck einer Sportmassage ist die spezifische Behandlung von Sportlern vor oder nach sportlichen Aktivitäten. Dabei werden Handgriffe der klassischen Massage verwendet, die durch verschiedene andere Grifftechniken erweitert werden. Auf diese Weise wird den speziellen Bedürfnissen von Sportlern Rechnung getragen."
-				/>
-			</div>
-		</div>
-		<!-- Prices -->
-		<div id="massage-price" class="price-section">
-			<h1>Preise</h1>
-			<div class="price-columns">
-				<div>
-					<h2>In der Salzgrotte</h2>
-					<div class="prices">
-						<p>Klassische Massage 120 CHF pro 60 Minuten</p>
-						<p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
-						<p>Sportmassage 120 CHF pro 60 Minuten</p>
-					</div>
-				</div>
-				<div>
-					<h2>Im Praxisraum</h2>
-					<div class="prices">
-						<p>Klassische Massage ab 80 CHF pro 60 Minuten</p>
-						<p>Entspannungsmassage ab 80 CHF pro 60 Minuten</p>
-						<p>Sportmassage ab 80 CHF pro 60 Minuten</p>
-					</div>
-				</div>
-			</div>
-			
-			<p>Die Behandlungsdauer versteht sich inklusive Vor- und Nachgespräch.</p>
-			<br>
-			<p>
-				Ein Grossteil der Krankenkassen übernimmt im Rahmen einer
-				Zusatzversicherung die Kosten einer Massage voll oder zum Teil.
-				Bitte erkundigen Sie sich vor der Behandlung bei Ihrer
-				Versicherung.
-			</p>
-		</div>
-		<!-- Reviews -->
-		<div class="reviews">
-			<h1>Bewertungen</h1>
-			<!-- <p>Hier könnten Ihre Bewertungen sein</p> -->
-			<!-- <SlideshowEventList2Img /> -->
-			<div class="reviews-desktop">
-				<SlideshowEventList3Img />
-			</div>
-			<div class="reviews-mobile">
-				<SlideshowEventList1Img />
-			</div>
-			<div class="reviews-tablet">
-				<SlideshowEventList2Img />
-			</div>
-			<div class="reviews-button">
-				<ButtonGrey href="/contacts/#personal-contact" text="BEWERTUNG SCHREIBEN" />
-			</div>
-		</div>
-		<Footer />
-	</main>
+    <!-- cards -->
+    <div class="cards">
+      <h1>Behandlungen</h1>
+      <div class="card-row">
+        <Card
+          imgPath="img/massage1-opt.jpg"
+          href="/massage/#classic"
+          title="Klassische Massage"
+          body="Die Klassische Massage ist eine äusserliche, manuelle Behandlung zur Verbesserung/Beseitigung und Prävention von Beschwerden im Bereich des Bewegungsapparates (Muskeln, Sehnen, Bänder, Gelenke, und Nerven) und zur psychischen Entspannung."
+        />
+        <Card
+          imgPath="img/massage2-opt.jpg"
+          href="/massage/#relaxing"
+          title="Entspannungsmassage"
+          body="Als Entspannungsmassage wird eine Massage bezeichnet, die nicht aus medizinischen Gründen durchgeführt wird, sondern ausschließlich der Entspannung dient. Sie dient vor allem zum Abbau von Stress auf geistiger und körperlicher Ebene und zur Steigerung des Wohlbefindens."
+        />
+        <Card
+          imgPath="img/massage3-opt.jpg"
+          href="/massage/#sport"
+          title="Sportmassage"
+          body="Ziel und Zweck einer Sportmassage ist die spezifische Behandlung von Sportlern vor oder nach sportlichen Aktivitäten. Dabei werden Handgriffe der klassischen Massage verwendet, die durch verschiedene andere Grifftechniken erweitert werden. Auf diese Weise wird den speziellen Bedürfnissen von Sportlern Rechnung getragen."
+        />
+      </div>
+    </div>
+    <!-- Prices -->
+    <div id="massage-price" class="price-section">
+      <h1>Preise</h1>
+      <div class="price-columns">
+        <div>
+          <h2>In der Salzgrotte</h2>
+          <div class="prices">
+            <p>Klassische Massage 120 CHF pro 60 Minuten</p>
+            <p>Entspannungsmassage 120 CHF pro 60 Minuten</p>
+            <p>Sportmassage 120 CHF pro 60 Minuten</p>
+          </div>
+        </div>
+        <div>
+          <h2>Im Praxisraum</h2>
+          <div class="prices">
+            <p>Klassische Massage 100 CHF pro 60 Minuten</p>
+            <p>Entspannungsmassage 100 CHF pro 60 Minuten</p>
+            <p>Sportmassage 100 CHF pro 60 Minuten</p>
+          </div>
+        </div>
+      </div>
+
+      <p>Die Behandlungsdauer versteht sich inklusive Vor- und Nachgespräch.</p>
+      <br />
+      <p>
+        Ein Grossteil der Krankenkassen übernimmt im Rahmen einer
+        Zusatzversicherung die Kosten einer Massage voll oder zum Teil. Bitte
+        erkundigen Sie sich vor der Behandlung bei Ihrer Versicherung.
+      </p>
+    </div>
+    <!-- Reviews -->
+    <div class="reviews">
+      <h1>Bewertungen</h1>
+      <!-- <p>Hier könnten Ihre Bewertungen sein</p> -->
+      <!-- <SlideshowEventList2Img /> -->
+      <div class="reviews-desktop">
+        <SlideshowEventList3Img />
+      </div>
+      <div class="reviews-mobile">
+        <SlideshowEventList1Img />
+      </div>
+      <div class="reviews-tablet">
+        <SlideshowEventList2Img />
+      </div>
+      <div class="reviews-button">
+        <ButtonGrey
+          href="/contacts/#personal-contact"
+          text="BEWERTUNG SCHREIBEN"
+        />
+      </div>
+    </div>
+    <Footer />
+  </main>
 </Layout>
 
 <style>
-	main {
-		height: 100%;
-		background-color: #efd3d7;
-	}
+  main {
+    height: 100%;
+    background-color: #efd3d7;
+  }
 
-	/* contacts */
+  /* contacts */
 
-	.contacts {
-		padding: 40px 40px;
-		text-align: center;
-	}
+  .contacts {
+    padding: 40px 40px;
+    text-align: center;
+  }
 
-	.contacts,
-	.cards,
-	.price-section,
-	.reviews
-	h1,
-	h2,
-	h3 {
-		color: #8e9aaf;
-	}
+  .contacts,
+  .cards,
+  .price-section,
+  .reviews h1,
+  h2,
+  h3 {
+    color: #8e9aaf;
+  }
 
-	.address {
-		display: flex;
-		justify-content: center;
-		padding-top: 20px;
-		gap: 8px;
-	}
+  .address {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    gap: 8px;
+  }
 
-	.addr-item1 {
-		text-align: left;
-		padding-left: 20px;
-		padding-right: 20px;
-	}
+  .addr-item1 {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-	.addr-item2 {
-		text-align: left;
-		padding-left: 20px;
-		padding-right: 20px;
-	}
+  .addr-item2 {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-	.addr-place {
-		margin-bottom: 8px;
-	}
+  .addr-place {
+    margin-bottom: 8px;
+  }
 
-	.icon-text {
-		display: flex;
-		gap: 10px;
-		margin-bottom: 10px;
-	}
+  .icon-text {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
 
-	.icon-text-last {
-		margin-bottom: 0px;
-	}
+  .icon-text-last {
+    margin-bottom: 0px;
+  }
 
-	.addr-icon {
-		color: #8e9aaf;
-		font-size: 24px;
-		width: 20px;
-		height: 20px;
-		text-align: center;
-	}
+  .addr-icon {
+    color: #8e9aaf;
+    font-size: 24px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+  }
 
-	.home-icon {
-		width: 25px;
-		height: 25px;
-	}
+  .home-icon {
+    width: 25px;
+    height: 25px;
+  }
 
-	.address a {
-		color: #3d3d3d;
-	}
+  .address a {
+    color: #3d3d3d;
+  }
 
-	.address a:hover {
-		color: #84858e;
-	}
+  .address a:hover {
+    color: #84858e;
+  }
 
-	/* quote */
+  /* quote */
 
-	.quote-desktop {
-		padding: 80px 150px;
-		background-color: rgba(255, 255, 255, 0.674);
-		text-align: center;
-		font-family: "Philosopher", sans-serif;
-		font-size: 22px;
-		font-weight: 500;
-	}
+  .quote-desktop {
+    padding: 80px 150px;
+    background-color: rgba(255, 255, 255, 0.674);
+    text-align: center;
+    font-family: "Philosopher", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+  }
 
-	.quote-mobile {
-		display: none;
-	}
+  .quote-mobile {
+    display: none;
+  }
 
-	/* cards */
+  /* cards */
 
-	.cards {
-		padding: 40px 40px;
-		text-align: center;
-	}
+  .cards {
+    padding: 40px 40px;
+    text-align: center;
+  }
 
-	.card-row {
-		display: flex;
-		gap: 16px;
-		margin-top: 20px;
-	}
+  .card-row {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+  }
 
-	/* prices */
+  /* prices */
 
-	.price-section {
-		padding: 0 40px 20px 40px;
-		text-align: center;
-		max-width: 1000px;
-		margin: 0 auto;
-	}
+  .price-section {
+    padding: 0 40px 20px 40px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 
-	.price-section h1, h2 {
-		margin-bottom: 20px;
-	}
+  .price-section h1,
+  h2 {
+    margin-bottom: 20px;
+  }
 
-	.price-columns {
-		display: flex;
-		justify-content: center;
-		gap: 20px;
-		flex-wrap: wrap;
-	}
+  .price-columns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
 
-	.prices {
-		max-width: 420px;
-		margin: 0 auto;
-		text-align: left;
-		margin-bottom: 20px;
-	}
+  .prices {
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 20px;
+  }
 
-	.prices p {
-		font-size: 18px;
-		margin-bottom: 8px;
-	}
+  .prices p {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
 
-	/* reviews */
+  /* reviews */
 
-	.reviews-mobile {
-		display: none;
-	}
+  .reviews-mobile {
+    display: none;
+  }
 
-	.reviews-tablet {
-		display: none;
-	}
+  .reviews-tablet {
+    display: none;
+  }
 
-	.reviews {
-		/* max-width: 800px; */
-		padding: 20px 40px 40px 40px;
-        margin: 0 auto;
-	}
+  .reviews {
+    /* max-width: 800px; */
+    padding: 20px 40px 40px 40px;
+    margin: 0 auto;
+  }
 
-	.reviews h1 {
-		margin-bottom: 20px;
-		text-align: center;
-	}
+  .reviews h1 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
 
-	.reviews p {
-		text-align: center;
-		padding-top: 20px;
-	}
+  .reviews p {
+    text-align: center;
+    padding-top: 20px;
+  }
 
-	.reviews-button {
-		text-align: center;
-    	padding-top: 20px;
-	}
+  .reviews-button {
+    text-align: center;
+    padding-top: 20px;
+  }
 
-	@media (max-width: 900px) {
+  @media (max-width: 900px) {
+    .reviews-desktop {
+      display: none;
+    }
 
-		.reviews-desktop {
-			display: none;
-		}
+    .reviews-tablet {
+      display: block;
+    }
+  }
 
-		.reviews-tablet {
-			display: block;
-		}
-	}
+  @media (max-width: 600px) {
+    /* contacts */
 
-	@media (max-width: 600px) {
+    .contacts {
+      font-size: 12px;
+      padding: 20px 10px;
+    }
 
-		/* contacts */
+    .contacts h1 {
+      font-size: 26px;
+    }
 
-		.contacts {
-			font-size: 12px;
-			padding: 20px 10px;
-		}
+    .addr-item1 {
+      padding-left: 0px;
+      padding-right: 3px;
+    }
 
-		.contacts h1 {
-			font-size: 26px;
-		}
+    .addr-item2 {
+      padding-left: 3px;
+      padding-right: 0px;
+    }
 
-		.addr-item1 {
-			padding-left: 0px;
-			padding-right: 3px;
-		}
+    .icon-text {
+      gap: 6px;
+    }
 
-		.addr-item2 {
-			padding-left: 3px;
-			padding-right: 0px;
-		}
+    .addr-icon {
+      width: 15px;
+      height: 15px;
+    }
 
-		.icon-text {
-			gap: 6px;
-		}
+    .home-icon {
+      width: 18px;
+      height: 18px;
+    }
 
-		.addr-icon {
-			width: 15px;
-			height: 15px;
-		}
+    /* quote */
+    .quote-desktop {
+      display: none;
+    }
+    .quote-mobile {
+      display: block;
+      padding: 20px 20px;
+      font-size: 18px;
+      background-color: rgba(255, 255, 255, 0.674);
+      text-align: center;
+      font-family: "Philosopher", sans-serif;
+      font-weight: 500;
+    }
 
-		.home-icon {
-			width: 18px;
-			height: 18px;
-		}
+    /* cards */
 
-		/* quote */
-		.quote-desktop {
-			display: none;
-		}
-		.quote-mobile {
-			display: block;
-			padding: 20px 20px;
-			font-size: 18px;
-			background-color: rgba(255, 255, 255, 0.674);
-			text-align: center;
-			font-family: "Philosopher", sans-serif;
-			font-weight: 500;
-		}
+    .cards {
+      padding: 20px 20px;
+    }
 
-		/* cards */
+    .card-row {
+      display: block;
+      margin-top: 0;
+    }
 
-		.cards {
-			padding: 20px 20px;
-		}
+    .cards h1 {
+      font-size: 26px;
+    }
 
-		.card-row {
-			display: block;
-			margin-top: 0;
-		}
+    /* prices */
 
-		.cards h1 {
-			font-size: 26px;
-		}
+    .price-section {
+      padding: 0 20px 20px 20px;
+      text-align: center;
+    }
 
-		/* prices */
+    .price-columns {
+      gap: 0;
+    }
 
-		.price-section {
-			padding: 0 20px 20px 20px;
-			text-align: center;
-		}
+    .prices p {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-align: left;
+    }
 
-		.price-columns {
-			gap: 0;
-		}
+    .price-section h1 {
+      font-size: 26px;
+    }
 
-		.prices p {
-			font-size: 14px;
-			font-weight: 600;
-			margin-bottom: 8px;
-			text-align: left;
-		}
+    .price-section h2 {
+      font-size: 22px;
+    }
 
-		.price-section h1 {
-			font-size: 26px;
-		}
+    /* reviews */
+    .reviews-desktop {
+      display: none;
+    }
 
-		.price-section h2 {
-			font-size: 22px;
-		}
+    .reviews-tablet {
+      display: none;
+    }
 
-		/* reviews */
-		.reviews-desktop {
-			display: none;
-		}
+    .reviews-mobile {
+      display: block;
+    }
 
-		.reviews-tablet {
-			display: none;
-		}
+    .reviews {
+      /* max-width: 800px; */
+      padding: 0 20px 20px 20px;
+    }
 
-		.reviews-mobile {
-			display: block;
-		}
+    .reviews h1 {
+      font-size: 26px;
+    }
 
-		.reviews {
-			/* max-width: 800px; */
-			padding: 0 20px 20px 20px;
-		}
-
-		.reviews h1 {
-			font-size: 26px;
-		}
-
-		.reviews p {
-			padding-bottom: 30px;
-		}
-	}
+    .reviews p {
+      padding-bottom: 30px;
+    }
+  }
 </style>
