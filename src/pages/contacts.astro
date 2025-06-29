@@ -15,6 +15,36 @@ import ButtonGreySubmit from "../components/ButtonGreySubmit.astro";
         <h1>Kontakte</h1>
       </div>
 
+      <div id="personal-contact" class="contact-form">
+        <h2>Für Buchung und Fragen</h2>
+        <form name="contact-general" method="POST" data-netlify="true">
+          <input type="hidden" name="subject" value="Anfrage Massage" />
+          <p>
+            <p><label>Vorname:</label></p>
+            <input type="text" name="Vorname" data-name="name" required />
+          </p>
+          <p>
+            <label>Nachname:</label>
+            <input type="text" name="Nachname" data-surname="surname" />
+          </p>
+          <p>
+            <label>Telefonnummer:</label>
+            <input type="tel" name="Telefonnummer" required />
+          </p>
+          <p>
+            <label>Email:</label>
+            <input type="email" name="Email" required />
+          </p>
+          <p>
+            <label>Nachricht:</label>
+            <textarea name="message"></textarea>
+          </p>
+          <div class="contact-button">
+            <ButtonGreySubmit text="SENDEN" />
+          </div>
+        </form>
+      </div>
+
       <div class="address-map">
         <div class="addr-item1">
           <div class="icon-text">
@@ -48,16 +78,61 @@ import ButtonGreySubmit from "../components/ButtonGreySubmit.astro";
           </div>
         </div>
         <iframe
-          loading="lazy"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2692.222292543229!2d8.4247139!3d47.5634632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479071c89afe7add%3A0x2d543a607ce5109b!2sIm%20See%203%2C%208187%20Weiach!5e0!3m2!1sen!2sch!4v1679263269765!5m2!1sen!2sch"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2692.241230708054!2d8.4255598!3d47.5630947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479071c87e214bb5%3A0x1e3dded9c0a4b13d!2sIm%20See%203%2C%208187%20Weiach!5e0!3m2!1sru!2sch!4v1751213417121!5m2!1sru!2sch"
           width="500"
           height="300"
           style="border:0;border-radius: 4px;"
           allowfullscreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        >
-        </iframe>
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="address-map">
+        <div class="addr-item1">
+          <div class="icon-text">
+            <Icon name="fa-solid:home" class="addr-icon home-icon" />
+            <div>
+              <div class="addr-place">
+                <p>Dopamin Praxis</p>
+              </div>
+              <p>
+                <a
+                  href="https://maps.app.goo.gl/gLepPp13qAveDrgD7"
+                  target="_blank"
+                >
+                  Schaffhauserstrasse 22
+                </a>
+              </p>
+              <p>
+                <a
+                  href="https://maps.app.goo.gl/gLepPp13qAveDrgD7"
+                  target="_blank"
+                >
+                  8302 Kloten
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="icon-text">
+            <Icon name="fa-solid:phone-alt" class="addr-icon" />
+            <a href="tel:+41795648109" target="_blank"> +41 (0)79 564 81 09</a>
+          </div>
+          <div class="icon-text icon-text-last">
+            <Icon name="fa-solid:envelope" class="addr-icon" />
+            <a href="mailto:elena_schaller@swissonline.ch" target="_blank">
+              elena_schaller@swissonline.ch
+            </a>
+          </div>
+        </div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5402.285394162768!2d8.536749011745686!3d47.38964860281397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900a73bb38e23f%3A0x62051d986dc3f86b!2sSchaffhauserstrasse%2022%2C%208006%20Z%C3%BCrich!5e0!3m2!1sru!2sch!4v1751212546367!5m2!1sru!2sch"
+          width="500"
+          height="300"
+          style="border:0;border-radius: 4px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
       <div class="address-map">
@@ -136,36 +211,6 @@ import ButtonGreySubmit from "../components/ButtonGreySubmit.astro";
           </div>
         </form>
       </div> -->
-
-      <div id="personal-contact" class="contact-form">
-        <h2>Für Buchung und Fragen</h2>
-        <form name="contact-general" method="POST" data-netlify="true">
-          <input type="hidden" name="subject" value="Anfrage Massage" />
-          <p>
-            <p><label>Vorname:</label></p>
-            <input type="text" name="Vorname" data-name="name" required />
-          </p>
-          <p>
-            <label>Nachname:</label>
-            <input type="text" name="Nachname" data-surname="surname" />
-          </p>
-          <p>
-            <label>Telefonnummer:</label>
-            <input type="tel" name="Telefonnummer" required />
-          </p>
-          <p>
-            <label>Email:</label>
-            <input type="email" name="Email" required />
-          </p>
-          <p>
-            <label>Nachricht:</label>
-            <textarea name="message"></textarea>
-          </p>
-          <div class="contact-button">
-            <ButtonGreySubmit text="SENDEN" />
-          </div>
-        </form>
-      </div>
     </div>
     <Footer />
   </main>
