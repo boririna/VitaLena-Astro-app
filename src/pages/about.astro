@@ -6,263 +6,248 @@ import SlideshowEventList from "../components/SlideshowEventList.astro";
 ---
 
 <Layout title="VitaLena Massage">
-    <main>
-        <Banner />
-        <div class="aboutme">
-            <div class="page-title">
-                <h1>Über mich</h1>
-            </div>
-            <div class="image-section">
-                <div class="images">
-                    <div class="pers-photos">
-                        <img
-                            src="/img/about-person-opt.jpg"
-                            alt=""
-                            width="400"
-                            class="personal-photo"
-                        />
-                    </div>
+  <main>
+    <Banner />
+    <div class="aboutme">
+      <div class="page-title">
+        <h1>Über mich</h1>
+      </div>
+      <div class="image-section">
+        <div class="images">
+          <div class="pers-photos">
+            <img
+              src="/img/about-person-opt.jpg"
+              alt=""
+              width="400"
+              class="personal-photo"
+            />
+          </div>
 
-                    <div class="proc-photos">
-                        <img
-                            src="/img/about-process.jpg"
-                            alt=""
-                            width="380"
-                            class="process-photo"
-                        />
-                        <div class="studio-photos">
-                            <img
-                                src="/img/about-room2-opt.jpeg"
-                                alt=""
-                                width="250"
-                                class="room-photo"
-                            />
-                            <img
-                                src="/img/about-room8.jpg"
-                                alt=""
-                                width="250"
-                                class="room-photo"
-                            />
-                        </div>
-                    </div>
-                </div>
+          <div class="proc-photos">
+            <img
+              src="/img/about-process.jpg"
+              alt=""
+              width="380"
+              class="process-photo"
+            />
+            <div class="studio-photos">
+              <img
+                src="/img/about-room2-opt.jpeg"
+                alt=""
+                width="250"
+                class="room-photo"
+              />
+              <img
+                src="/img/about-room8.jpg"
+                alt=""
+                width="250"
+                class="room-photo"
+              />
             </div>
-
-            <div class="slide-show">
-                <SlideshowEventList
-                    slideImg1="/img/about-person-opt.jpg"
-                    slideImg2="/img/about-process.jpg"
-                    slideImg3="/img/about-room2-opt.jpeg"
-                    slideImg4="/img/about-room8.jpg"
-                />
-            </div>
-
-            <div class="about-text">
-                <h2>Steckbrief</h2>
-                <p> Hallo, ich heisse Elena.</p>
-                <p>
-                    Seitdem ich 1992 den ersten Kurs klassische Massage gemacht
-                    hatte, hatte ich immer die Idee den Leuten zu helfen, die
-                    Verspannungen oder sogar Schmerzen haben und Entspannung
-                    brauchen. Ich arbeitete als Französisch Lehrerin und danach
-                    als Managerin in Firmen in Tscheljabinsk (Russland) und mein
-                    Hobby war das Massieren. Es machte mir viel Spass.
-                </p>
-                <p>
-                    Im Jahr 2012 entschied ich mich, dass ich massieren nicht
-                    mehr nur als mein Hobby, sondern als meine Arbeit betreiben
-                    und meine spezifischen Kenntnisse verbessern und vertiefen
-                    möchte. Ich begann mit einem Kurs über Hiromassage nach der
-                    Methode von Enrique Garcia. Eine wunderbare Art der
-                    Entspannungsmassage. Dank diesen Techniken habe ich mich
-                    endgültig in das Massieren verliebt.
-                </p>
-                <p>
-                    In der Folge habe ich verschiedene weitere Techniken gelernt
-                    und zwar Lymphdrainage, hawaiianische Lomi-Lomi Nui,
-                    thailändische Massage, Sportmassage sowie Taping. Dabei
-                    hatte ich für mich beschlossen, dass ich unbedingt eine
-                    medizinische Ausbildung benötigte. Im Jahr 2016 hatte ich
-                    das medizinische Studium in den diplomierten Bereichen
-                    Krankenschwester und medizinische Masseurin abgeschlossen.
-                    Diese 3 Jahre waren sehr anstrengend und fordernd, aber auch
-                    sehr spannend, interessant und lehrreich.
-                </p>
-                <p>
-                    Während des Studiums habe ich angefangen in einer Klinik für
-                    plastische und ästhetische Chirurgie zu arbeiten, in welcher
-                    ich mein Wissen in den Bereichen medizinische Massage,
-                    Lymphdrainage sowie Spa- Behandlungen einbringen konnte.
-                    Aber meine primäre Tätigkeit war wie bereits davor als
-                    selbständige Masseurin. Ich behandelte die Kundinnen und
-                    Kunden mit den unterschiedlichsten Massagetechniken, welche
-                    ich je nach Bedarf auch mischte und flexibel
-                    aneinanderhängte.
-                </p>
-                <p>
-                    Seit dem Umzug in die Schweiz im Frühling 2018 konnte ich
-                    mein medizinisches Wissen neben klassischer Massage bei
-                    Sportmannschaften einsetzen. Dies sowohl im Bereich
-                    Eishockey (Mannschaft der 2. Liga) als auch beim
-                    Gehörlosensport (Nationalteams Curling und Futsal).
-                </p>
-                <p>
-                    Im Jahr 2019 hatte ich grosses Glück gehabt und eine
-                    Stelle als Masseurin bei der Firma MMS <a href="https://www.medicalmassageservice.ch/" target="_blank">https://www.medicalmassageservice.ch/</a> gefunden, die
-                    Massage am Arbeitsplatz bei verschiedenen Firmen anbietet.
-                    Dort bin ich bis jetzt am Arbeiten.
-                </p>
-                <p>
-                    Da meine Diplome in der Schweiz nicht anerkannt wurden,
-                    wurde ich wieder eine Schülerin und zwar in einer
-                    Massageschule in Zürich. Dort habe ich klassische Massage
-                    und medizinische Grundlagen studiert. Obwohl ich schon viel
-                    wusste, habe ich diverses Neues für mich dazu gelernt. Zum
-                    Beispiel die Funktionsmassage. So konnte ich mein
-                    Massagewissen erweitern. Von welchem auch Sie als meine
-                    Kundin oder mein Kunde profitieren können.
-                </p>
-                <h2>Ausbildungen</h2>
-                <p>
-                    2016 - Diplomierte Krankenschwester und medizinische
-                    Masseurin bei der staatliche medizinische Universität
-                    Südural (Tscheljabinsk, Russland)
-                </p>
-                <p>
-                    2017 - Fortbildung «Therapeutisches Taping» bei der Akademie
-                    für therapeutisches Taping Orthodynamik (Moskau)
-                </p>
-                <p>
-                    2022 - Diplomierte Berufsmasseurin bei der Akademie für
-                    Prävention, Komplementärtherapie und Massage ACOMED (Zürich)
-                </p>
-            </div>
+          </div>
         </div>
-        <Footer />
-    </main>
+      </div>
+
+      <div class="slide-show">
+        <SlideshowEventList
+          slideImg1="/img/about-person-opt.jpg"
+          slideImg2="/img/about-process.jpg"
+          slideImg3="/img/about-room2-opt.jpeg"
+          slideImg4="/img/about-room8.jpg"
+        />
+      </div>
+
+      <div class="about-text">
+        <h2>Steckbrief</h2>
+        <p>Hallo, ich heisse Elena.</p>
+        <p>
+          Seitdem ich 1992 den ersten Kurs klassische Massage gemacht hatte,
+          hatte ich immer die Idee den Leuten zu helfen, die Verspannungen oder
+          sogar Schmerzen haben und Entspannung brauchen. Das massieren wurde zu
+          meinem Hobby, welches mir viel Spass machte.
+        </p>
+        <p>
+          Im Jahr 2012 entschied ich mich, dass ich das Massieren als meine
+          Arbeit betreiben und meine spezifischen Kenntnisse verbessern und
+          vertiefen möchte.
+        </p>
+        <p>
+          In der Folge habe ich verschiedene weitere Methoden und Techniken dazu
+          gelernt und zwar Entspannungsmassage, medizinische Massage,
+          Lymphdrainage, hawaiianische Lomi-Lomi Nui, thailändische Massage,
+          Sportmassage sowie Taping.
+        </p>
+        <p>
+          2016 habe ich in einer Klinik für plastische und ästhetische Chirurgie
+          angefangen zu arbeiten, in welcher ich mein Wissen in den Bereichen
+          medizinische Massage, Lymphdrainage sowie Spa- Behandlungen einbringen
+          konnte. Aber meine primäre Tätigkeit war wie bereits davor als
+          selbständige Masseurin. Ich behandelte die Kundinnen und Kunden mit
+          den unterschiedlichsten Massagetechniken, welche ich je nach Bedarf
+          auch mischte und flexibel aneinanderhängte.
+        </p>
+        <p>
+          Seit dem Umzug in die Schweiz im Frühling 2018 konnte ich mein
+          medizinisches Wissen neben klassischer Massage bei Sportmannschaften
+          einsetzen. Dies sowohl im Bereich Eishockey (Mannschaft der 2. Liga)
+          als auch beim Gehörlosensport (Nationalteams Curling und Futsal).
+        </p>
+        <p>
+          Im Jahr 2019 durfte ich eine Stelle als Masseurin bei der Firma MMS <a
+            href="https://www.medicalmassageservice.ch/"
+            target="_blank">https://www.medicalmassageservice.ch/</a
+          > antreten, welche Massage am Arbeitsplatz bei verschiedenen Firmen wie
+          Migros, Swisscom oder EKZ anbietet. Bei dieser Firma arbeite ich nach wie
+          vor als Angestellte.
+        </p>
+        <p>
+          Seit 2022 arbeite ich selbständig in der Salzgrotte (Kloten <a
+            href="https://salzgrotte.ch/offer-prices/"
+            target="_blank">https://salzgrotte.ch/offer-prices/</a
+          > https://salzgrotte.ch/offer-prices/) sowie seit Sommer 2025 in der Dopamin
+          Praxis (Kloten <a
+            href="https://dopaminmassagekloten.ch/"
+            target="_blank">https://dopaminmassagekloten.ch/</a
+          >).
+        </p>
+        <h2>Ausbildungen</h2>
+        <p>Aktuell - Ausbildung Rebalancing (Rüti ZH)</p>
+        <p>2025 - Diplomierte therapeutische Masseurin (Zürich)</p>
+        <p>2025 - Manuelle Lymphdrainage (Zürich)</p>
+        <p>2023 - Fussreflexzonen Massage (Zürich)</p>
+        <p>2022 - Diplomierte Berufsmasseurin (Zürich)</p>
+        <p>2017 - Fortbildung «Therapeutisches Taping» (Moskau)</p>
+        <p>
+          2016 - Diplomierte Krankenschwester und medizinische Masseurin bei der
+          staatlichen medizinische Universität Südural (Tscheljabinsk, Russland)
+        </p>
+      </div>
+    </div>
+    <Footer />
+  </main>
 </Layout>
 
 <style>
-    main {
-        position: relative;
-        margin: 0 auto;
-        max-width: 1100px;
-        height: 100%;
-        background-color: #efd3d7;
-    }
+  main {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1100px;
+    height: 100%;
+    background-color: #efd3d7;
+  }
 
+  .aboutme {
+    padding-top: 104px;
+  }
+
+  h1,
+  h2 {
+    color: #8e9aaf;
+  }
+
+  .page-title {
+    padding: 40px 40px;
+    text-align: center;
+  }
+
+  .image-section {
+    padding: 0 40px;
+  }
+
+  .image-section img {
+    border-radius: 4px;
+  }
+
+  .images {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    gap: 20px;
+  }
+
+  .personal-photo {
+    max-width: 100%;
+    height: auto;
+    /* width: auto; */
+  }
+
+  .process-photo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .room-photo {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .studio-photos {
+    display: flex;
+    flex-flow: wrap;
+    gap: 20px;
+  }
+
+  .studio-photos img {
+    /* width: 250px; */
+  }
+
+  .slide-show {
+    padding: 20px 40px;
+    text-align: center;
+    display: none;
+  }
+
+  /* about text */
+
+  .about-text {
+    padding: 20px 40px 40px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .about-text h2 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .about-text p {
+    padding-bottom: 8px;
+  }
+
+  @media (max-width: 960px) {
+    /* .pers-photos img {
+            width: 100%;
+        } */
+    .proc-photos {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 600px) {
     .aboutme {
-        padding-top: 104px;
-    }
-
-    h1,
-    h2 {
-        color: #8e9aaf;
+      padding-top: 70px;
     }
 
     .page-title {
-        padding: 40px 40px;
-        text-align: center;
+      padding: 20px;
+      text-align: center;
     }
 
     .image-section {
-        padding: 0 40px;
+      padding: 0 20px;
+      display: none;
     }
-
-    .image-section img {
-        border-radius: 4px;
-    }
-
-    .images {
-        display: flex;
-        justify-content: center;
-        flex-flow: wrap;
-        gap: 20px;
-    }
-
-    .personal-photo {
-        max-width: 100%;
-        height: auto;
-        /* width: auto; */
-    }
-
-    .process-photo {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-    }
-    .room-photo {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .studio-photos {
-        display: flex;
-        flex-flow: wrap;
-        gap: 20px;
-    }
-
     .studio-photos img {
-        /* width: 250px; */
+      width: 100%;
     }
 
     .slide-show {
-        padding: 20px 40px;
-        text-align: center;
-        display: none;
+      padding: 0 20px;
+      text-align: center;
+      display: block;
     }
-
-    /* about text */
 
     .about-text {
-        padding: 20px 40px 40px 40px;
-        max-width: 800px;
-        margin: 0 auto;
+      padding: 0 20px 20px 20px;
     }
-
-    .about-text h2 {
-        text-align: center;
-        margin: 20px 0;
-    }
-    .about-text p {
-        padding-bottom: 8px;
-    }
-
-    @media (max-width: 960px) {
-        /* .pers-photos img {
-            width: 100%;
-        } */
-        .proc-photos {
-            text-align: center;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .aboutme {
-            padding-top: 70px;
-        }
-
-        .page-title {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .image-section {
-            padding: 0 20px;
-            display: none;
-        }
-        .studio-photos img {
-            width: 100%;
-        }
-
-        .slide-show {
-            padding: 0 20px;
-            text-align: center;
-            display: block;
-        }
-
-        .about-text {
-            padding: 0 20px 20px 20px;
-        }
-    }
+  }
 </style>
